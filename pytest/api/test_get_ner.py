@@ -6,17 +6,16 @@ Created on 2020/4/1
 @Desc  :妇科NER测试
 '''
 
-from api.get_ner import GetNer
 import pytest
 import allure
+from api.get_requests import GetRequests
 
 
 class TestNer(object):
 
-    @pytest.mark.nertest
+    @pytest.mark.apitest
     @allure.feature("Ner实体识别")
-    def test_get_ner(self):
-        """
-        调用get_ner脚本
-        """
-        GetNer.get_ner(self, "bio_char.txt", "bio_char_result.csv", "ner_test_result.csv", "tag.txt")
+    def test_get_common_ner(self):
+        GetRequests().get_request("http://192.168.1.18:32060/ner/v1", "GET", "ner", "ner\\tag.txt",
+                                  "item\\test_for_request_ner.csv", ["sentence", "all_area"], "bio",
+                                  "ner_test_result.xls", "ner_target_test_result.xls")

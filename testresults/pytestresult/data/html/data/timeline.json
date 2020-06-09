@@ -4,85 +4,21 @@
   "children" : [ {
     "name" : "WIN-OQ20V7UABJF",
     "children" : [ {
-      "name" : "23296-MainThread",
+      "name" : "16856-MainThread",
       "children" : [ {
         "name" : "test_get_pro_intent",
-        "uid" : "87905629ff21f703",
-        "parentUid" : "fbe73866ae35fd6c8c9c83123d51ef00",
+        "uid" : "ab491f74a096efce",
+        "parentUid" : "4bb8616f1dfcaa9d37321d879b97dfa2",
         "status" : "passed",
         "time" : {
-          "start" : 1586835667615,
-          "stop" : 1586836549949,
-          "duration" : 882334
-        },
-        "flaky" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "fbe73866ae35fd6c8c9c83123d51ef00"
-    }, {
-      "name" : "8000-MainThread",
-      "children" : [ {
-        "name" : "test_get_test_symptom",
-        "uid" : "e719e77bacace03c",
-        "parentUid" : "f10e9c12ab10aaca09a64fecc51ac329",
-        "status" : "passed",
-        "time" : {
-          "start" : 1586760042278,
-          "stop" : 1586760151675,
-          "duration" : 109397
-        },
-        "flaky" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "f10e9c12ab10aaca09a64fecc51ac329"
-    }, {
-      "name" : "2712-MainThread",
-      "children" : [ {
-        "name" : "test_get_eye_intent",
-        "uid" : "40b6878efe7d9ce4",
-        "parentUid" : "4d013b01c413c02d6d925e2d195eda20",
-        "status" : "passed",
-        "time" : {
-          "start" : 1586922528022,
-          "stop" : 1586922961194,
-          "duration" : 433172
+          "start" : 1591695838153,
+          "stop" : 1591696415451,
+          "duration" : 577298
         },
         "flaky" : true,
         "parameters" : [ ]
       } ],
-      "uid" : "4d013b01c413c02d6d925e2d195eda20"
-    }, {
-      "name" : "25096-MainThread",
-      "children" : [ {
-        "name" : "test_get_pro_symptom",
-        "uid" : "3d57cb7a67a6cd98",
-        "parentUid" : "66696c66ce1e1c07190490730972998b",
-        "status" : "passed",
-        "time" : {
-          "start" : 1586835196677,
-          "stop" : 1586835482148,
-          "duration" : 285471
-        },
-        "flaky" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "66696c66ce1e1c07190490730972998b"
-    }, {
-      "name" : "25476-MainThread",
-      "children" : [ {
-        "name" : "test_get_test_intent",
-        "uid" : "b2705fdbc3e09865",
-        "parentUid" : "350f85dceddfafb4ac70baace0c8fbda",
-        "status" : "passed",
-        "time" : {
-          "start" : 1586767837453,
-          "stop" : 1586768184854,
-          "duration" : 347401
-        },
-        "flaky" : true,
-        "parameters" : [ ]
-      } ],
-      "uid" : "350f85dceddfafb4ac70baace0c8fbda"
+      "uid" : "4bb8616f1dfcaa9d37321d879b97dfa2"
     } ],
     "uid" : "c1d739ea2cde58890d0f87d35a80f37b"
   } ]

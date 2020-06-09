@@ -37,6 +37,7 @@ class GetRelation:
        查看answer中的有效数据，sentence，ner_title,ner_context并做储备，后期做调用
        :param file:answer文件
        """
+        print("get answer")
         sentence_list = []
         each_ner_content = []
         each_ner_title = []
@@ -51,37 +52,38 @@ class GetRelation:
             # 获取每个句子所有的实体类别：如果一个句子有多个实体类别，中间用$分割
             ner_type_l = ner_type.split("$")
             # 判断是否有多个实体类别
-            if len(ner_type_l) >= 2:
-                # 根据$拆分每个ner
-                ner_l = ner.split("$")
-                # 循环遍历拆分每个ner和内容
-                for i in range(1, len(ner_l)):
-                    each_ner = ner_l[i].split(":")
-                    # 拼接 每个ner的类别和内容
-                    if i == 1:
-                        each_ner_title.append(str(each_ner[0]))
-                        each_ner_content.append(str(each_ner[1]))
-                    if i >= 2:
-                        each_ner_title.append("," + str(each_ner[0]))
-                        each_ner_content.append("," + str(each_ner[1]))
+            if ner_type != "无":
+                if len(ner_type_l) >= 2 and ner != "无":
+                    # 根据$拆分每个ner
+                    ner_l = ner.split("$")
+                    # 循环遍历拆分每个ner和内容
+                    for i in range(1, len(ner_l)):
+                        each_ner = ner_l[i].split(":")
+                        # 拼接 每个ner的类别和内容
+                        if i == 1:
+                            each_ner_title.append(str(each_ner[0]))
+                            each_ner_content.append(str(each_ner[1]))
+                        if i >= 2:
+                            each_ner_title.append(str(each_ner[0]))
+                            each_ner_content.append(str(each_ner[1]))
+                        # 拼接sentence，each_ner_content，each_ner_title
+                    sentence_list.append(sentence)
+                    each_ner_c_list.append(each_ner_content)
+                    each_ner_t_list.append(each_ner_title)
+                # 只有单个实体
+                else:
+                    # 拆分ner和内容
+                    each_ner = ner.split("$")[1].split(":")
+                    # 拼接 ner的类别和内容
+                    each_ner_title.append(str(each_ner[0]))
+                    each_ner_content.append(str(each_ner[1]))
                     # 拼接sentence，each_ner_content，each_ner_title
                     sentence_list.append(sentence)
                     each_ner_c_list.append(each_ner_content)
                     each_ner_t_list.append(each_ner_title)
-            # 只有单个实体
-            else:
-                # 拆分ner和内容
-                each_ner = ner.split("$")[1].split(":")
-                # 拼接 ner的类别和内容
-                each_ner_title.append(str(each_ner[0]))
-                each_ner_content.append(str(each_ner[1]))
-                # 拼接sentence，each_ner_content，each_ner_title
-                sentence_list.append(sentence)
-                each_ner_c_list.append(each_ner_content)
-                each_ner_t_list.append(each_ner_title)
-            # 重置 each_ner_content，each_ner_title
-            each_ner_content = []
-            each_ner_title = []
+                # 重置 each_ner_content，each_ner_title
+                each_ner_content = []
+                each_ner_title = []
         print(sentence_list)
         print(each_ner_c_list)
         print(each_ner_t_list)
@@ -109,6 +111,7 @@ class GetRelation:
         查看question中的有效数据，sentence，ner_title,ner_context,intent，并做储备，后期做调用
         :param file:question文件
         """
+        print("get question")
         sentence_list = []
         intent_list = []
         each_intent_list = []
@@ -192,12 +195,25 @@ class GetRelation:
         workbook.save(rootPath + '\\testresults\\resultfile\\' + "question_collection_result.xls")
         return sentence_list, each_ner_c_list, each_ner_t_list, intent_list
 
+    def get_relation(self):
+        answer_sentence_list, answer_each_ner_c_list, answer_each_ner_t_list = GetRelation.get_answer(self,
+                                                                                                      "demo-answer.csv")
+        question_sentence_list, question_each_ner_c_list, question_each_ner_t_list, question_intent_list = GetRelation.get_question(
+            self,
+            "demo-question.csv")
 
-def get_relation(self, question, answer, result_file):
-    answer_sentence_list, answer_each_ner_c_list, answer_each_ner_t_list = GetRelation.get_answer("answer.csv")
-    question_sentence_list, question_each_ner_c_list, question_each_ner_t_list, question_intent_list = GetRelation.get_answer(
-        "question.csv")
+        for i in (0, len(question_each_ner_c_list) - 1):
+            if len(question_each_ner_c_list[i]) == 1:
+                for j in range(0, len(answer_each_ner_c_list)):
+                    if question_each_ner_c_list[i] == answer_each_ner_c_list[j]:
+                        print(question_each_ner_c_list[i], answer_each_ner_c_list[j], answer_sentence_list[j])
+            else:
+                for k in range(0, len(question_each_ner_c_list[i] - 1)):
+                    if question_each_ner_c_list[i][j] in answer_each_ner_c_list[k]:
+                        print(question_each_ner_c_list[i][j], answer_each_ner_c_list[k], answer_sentence_list[k])
 
 
 test = GetRelation()
-test.get_question("question.csv")
+test.get_relation()
+# test.get_question("demo-question.csv")
+# test.get_answer("demo-answer.csv")

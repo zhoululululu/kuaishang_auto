@@ -21,6 +21,12 @@ class Binary:
 
     @staticmethod
     def get_recall_score(truth_value, prob_value):
+        """
+        传入标注内容
+        :param num: 接口返回的num值
+        :param mid：定义的相似值界限：大于这个界限即为相似，小于则不相似
+        :return re_score：返回一个证
+        """
         recall = recall_score(truth_value, prob_value)
         return recall
 
@@ -52,12 +58,12 @@ class Binary:
         print("准确率P为：", precision)
         print("F1值为：", f1)
         print("Accuracy值为：", Accuracy)
-        plt.ylim([0.0, 1.05])
-        plt.xlabel('False Positive Rate')
-        plt.ylabel('True Positive Rate')
-        plt.title('TEST Example')
-        plt.legend(loc="lower right")
-        plt.show()
+        # plt.ylim([0.0, 1.05])
+        # plt.xlabel('False Positive Rate')
+        # plt.ylabel('True Positive Rate')
+        # plt.title('TEST Example')
+        # plt.legend(loc="lower right")
+        # plt.show()
 
 
 class MultiClassByWord:
@@ -167,6 +173,7 @@ class MultiClassByWord:
         pn = 0
         rn = 0
         tn = 0
+        f1 = 0
         result = list(zip(bz_intent_list, re_intent_list))
         count_all_p = 0
         count_p = 0
@@ -175,25 +182,31 @@ class MultiClassByWord:
         for res in result:
             bz_bio = res[0]  # 人工标注
             re_bio = res[1]  # 接口返回
-            if bz_bio == point:
-                count_all_r += 1
+            # print(bz_bio, re_bio)
+            # if bz_bio==point:
+            if point in bz_bio:
                 pn = pn + 1
-                if bz_bio == re_bio:
-                    count_r += 1
+                count_all_r = count_all_r + 1
+                if point in re_bio:
+                    count_r = count_r + 1
                     tn = tn + 1
-            if re_bio == point:
+            # if re_bio == point:
+            if point in re_bio:
                 rn = rn + 1
-                count_all_p += 1
-                if bz_bio == re_bio:
-                    count_p += 1
+                count_all_p = count_all_p + 1
+                # if bz_bio == re_bio:
+                if point in bz_bio:
+                    count_p = count_p + 1
         if count_all_p != 0 and count_all_r != 0:
             p = count_p / count_all_p
             r = count_r / count_all_r
-            f1 = 2 * p * r / (p + r)
+            if p != 0 and r != 0:
+                f1 = 2 * p * r / (p + r)
         else:
             p = 0
             r = 0
             f1 = 0
+        #print(p, r, f1, pn, rn, tn)
         return p, r, f1, pn, rn, tn
 
     # 直接算出平均召回率，准确率，F1值
@@ -207,6 +220,9 @@ class MultiClassByWord:
         count_p = 0
         count_all_r = 0
         count_r = 0
+        p = 0
+        r = 0
+        f1 = 0
         for res in result:
             bz_bio = res[0]  # 人工标注
             re_bio = res[1]  # 接口返回
@@ -222,9 +238,15 @@ class MultiClassByWord:
                 rn = rn + 1
                 if re_bio == bz_bio:
                     count_p += 1
-        p = count_p / count_all_p
-        r = count_r / count_all_r
-        f1 = 2 * p * r / (p + r)
+        if count_all_p != 0 and count_all_r != 0:
+            p = count_p / count_all_p
+            r = count_r / count_all_r
+            if p != 0 and r != 0:
+                f1 = 2 * p * r / (p + r)
+        else:
+            p = 0
+            r = 0
+            f1 = 0
         return p, r, f1, pn, rn, tn
 
     def multi_each_target(self, target_list, bz_intent_list, re_intent_list):
@@ -249,6 +271,7 @@ class MultiClassByWord:
             pn_list.append(pn)
             rn_list.append(rn)
             tn_list.append(tn)
+        print(precision_list, recall_list, f1_list, pn_list, rn_list, tn_list)
         return precision_list, recall_list, f1_list, pn_list, rn_list, tn_list
 
     def multi_ave_target(self, bz_intent_list, re_intent_list, point):
@@ -261,3 +284,49 @@ class MultiClassByWord:
         print("准确率P为：", p)
         print("F1为：", f1)
         return p, r, f1, pn, rn, tn
+
+    def mult_class_target(self, bz_intent_list, re_intent_list, point):
+        pn = 0
+        rn = 0
+        tn = 0
+        f1 = 0
+        result = list(zip(bz_intent_list, re_intent_list))
+        count_all_p = 0
+        count_p = 0
+        count_all_r = 0
+        count_r = 0
+        for res in result:
+            bz_bio = res[0]  # 人工标注
+            re_bio = res[1]  # 接口返回
+            # if bz_bio==point:
+            if point in bz_bio:
+                pn = pn + 1
+                count_all_r = count_all_r + 1
+                if point in re_bio:
+                    count_r = count_r + 1
+                    tn = tn + 1
+            # if re_bio == point:
+            if point in re_bio:
+                rn = rn + 1
+                count_all_p = count_all_p + 1
+                # if bz_bio == re_bio:
+                if point in bz_bio:
+                    count_p = count_p + 1
+        if count_all_p != 0 and count_all_r != 0:
+            p = count_p / count_all_p
+            r = count_r / count_all_r
+            if p != 0 and r != 0:
+                f1 = 2 * p * r / (p + r)
+        else:
+            p = 0
+            r = 0
+            f1 = 0
+        print(p, r, f1, pn, rn, tn)
+        return p, r, f1, pn, rn, tn
+
+#
+# bz_list = [["A", "B", "C"], ["A", "B"], ["B", "C"], ["A"], ["B"], ["C"], ["A"]]
+# re_list = [["A", "B", "D"], ["A", "B", "C"], ["C", "B"], ["A"], ["B"], ["C"], ["B"]]
+# point = "B"
+# test = MultiClassByWord()
+# test.mult_class_target(bz_list, re_list, point)

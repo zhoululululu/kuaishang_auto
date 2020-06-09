@@ -1,6 +1,2 @@
 "Status","Name","Duration in ms","Description"
-"passed","pytest.api.test_get_intent.TestIntent#test_get_pro_intent","882334",""
-"passed","pytest.api.test_get_symptom.TestSymptom#test_get_test_symptom","109397",""
-"passed","pytest.api.test_get_intent.TestIntent#test_get_eye_intent","433172",""
-"passed","pytest.api.test_get_symptom.TestSymptom#test_get_pro_symptom","285471",""
-"passed","pytest.api.test_get_intent.TestIntent#test_get_test_intent","347401",""
+"passed","pytest.api.test_get_intent.TestIntent#test_get_pro_intent","577298",""

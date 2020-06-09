@@ -51,6 +51,9 @@ class GetXpath:
         """
         self.conf['chat_box'] = self.config.get("UI-PROCESS", "chat_box")
         self.conf['send_btn'] = self.config.get("UI-PROCESS", "send_btn")
+        self.conf['edit_input'] = self.config.get("UI-PROCESS", "edit_input")
+        self.conf['kf_output'] = self.config.get("UI-PROCESS", "kf_output")
+
         return self.conf
 
 

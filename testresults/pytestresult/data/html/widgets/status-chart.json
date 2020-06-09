@@ -1,50 +1,10 @@
 [ {
-  "uid" : "87905629ff21f703",
+  "uid" : "ab491f74a096efce",
   "name" : "test_get_pro_intent",
   "time" : {
-    "start" : 1586835667615,
-    "stop" : 1586836549949,
-    "duration" : 882334
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "e719e77bacace03c",
-  "name" : "test_get_test_symptom",
-  "time" : {
-    "start" : 1586760042278,
-    "stop" : 1586760151675,
-    "duration" : 109397
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "40b6878efe7d9ce4",
-  "name" : "test_get_eye_intent",
-  "time" : {
-    "start" : 1586922528022,
-    "stop" : 1586922961194,
-    "duration" : 433172
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "3d57cb7a67a6cd98",
-  "name" : "test_get_pro_symptom",
-  "time" : {
-    "start" : 1586835196677,
-    "stop" : 1586835482148,
-    "duration" : 285471
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "b2705fdbc3e09865",
-  "name" : "test_get_test_intent",
-  "time" : {
-    "start" : 1586767837453,
-    "stop" : 1586768184854,
-    "duration" : 347401
+    "start" : 1591695838153,
+    "stop" : 1591696415451,
+    "duration" : 577298
   },
   "status" : "passed",
   "severity" : "normal"

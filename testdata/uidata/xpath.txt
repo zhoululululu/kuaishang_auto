@@ -1,3 +1,5 @@
 [UI-PROCESS]
 chat_box = //input[contains(@type,"text")]
 send_btn = //span[contains(text(),"发送")]
+edit_input = //div[contains(@id,"ksEditInstance")]
+kf_output = //div[contains(@class,"msg_cs vcaPage")][last()]//div[contains(@class,"msg")]//span

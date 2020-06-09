@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 '''
-Created on 2020/2/27
-@File  : test_get_intent.py
+Created on 2020/5/12
+@File  : get_intent.py
 @author: ZL
 @Desc  :
 '''
@@ -13,12 +13,13 @@ from common.change_data_type import ChangeDataType
 from common.common_function import CommonFunction
 from algorithm.algorithm_func import MultiClassByWord
 import xlwt
+import operator
 
 curPath = os.path.abspath(os.path.dirname(__file__))
 rootPath = os.path.split(curPath)[0]
 
 
-class GetIntent:
+class GetMultIntent:
 
     def get_intent_result(self, target_file, bz_intent_list, re_intent_list):
         """
@@ -85,15 +86,10 @@ class GetIntent:
                 result = r.json()
                 re_intent = result["data"]["intent"]  # 获取返回data的intent
                 print(re_intent)
-                # score = result["data"]["score"]  # 获取返回data的score
+                score = result["data"]["score"]  # 获取返回data的score
                 tf = CommonFunction.get_tf(intent, re_intent)
             except Exception as e:
                 score = "bad request"
-                # print(e)
-            # self.logging.info("句子：" + sentence + "---预期意图：" + intent
-            #                   + "---实际意图：" + re_intent + "---是否一致：" + tf)
-            # 拼接结果数据
-            # score_list.append(score)
             exp_intent_list.append(intent)
             re_intent_list.append(re_intent)
             tf_list.append(tf)
@@ -106,98 +102,70 @@ class GetIntent:
         # 输出excel
         test_data.to_excel(rootPath + '\\testresults\\resultfile\\' + now + result_file, index=False,
                            encoding="utf-8")
-        GetIntent.get_intent_result(self, target_file, exp_intent_list, re_intent_list)
+        GetMultIntent.get_intent_result(self, target_file, exp_intent_list, re_intent_list)
 
-    def get_pro_intent(self, api_url, target_file, test_data_file, result_file):
+    def get_mul_intent_1(self, sentence):
         """
-        通过抽取测试集的数据，调用意图接口，得出的测试结果，在调用函数获取每个target的准确率，召回率，F1
-        :param target_file: 储存target的文件
-        :param data_file: 储存接口结果数据的文件
+         意图标签完全匹配，顺序可不同
         """
-        # 获取测试集的data
-        test_data = ChangeDataType.csv_to_dict(rootPath + "\\testdata\\apidata\\intent\\" + test_data_file)
-        score_list = []
-        re_intent_list = []
-        exp_intent_list = []
+        api_url = "http://192.168.1.79:8198/gynaecology_intent/v2?sentence={}"
+        url = api_url.format(sentence)  # 接口请求
+        r = requests.get(url, timeout=50)
+        pro_intent = ['咨询案例', '描述生理现象', '描述症状', '咨询病因']
+        result = r.json()
+        re_intent = result["data"]["intent"]  # 获取返回data的intent
+        # 对两个意图进行排序，排序后的意图可进行匹配关系
+        re_intent.sort()
+        pro_intent.sort()
+        print(re_intent)
+        print(pro_intent)
+        print(operator.eq(re_intent, pro_intent))
+
+    def get_mul_intent_2(self, sentence):
+        """
+         意图标签不完全匹配，但是须有包含关系，标注的意图包括接口返回，或接口意图包含标注意图均可
+        """
+        api_url = "http://192.168.1.79:8198/gynaecology_intent/v2?sentence={}"
+        url = api_url.format(sentence)  # 接口请求
+        r = requests.get(url, timeout=50)
+        pro_intent = ['咨询案例', '描述生理现象']
+        result = r.json()
+        re_intent = result["data"]["intent"]  # 获取返回data的intent
+        # 对两个意图进行排序，排序后的意图可进行匹配关系
+        re_intent.sort()
+        pro_intent.sort()
+        # 做匹配关系的比较，若有一边有包含关系，则认为匹配成功
+        if set(re_intent) > set(pro_intent) or set(pro_intent) > set(re_intent):
+            print("TRUE")
+        else:
+            print("FALSE")
+
+    def get_mul_intent_3(self, sentence):
+        """
+         意图标签不完全匹配，只要接口返回中有一个可对应上即算匹配成功
+        """
+        api_url = "http://192.168.1.79:8198/gynaecology_intent/v2?sentence={}"
+        url = api_url.format(sentence)  # 接口请求
+        r = requests.get(url, timeout=50)
+        pro_intent = ['111', '描述生理现象']
+        result = r.json()
+        re_intent = result["data"]["intent"]  # 获取返回data的intent
+        # 对两个意图进行排序，排序后的意图可进行匹配关系
+        re_intent.sort()
+        pro_intent.sort()
         tf_list = []
-        # 循环读取sentence，intent
-        for idx, temp in test_data.iterrows():
-            intent = temp["intent"]
-            sentence = temp["sentence"]
-            headers = {
-                'Authorization': "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb21wYW55X2lkIjoxLCJyb2JvdF9pZCI6MSwiZXhwIjoxNTg5MzMyNTIzfQ.Durc3V9XA99BejXc2ZOzspPU-JJCY1nUUjceICwBWNE",
-                'Content-Type': 'application/x-www-form-urlencoded'
-            }
-            data = {
-                'dialog': sentence,
-                'client_id': "zltest",
-            }
-            url = api_url.format(sentence)  # 接口请求
-            try:
-                r = requests.post(url, data=data, headers=headers, timeout=50)
-                result = r.json()
-                re_intent = result["ner_result"]["ner"]["intent"]["Value"][0]["Value"]  # 获取返回data的intent
-                print(re_intent)
-                tf = CommonFunction.get_tf(intent, re_intent)
-            except Exception as e:
-                score = "bad request"
-            exp_intent_list.append(intent)
-            re_intent_list.append(re_intent)
-            tf_list.append(tf)
+        re_list = []
+        for i in range(0, len(re_intent)):
+            # 做匹配关系的比较，若有一边有包含关系，则认为匹配成功
+            re_list.append(re_intent[i])
+            if set(re_list) > set(pro_intent) or set(pro_intent) > set(re_list):
+                tf_list.append("TRUE")
+            re_list = []
+        if set(tf_list) >= set(["TRUE"]):
+            print("TRUE")
+        else:
+            print("FALSE")
 
-        test_data["re_intent"] = re_intent_list
-        # 调用方法，拼接test_data值
-        test_data = CommonFunction.get_collections(test_data, tf_list)
-        now = time.strftime('%y_%m_%d-%H_%M_%S')
-        # 输出excel
-        test_data.to_excel(rootPath + '\\testresults\\resultfile\\' + now + result_file, index=False,
-                           encoding="utf-8")
-        GetIntent.get_intent_result(self, target_file, exp_intent_list, re_intent_list)
 
-    def get_eye_intent(self, api_url, target_file, test_data_file, result_file):
-        """
-        通过抽取测试集的数据，调用意图接口，得出的测试结果，在调用函数获取每个target的准确率，召回率，F1
-        :param target_file: 储存target的文件
-        :param data_file: 储存接口结果数据的文件
-        """
-        # 获取测试集的data
-        test_data = ChangeDataType.csv_to_dict(rootPath + "\\testdata\\apidata\\" + test_data_file)
-        score_list = []
-        re_intent_list = []
-        bz_intent_list = []
-        tf_list = []
-        re_intent = ""
-        tf = ""
-        # 循环读取sentence，intent
-        for idx, temp in test_data.iterrows():
-            intent = temp["intention"]
-            sentence = temp["sentence"]
-            # 发起请求
-            url = api_url.format(sentence)
-            try:
-                r = requests.get(url, timeout=50)
-                result = r.json()
-                re_intent = result["data"]["intent"]  # 获取返回data的intent
-                print(re_intent)
-                # score = result["data"]["intent_probability"]  # 获取返回data的score
-                tf = CommonFunction.get_tf(intent, re_intent)
-            except Exception as e:
-                score = "bad request"
-                print(e)
-            # self.logging.info("句子：" + sentence + "---预期意图：" + intent
-            #                   + "---实际意图：" + re_intent + "---是否一致：" + tf)
-            # 拼接结果数据
-            #            score_list.append(score)
-            bz_intent_list.append(intent)
-            re_intent_list.append(re_intent)
-            tf_list.append(tf)
-
-        test_data["re_intent"] = re_intent_list
-        # test_data["score"] = score_list
-        # 调用方法，拼接test_data值
-        test_data = CommonFunction.get_collections(test_data, tf_list)
-        now = time.strftime('%y_%m_%d-%H_%M_%S')
-        # 输出excel
-        test_data.to_excel(rootPath + '\\testresults\\resultfile\\' + now + result_file, index=False,
-                           encoding="utf-8")
-        GetIntent.get_intent_result(self, target_file, bz_intent_list, re_intent_list)
+test = GetMultIntent()
+test.get_mul_intent_3("月经推迟三四天 伴有呕吐 恶心 白带有血丝 嗓子肿疼 太阳穴疼 的症状 请问这是怎么了")

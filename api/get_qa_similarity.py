@@ -20,7 +20,6 @@ rootPath = os.path.split(curPath)[0]
 class GetQASimilarity:
 
     def get_qa_similarity(self, test_data_file, result_file):
-        # self.logging = Logging()
         test_data = ChangeDataType.csv_to_dict(rootPath + "\\testdata\\apidata\\" + test_data_file)
         score_list = []
         re_score_list = []
@@ -42,8 +41,6 @@ class GetQASimilarity:
             except Exception as e:
                 score = "bad request"
                 print(score)
-            # self.logging.info("症状1：" + str1 + "---症状2：" + str2 + "---预期分数："
-            #                   + str(label) + "---实际分数：" + str(re_score) + "---是否一致：" + tf)
             score_list.append(score)
             re_score_list.append(re_score)
             tf_list.append(tf)
@@ -57,3 +54,5 @@ class GetQASimilarity:
                            encoding="utf-8")
 
 
+if __name__ == '__main__':
+    GetQASimilarity().get_qa_similarity("beauty_item_testdata.csv", "beauty_test_result.xls")

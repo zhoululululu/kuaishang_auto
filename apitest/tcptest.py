@@ -16,8 +16,9 @@ def start_tcp_server(ip, port):
         print("waiting for connection")
         client, addr = sock.accept()
         print('having a connection:', addr)
-        client.send("{you connect success}".encode())
+        client.send("connect successful\n".encode("GBK"))
         client.close()
 
+
 if __name__ == '__main__':
-    start_tcp_server('192.168.92.237', 53168)
+    start_tcp_server('192.168.170.129', 53168)

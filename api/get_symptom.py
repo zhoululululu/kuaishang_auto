@@ -19,7 +19,7 @@ curPath = os.path.abspath(os.path.dirname(__file__))
 rootPath = os.path.split(curPath)[0]
 
 
-class GetSymptom:
+class GetSimilarySymptom:
 
     def get_symptom(self, api_url, test_data_file, result_file):
         test_data = ChangeDataType.json_to_dict(rootPath + "\\testdata\\apidata\\" + test_data_file)
@@ -118,3 +118,9 @@ class GetSymptom:
             sheet1.write(i + 1, 2, result_value_list[i])
             sheet1.write(i + 1, 3, tf_list[i])
         workbook.save(rootPath + '\\testresults\\resultfile\\' + now + result_file)
+
+
+if __name__ == '__main__':
+    GetSimilarySymptom().get_symptom("http://192.168.1.74:8233/bert_similarity/v2?str1={}&str2={}&model=psoriasis1",
+                                     "similary\\test_for_request_symptom_similary.csv",
+                                     "ymptom_similary_test_result.xls")

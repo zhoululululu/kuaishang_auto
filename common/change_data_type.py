@@ -8,7 +8,6 @@ Created on 2020/2/26
 
 import json
 import pandas
-from common.common_function import CommonFunction
 import os
 
 curPath = os.path.abspath(os.path.dirname(__file__))
@@ -27,6 +26,17 @@ class ChangeDataType:
         with open(path, mode='r', encoding='utf-8') as f2:
             test_data = json.load(f2)
             return test_data
+
+    @staticmethod
+    def excel_to_dict(file_name, sheet_name):
+        """
+        将数据由excel文件转换为dict
+        :param file_name: 需要转换的excel
+        :param sheet_name: sheet名称
+        :return test_data: 转换后的dict字符串
+        """
+        test_data = pandas.read_excel(file_name, sheet_name=sheet_name, encoding="utf-8")
+        return test_data
 
     @staticmethod
     def dict_to_jsonfile(dict_data, file_name):
@@ -49,21 +59,21 @@ class ChangeDataType:
         str_json = json.dumps(dict_data)
         return str_json
 
-    # @staticmethod
-    # def ner_csv_to_dict(file):
-    #     """
-    #     将csv转换为dict（专为妇科ner而立，特殊处理exp_bio，re_bio）
-    #     :param file: 需要转换的dict数据文件（此处应该为ner文件）
-    #     :return exp_bio_list: 转换为dict的预期bio值list
-    #     :return re_bio_list: 转换为dict的实际接口结果bio值list
-    #     """
-    #     test_data = pandas.read_csv(file, encoding="utf-8")
-    #     exp_bio_list = []
-    #     re_bio_list = []
-    #     for idx, temp in test_data.iterrows():
-    #         exp_bio_list.append(temp["exp_bio"])
-    #         re_bio_list.append(temp["re_bio"])
-    #     return exp_bio_list, re_bio_list
+    @staticmethod
+    def ner_csv_to_dict(file):
+        """
+        将csv转换为dict（专为妇科ner而立，特殊处理exp_bio，re_bio）
+        :param file: 需要转换的dict数据文件（此处应该为ner文件）
+        :return exp_bio_list: 转换为dict的预期bio值list
+        :return re_bio_list: 转换为dict的实际接口结果bio值list
+        """
+        test_data = pandas.read_csv(file, encoding="utf-8")
+        exp_bio_list = []
+        re_bio_list = []
+        for idx, temp in test_data.iterrows():
+            exp_bio_list.append(temp["exp_bio"])
+            re_bio_list.append(temp["re_bio"])
+        return exp_bio_list, re_bio_list
 
     @staticmethod
     def csv_to_dict(file):
@@ -74,15 +84,17 @@ class ChangeDataType:
         """
         test_data = pandas.read_csv(file, encoding="utf-8")
         return test_data
-    #
-    # @staticmethod
-    # def zip_data(file):
-    #     """
-    #     将csv转换为dict（专为妇科ner而立，特殊处理exp_bio，re_bio）
-    #     :param file: 需要转换的dict数据文件（此处应该为ner文件）
-    #     :return exp_bio_list: 转换为dict的预期bio值list
-    #     :return re_bio_list: 转换为dict的实际接口结果bio值list
-    #     """
-    #     re_word_list, words_list, bios_list = CommonFunction.get_ner_to_words(file)
-    #     return_data = zip(re_word_list, words_list)
-    #     return return_data
+
+    @staticmethod
+    def txt_to_dict(file):
+        """
+        将txt文件转换为dict
+        :param file: 需要转换成dict的txt数据文件
+        :return test_data: 转换为dict的数据
+        """
+        test_data = []
+        f = open(file, "r")
+        for line in f.readlines():
+            test_data.append(line.strip("\n"))
+        return test_data
+

@@ -10,11 +10,13 @@ import os
 import requests
 import csv
 from common.common_function import CommonFunction
-from common.change_data_type import ChangeDataType
 from algorithm.algorithm_func import MultiClassByWord
+from common.change_data_type import ChangeDataType
 
 curPath = os.path.abspath(os.path.dirname(__file__))
 rootPath = os.path.split(curPath)[0]
+import xlwt
+import time
 
 
 class GetNer:
@@ -29,14 +31,42 @@ class GetNer:
         target_list = CommonFunction.get_target(self, target_file)
         # 获取人工预期及接口返回的bio值list
         # exp_bio_list, re_bio_list = ChangeDataType.ner_csv_to_dict(
-        #     rootPath + "\\testresults\\resultfile\\" + data_file)
+        # rootPath + "\\testresults\\resultfile\\common_ner_test_result.csv")
         # 返回每个target的准确率，召回率，F1
-        MultiClassByWord.multi_each_target(self, target_list, exp_bio_list,
-                                           re_bio_list)
+        precision_list, recall_list, f1_list, pn_list, rn_list, tn_list = MultiClassByWord.multi_each_target(self,
+                                                                                                             target_list,
+                                                                                                             exp_bio_list,
+                                                                                                             re_bio_list)
+        target_list.append("平均值（不含O）")
         # 返回平均的准确率，召回率，F1
-        MultiClassByWord.multi_ave_target(self, exp_bio_list, re_bio_list, "0")
+        p, r, f1, pn, rn, tn = MultiClassByWord.multi_ave_target(self, exp_bio_list, re_bio_list, "O")
+        precision_list.append(p)
+        recall_list.append(r)
+        f1_list.append(f1)
+        pn_list.append(pn)
+        rn_list.append(rn)
+        tn_list.append(tn)
+        now = time.strftime('%y_%m_%d-%H_%M_%S')
+        workbook = xlwt.Workbook()
+        sheet1 = workbook.add_sheet('意图统计结果', cell_overwrite_ok=True)
+        sheet1.write(0, 0, "NER列表")
+        sheet1.write(0, 1, "人工标注数量")
+        sheet1.write(0, 2, "接口结果数量")
+        sheet1.write(0, 3, "一致数量")
+        sheet1.write(0, 4, "准确率")
+        sheet1.write(0, 5, "召回率")
+        sheet1.write(0, 6, "F1值")
+        for i in range(0, len(target_list)):
+            sheet1.write(i + 1, 0, target_list[i])
+        sheet1.write(i + 1, 1, pn_list[i])
+        sheet1.write(i + 1, 2, rn_list[i])
+        sheet1.write(i + 1, 3, tn_list[i])
+        sheet1.write(i + 1, 4, precision_list[i])
+        sheet1.write(i + 1, 5, recall_list[i])
+        sheet1.write(i + 1, 6, f1_list[i])
+        workbook.save(rootPath + '\\testresults\\resultfile\\' + now + "common_ner_target_test_result.xls")
 
-    def get_ner(self, origin_test_data_file, test_data_file, result_file, target_file):
+    def get_ner(self, api_url, origin_test_data_file, test_data_file, result_file, target_file):
         """
         通过target列表，以及人工及接口返回的bio
         :param origin_test_data_file: 原始的只有单个字及人工bio值的文件
@@ -45,7 +75,7 @@ class GetNer:
         :param target_file: 储存target的文件
         """
         # 调用get_txt_to_csv函数，将txt文件转换为csv文件
-        CommonFunction.get_txt_to_csv(origin_test_data_file, test_data_file)
+        # CommonFunction.get_txt_to_csv(origin_test_data_file, test_data_file)
         # 调用get_ner_to_words函数，返回字列表，句子列表，及人工预期bio列表
         word_list, words_list, bios_list = CommonFunction.get_ner_to_words(test_data_file)
         result_bio_list = []
@@ -60,7 +90,7 @@ class GetNer:
         n = -1
         for temp in words_list:
             # 请求接口，循环words_list中的每句话
-            url = "http://192.168.1.74:8064/ner/v1?utterance={}&model_name=gynaecology".format(
+            url = api_url.format(
                 temp)
             try:
                 r = requests.get(url, timeout=50)
@@ -84,3 +114,9 @@ class GetNer:
               "{:.2f}%".format(tf_list.count("FALSE") / len(tf_list) * 100))
         # 调用函数，输出每个target及平均的准确率，召回率，F1
         GetNer.get_ner_result(self, target_file, bios_list, result_bio_list)
+
+
+if __name__ == '__main__':
+    GetNer().get_ner("http://192.168.1.18:32060/ner/v1?utterance={}&model_name=all_area", "common_ner_test_case.txt",
+                     "bio_char_result.csv",
+                     "gynaenology_ner_test_result.csv", "ner\\common_ner_tag.txt")
