@@ -1,5 +1,5 @@
 {
-  "uid" : "eee80251ce5883d8",
+  "uid" : "8887c6e2f21ccae4",
   "name" : "test_get_pro_intent",
   "fullName" : "pytest.api.test_get_intent.TestIntent#test_get_pro_intent",
   "historyId" : "5577602bedd8563b8ebaf88513cfdf02",
@@ -56,6 +56,6 @@
     "categories" : [ ],
     "tags" : [ "api_intention_test" ]
   },
-  "source" : "eee80251ce5883d8.json",
+  "source" : "8887c6e2f21ccae4.json",
   "parameterValues" : [ ]
 }

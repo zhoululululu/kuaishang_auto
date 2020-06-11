@@ -139,7 +139,7 @@ class CommonFunction:
         print("总数：", len(tf_list), "，一致数：", tf_list.count("TRUE"), "，不一致数：", tf_list.count("FALSE"), "，一致率：",
               "{:.2f}%".format(tf_list.count("TRUE") / len(tf_list) * 100), "，不一致率：",
               "{:.2f}%".format(tf_list.count("FALSE") / len(tf_list) * 100))
-        return data
+        return data, len(tf_list), "{:.2f}%".format(tf_list.count("TRUE") / len(tf_list) * 100)
 
     def get_collection_2(self, target_file, bz_intent_list, re_intent_list, final_result):
         """

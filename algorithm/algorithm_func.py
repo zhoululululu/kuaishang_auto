@@ -184,18 +184,18 @@ class MultiClassByWord:
             re_bio = res[1]  # 接口返回
             # print(bz_bio, re_bio)
             # if bz_bio==point:
-            if point in bz_bio:
+            if point == bz_bio:
                 pn = pn + 1
                 count_all_r = count_all_r + 1
-                if point in re_bio:
+                if point == re_bio:
                     count_r = count_r + 1
                     tn = tn + 1
             # if re_bio == point:
-            if point in re_bio:
+            if point == re_bio:
                 rn = rn + 1
                 count_all_p = count_all_p + 1
                 # if bz_bio == re_bio:
-                if point in bz_bio:
+                if point == bz_bio:
                     count_p = count_p + 1
         if count_all_p != 0 and count_all_r != 0:
             p = count_p / count_all_p

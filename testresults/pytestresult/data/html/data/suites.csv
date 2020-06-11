@@ -1,2 +1,2 @@
 "Status","Name","Duration in ms","Description"
-"passed","pytest.api.test_get_intent.TestIntent#test_get_pro_intent","577298",""
+"passed","pytest.api.test_get_intent.TestIntent#test_get_pro_intent","849558",""

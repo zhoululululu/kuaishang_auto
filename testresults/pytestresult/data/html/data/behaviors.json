@@ -5,13 +5,13 @@
     "name" : "测试环境通用意图识别",
     "children" : [ {
       "name" : "test_get_pro_intent",
-      "uid" : "ab491f74a096efce",
+      "uid" : "72f5bea38c94886d",
       "parentUid" : "c8e7f5ba17e5e618af1393c204f90170",
       "status" : "passed",
       "time" : {
-        "start" : 1591695838153,
-        "stop" : 1591696415451,
-        "duration" : 577298
+        "start" : 1591860480251,
+        "stop" : 1591861329809,
+        "duration" : 849558
       },
       "flaky" : true,
       "parameters" : [ ]

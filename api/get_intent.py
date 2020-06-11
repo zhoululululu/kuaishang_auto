@@ -22,7 +22,7 @@ rootPath = os.path.split(curPath)[0]
 
 class GetIntent:
 
-    def get_intent_result(self, target_file, bz_intent_list, re_intent_list, test_result_file):
+    def get_intent_result(self, target_file, bz_intent_list, re_intent_list, test_result_file, total_num, accuracy):
         """
         通过获取target列表，以及人工及接口返回的意图值，来计算每个target及平均的准确率，召回率，F1
         :param target_file: 储存target的文件
@@ -44,6 +44,14 @@ class GetIntent:
         pn_list.append(pn)
         rn_list.append(rn)
         tn_list.append(tn)
+
+        target_list.append("汇总")
+        precision_list.append("用例数：" + total_num)
+        recall_list.append("accuracy：" + accuracy)
+        f1_list.append("")
+        pn_list.append("")
+        rn_list.append("")
+        tn_list.append("")
         now = time.strftime('%y_%m_%d-%H_%M_%S')
         workbook = xlwt.Workbook()
         sheet1 = workbook.add_sheet('意图统计结果', cell_overwrite_ok=True)
@@ -63,6 +71,7 @@ class GetIntent:
             sheet1.write(i + 1, 5, recall_list[i])
             sheet1.write(i + 1, 6, f1_list[i])
         workbook.save(rootPath + '\\testresults\\resultfile\\' + now + test_result_file)
+        return rootPath + '\\testresults\\resultfile\\' + now + test_result_file
 
     def get_intent(self, api_url, target_file, test_data_file, result_file, test_result_file):
         """
@@ -93,12 +102,13 @@ class GetIntent:
             tf_list.append(tf)
 
         test_data["re_intent"] = re_intent_list
-        test_data = CommonFunction.get_collection_1(test_data, tf_list)
+        test_data, total_num, accuracy = CommonFunction.get_collection_1(test_data, tf_list)
         now = time.strftime('%y_%m_%d-%H_%M_%S')
         # 输出excel
         test_data.to_excel(rootPath + '\\testresults\\resultfile\\' + now + result_file, index=False,
                            encoding="utf-8")
-        GetIntent.get_intent_result(self, target_file, exp_intent_list, re_intent_list, test_result_file)
+        GetIntent.get_intent_result(self, target_file, exp_intent_list, re_intent_list, test_result_file, total_num,
+                                    accuracy)
 
     def get_pro_intent(self, api_url, target_file, test_data_file, result_file, test_result_file):
         """
@@ -265,11 +275,11 @@ if __name__ == '__main__':
     #                            "intent\\dermatology\\andpsorasis.txt", "psoriasis\\psoriasis_test_500.csv",
     #                            "psoriasis_pro_result.xls")
     GetIntent().get_pro_intent("http://robotchat.kuaishangkf.com/x/identify/v1/re_unify/identify",
-                               "intent\\gynaecology\\线上target.txt", "gynaecology\\妇科-总测试数据-线上线下.csv",
-                               "gynaecology_pro_result.xls", "gynaecology_pro_target_result.xls")
+                               "intent\\gynaecology\\线上target.txt", "gynaecology\\hj_test.csv",
+                               "gynaecology_pro_result(hj).xls", "gynaecology_pro_target_result(hj).xls")
 #     GetIntent().get_mult_intent("http://192.168.1.74:8900/multi_intention/v2?sentence={}",
-#                                 "intent\\gynaecology\\test_target.txt",
-#                                 "intent\\gynaecology\\gynaecology_to_test.xlsx",
-#                                 "gynaecology_mix_intent_test_result.xls", "mix_final_result.xls")
-# GetIntent().get_final_excel("intent\\gynaecology\\test_target.txt", "mult_final_result.xls")
-# GetIntent().get_test_excel("intent\\gynaecology\\test_target.txt", "mix_final_result.xls")
+# #                                 "intent\\gynaecology\\test_target.txt",
+# #                                 "intent\\gynaecology\\gynaecology_to_test.xlsx",
+# #                                 "gynaecology_mix_intent_test_result.xls", "mix_final_result.xls")
+# # GetIntent().get_final_excel("intent\\gynaecology\\test_target.txt", "mult_final_result.xls")
+# # GetIntent().get_test_excel("intent\\gynaecology\\test_target.txt", "mix_final_result.xls")

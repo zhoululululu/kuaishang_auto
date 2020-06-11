@@ -1,12 +1,12 @@
 {
-  "uid" : "6aa2dd9b80915749",
+  "uid" : "6bd4e0c49c711a26",
   "name" : "test_get_pro_intent",
   "fullName" : "pytest.api.test_get_intent.TestIntent#test_get_pro_intent",
   "historyId" : "5577602bedd8563b8ebaf88513cfdf02",
   "time" : {
-    "start" : 1591694268542,
-    "stop" : 1591694762683,
-    "duration" : 494141
+    "start" : 1591762652178,
+    "stop" : 1591763311696,
+    "duration" : 659518
   },
   "status" : "passed",
   "flaky" : false,
@@ -32,7 +32,7 @@
     "value" : "WIN-OQ20V7UABJF"
   }, {
     "name" : "thread",
-    "value" : "11600-MainThread"
+    "value" : "2952-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -54,6 +54,6 @@
     "categories" : [ ],
     "tags" : [ "api_intention_test" ]
   },
-  "source" : "6aa2dd9b80915749.json",
+  "source" : "6bd4e0c49c711a26.json",
   "parameterValues" : [ ]
 }

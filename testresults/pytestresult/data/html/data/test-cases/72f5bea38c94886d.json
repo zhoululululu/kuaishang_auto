@@ -1,12 +1,12 @@
 {
-  "uid" : "ab491f74a096efce",
+  "uid" : "72f5bea38c94886d",
   "name" : "test_get_pro_intent",
   "fullName" : "pytest.api.test_get_intent.TestIntent#test_get_pro_intent",
   "historyId" : "5577602bedd8563b8ebaf88513cfdf02",
   "time" : {
-    "start" : 1591695838153,
-    "stop" : 1591696415451,
-    "duration" : 577298
+    "start" : 1591860480251,
+    "stop" : 1591861329809,
+    "duration" : 849558
   },
   "status" : "passed",
   "flaky" : true,
@@ -32,7 +32,7 @@
     "value" : "WIN-OQ20V7UABJF"
   }, {
     "name" : "thread",
-    "value" : "16856-MainThread"
+    "value" : "6936-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -53,7 +53,55 @@
   "extra" : {
     "severity" : "normal",
     "retries" : [ {
-      "uid" : "6aa2dd9b80915749",
+      "uid" : "ca67783889f79193",
+      "status" : "passed",
+      "time" : {
+        "start" : 1591783685746,
+        "stop" : 1591784462543,
+        "duration" : 776797
+      }
+    }, {
+      "uid" : "6bd4e0c49c711a26",
+      "status" : "passed",
+      "time" : {
+        "start" : 1591762652178,
+        "stop" : 1591763311696,
+        "duration" : 659518
+      }
+    }, {
+      "uid" : "932df18483b5342",
+      "status" : "passed",
+      "time" : {
+        "start" : 1591761668839,
+        "stop" : 1591762326562,
+        "duration" : 657723
+      }
+    }, {
+      "uid" : "7ac2f1a2d6e63d67",
+      "status" : "passed",
+      "time" : {
+        "start" : 1591759768733,
+        "stop" : 1591760412310,
+        "duration" : 643577
+      }
+    }, {
+      "uid" : "66a0740088da3267",
+      "status" : "passed",
+      "time" : {
+        "start" : 1591758101893,
+        "stop" : 1591758727429,
+        "duration" : 625536
+      }
+    }, {
+      "uid" : "e0658300b5e8d445",
+      "status" : "passed",
+      "time" : {
+        "start" : 1591695838153,
+        "stop" : 1591696415451,
+        "duration" : 577298
+      }
+    }, {
+      "uid" : "5efc0507ef0f2f8f",
       "status" : "passed",
       "time" : {
         "start" : 1591694268542,
@@ -61,7 +109,7 @@
         "duration" : 494141
       }
     }, {
-      "uid" : "62805e131c6c1cba",
+      "uid" : "a30a5d8ec3497a52",
       "status" : "passed",
       "time" : {
         "start" : 1591586215128,
@@ -69,7 +117,7 @@
         "duration" : 101199
       }
     }, {
-      "uid" : "e360a2942e491682",
+      "uid" : "fe133dac7af1ec31",
       "status" : "broken",
       "statusDetails" : "UnicodeDecodeError: 'utf-8' codec can't decode byte 0xc3 in position 0: invalid continuation byte",
       "time" : {
@@ -78,7 +126,7 @@
         "duration" : 101020
       }
     }, {
-      "uid" : "eee80251ce5883d8",
+      "uid" : "8887c6e2f21ccae4",
       "status" : "broken",
       "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\workspace\\\\kuaishang_auto\\\\testdata\\\\apidata\\\\leucoderma\\\\leucoderma_test_data.csv'",
       "time" : {
@@ -90,6 +138,6 @@
     "categories" : [ ],
     "tags" : [ "api_intention_test" ]
   },
-  "source" : "ab491f74a096efce.json",
+  "source" : "72f5bea38c94886d.json",
   "parameterValues" : [ ]
 }

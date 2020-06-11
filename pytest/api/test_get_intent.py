@@ -16,9 +16,9 @@ class TestIntent(object):
     @allure.feature("测试环境通用意图识别")
     def test_get_pro_intent(self):
         # 意图测试
-        GetRequests().get_request("http://192.168.1.74:8900/fuke_intention/v1_31", "GET", "intent",
+        GetRequests().get_request("http://192.168.1.74:8900/fuke_intention/v1_42", "GET", "intent",
                                   "intent\\gynaecology\\线上target.txt",
-                                  "intent\\gynaecology\\线上线下test_case_31.csv", ["sentence"], "label",
+                                  "intent\\gynaecology\\妇科-总测试数据-线上线下.csv", ["sentence"], "label",
                                   "gynaecology_intention_test_result.xls",
                                   "gynaecology_intention_target_test_result.xls")
         # GetRequests().get_request("http://192.168.1.74:8900/fuke_intention/v1", "GET", "intent",

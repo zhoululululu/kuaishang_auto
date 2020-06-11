@@ -32,7 +32,7 @@ class GetRequests:
         # 意图
         if api_name == "intent":
             params = {
-                #"utterance": data
+                # "utterance": data
                 "sentence": data
             }
         # 项目
@@ -74,7 +74,7 @@ class GetRequests:
         """
         # 意图
         if api_name == "intent":
-            #result = result["data"]["intent"]
+            # result = result["data"]["intent"]
             result = result["data"]["intention"]
         # 项目
         elif api_name == "item":
@@ -186,17 +186,20 @@ class GetRequests:
                     print("bad request")
 
             test_data["response"] = re_list  # 在testdata中拼接接口返回值，方便后期输出excel对齐显示
-            test_data = CommonFunction.get_collection_1(test_data,
-                                                        tf_list)  # 调用方法控制台打印输出相关信息（是否一致，总数，一致数，不一直数，一致率，不一致率等）
+            # 调用方法控制台打印输出相关信息（是否一致，总数，一致数，不一直数，一致率，不一致率等）
+            test_data, total_num, accuracy = CommonFunction.get_collection_1(test_data,
+                                                                             tf_list)
             now = time.strftime('%y_%m_%d-%H_%M_%S')
             test_data.to_excel(rootPath + '\\testresults\\resultfile\\' + now + result_file, index=False,
                                encoding="utf-8")  # 输出excel
         if "similary" in api_category:  # 相似度处理（二分类算法，直接调用输出显示prf值）
             Binary.binary_plot_curve(exp_list, re_list)
         else:  # 其他接口（多分类算法，通过调用调用输出显示每个target的prf值）
-            GetRequests.get_target_result(self, target_file, exp_list, re_list, target_result_file)
+            file_name = GetRequests.get_target_result(self, target_file, exp_list, re_list, target_result_file,
+                                                      total_num, accuracy)
+        return file_name
 
-    def get_target_result(self, target_file, bz_intent_list, re_intent_list, target_result_file):
+    def get_target_result(self, target_file, bz_intent_list, re_intent_list, target_result_file, total_num, accuracy):
         """
         通过获取target列表，以及人工及接口返回的意图值，来计算每个target及平均的准确率，召回率，F1
         :param target_file: 储存target的文件
@@ -219,6 +222,13 @@ class GetRequests:
         pn_list.append(pn)
         rn_list.append(rn)
         tn_list.append(tn)
+        target_list.append("汇总")
+        precision_list.append("用例数：" + str(total_num))
+        recall_list.append("accuracy：" + str(accuracy))
+        f1_list.append("")
+        pn_list.append("")
+        rn_list.append("")
+        tn_list.append("")
         now = time.strftime('%y_%m_%d-%H_%M_%S')
         workbook = xlwt.Workbook()
         sheet1 = workbook.add_sheet('统计结果', cell_overwrite_ok=True)
@@ -238,6 +248,7 @@ class GetRequests:
             sheet1.write(i + 1, 5, recall_list[i])
             sheet1.write(i + 1, 6, f1_list[i])
         workbook.save(rootPath + '\\testresults\\resultfile\\' + now + target_result_file)
+        return rootPath + '\\testresults\\resultfile\\' + now + target_result_file
 
 
 if __name__ == '__main__':
