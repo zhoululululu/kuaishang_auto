@@ -213,15 +213,15 @@ class GetRequests:
                                                                                                              target_list,
                                                                                                              bz_intent_list,
                                                                                                              re_intent_list)
-        # 返回平均的准确率，召回率，F1
-        target_list.append("平均值（不含无）")
-        p, r, f1, pn, rn, tn = MultiClassByWord.multi_ave_target(self, bz_intent_list, re_intent_list, "无")
-        precision_list.append(p)
-        recall_list.append(r)
-        f1_list.append(f1)
-        pn_list.append(pn)
-        rn_list.append(rn)
-        tn_list.append(tn)
+        # 返回NER中非O平均的准确率，召回率，F1
+        # target_list.append("平均值（不含O）")
+        # p, r, f1, pn, rn, tn = MultiClassByWord.multi_ave_target(self, bz_intent_list, re_intent_list, "O")
+        # precision_list.append(p)
+        # recall_list.append(r)
+        # f1_list.append(f1)
+        # pn_list.append(pn)
+        # rn_list.append(rn)
+        # tn_list.append(tn)
         target_list.append("汇总")
         precision_list.append("用例数：" + str(total_num))
         recall_list.append("accuracy：" + str(accuracy))

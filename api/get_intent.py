@@ -35,19 +35,10 @@ class GetIntent:
                                                                                                              target_list,
                                                                                                              bz_intent_list,
                                                                                                              re_intent_list)
-        # 返回平均的准确率，召回率，F1
-        target_list.append("平均值（不含无）")
-        p, r, f1, pn, rn, tn = MultiClassByWord.multi_ave_target(self, bz_intent_list, re_intent_list, "无")
-        precision_list.append(p)
-        recall_list.append(r)
-        f1_list.append(f1)
-        pn_list.append(pn)
-        rn_list.append(rn)
-        tn_list.append(tn)
 
         target_list.append("汇总")
-        precision_list.append("用例数：" + total_num)
-        recall_list.append("accuracy：" + accuracy)
+        precision_list.append("用例数：" + str(total_num))
+        recall_list.append("accuracy：" + str(accuracy))
         f1_list.append("")
         pn_list.append("")
         rn_list.append("")
@@ -93,7 +84,6 @@ class GetIntent:
                 r = requests.get(url, timeout=50)
                 result = r.json()
                 re_intent = result["data"]["intent"]  # 获取返回data的intent
-                print(re_intent)
                 tf = CommonFunction.get_tf(intent, re_intent)
             except Exception as e:
                 score = "bad request"
@@ -156,12 +146,13 @@ class GetIntent:
 
         test_data["re_intent"] = re_intent_list
         # 调用方法，拼接test_data值
-        test_data = CommonFunction.get_collection_1(test_data, tf_list)
+        test_data, total_num, accuracy = CommonFunction.get_collection_1(test_data, tf_list)
         now = time.strftime('%y_%m_%d-%H_%M_%S')
         # 输出excel
         test_data.to_excel(rootPath + '\\testresults\\resultfile\\' + now + result_file, index=False,
                            encoding="utf-8")
-        GetIntent.get_intent_result(self, target_file, exp_intent_list, re_intent_list, test_result_file)
+        GetIntent.get_intent_result(self, target_file, exp_intent_list, re_intent_list, test_result_file, total_num,
+                                    accuracy)
 
     def get_eye_intent(self, api_url, target_file, test_data_file, result_file):
         """
@@ -274,12 +265,23 @@ if __name__ == '__main__':
     # GetIntent().get_pro_intent("http://robotchat.kuaishangkf.com/x/identify/v1/re_unify/identify",
     #                            "intent\\dermatology\\andpsorasis.txt", "psoriasis\\psoriasis_test_500.csv",
     #                            "psoriasis_pro_result.xls")
-    GetIntent().get_pro_intent("http://robotchat.kuaishangkf.com/x/identify/v1/re_unify/identify",
-                               "intent\\gynaecology\\线上target.txt", "gynaecology\\hj_test.csv",
-                               "gynaecology_pro_result(hj).xls", "gynaecology_pro_target_result(hj).xls")
+    # GetIntent().get_pro_intent("http://robotchat.kuaishangkf.com/x/identify/v1/re_unify/identify",
+    #                            "intent\\gynaecology\\线上target.txt", "gynaecology\\妇科-总测试数据-线上线下.csv",
+    #                            "gynaecology_pro_result.xls", "gynaecology_pro_target_result.xls")
+    # GetIntent().get_pro_intent("http://robotchat.kuaishangkf.com/x/identify/v1/re_unify/identify",
+    #                            "intent\\gynaecology\\线上target.txt", "gynaecology\\hj_test.csv",
+    #                            "gynaecology_pro_result.xls", "gynaecology_pro_target_result.xls")
+    GetIntent().get_intent(
+        "http://192.168.26.105:30102/intention/v1?utterance={}&enterprise=skin&multi_intent_mode=False",
+        "intent\\dermatology\\target.txt", "dermatology\\dermatology_test_data_3995.csv",
+        "dermatology_test_result.xls", "dermatology_test_target_result.xls")
+    #192.168.1.79:8902/intention/v2/skin?utterance=注意事项&enterprise=beauty&multi_intent_mode=False&qt_mode=True
+    GetIntent().get_intent(
+        "http://192.168.1.79:8902/intention/v2/skin?utterance={}&enterprise=beauty&multi_intent_mode=False&qt_mode=True",
+        "intent\\dermatology\\target.txt", "dermatology\\dermatology_test_data_3995.csv",
+        "dermatology_test_result.xls", "dermatology_test_target_result.xls")
 #     GetIntent().get_mult_intent("http://192.168.1.74:8900/multi_intention/v2?sentence={}",
 # #                                 "intent\\gynaecology\\test_target.txt",
 # #                                 "intent\\gynaecology\\gynaecology_to_test.xlsx",
 # #                                 "gynaecology_mix_intent_test_result.xls", "mix_final_result.xls")
-# # GetIntent().get_final_excel("intent\\gynaecology\\test_target.txt", "mult_final_result.xls")
 # # GetIntent().get_test_excel("intent\\gynaecology\\test_target.txt", "mix_final_result.xls")

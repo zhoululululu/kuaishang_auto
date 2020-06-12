@@ -8,9 +8,10 @@ Created on 2020/6/11
 import pandas
 from io import BytesIO
 import time
-from flask import Flask, Response
+from flask import Flask, request, Response
 from common.change_data_type import ChangeDataType
 import os
+from api.get_requests import GetRequests
 
 curPath = os.path.abspath(os.path.dirname(__file__))
 rootPath = os.path.split(curPath)[0]
@@ -37,10 +38,10 @@ def trans_record_data_to_io(data):
 
 @app.route('/test_test_result/download', methods=['GET'])
 def download():
-    from api.get_requests import GetRequests
     data_list = []
     data = {}
-    file_name = GetRequests().get_request("http://192.168.1.74:8900/fuke_intention/v1_42", "GET", "intent",
+    url = request.form.get("url")  # 获取接口请求中form-data的url参数传入的值
+    file_name = GetRequests().get_request(url, "GET", "intent",
                                           "intent\\gynaecology\\线上target.txt",
                                           "intent\\gynaecology\\妇科-总测试数据-线上线下.csv", ["sentence"], "label",
                                           "gynaecology_intention_test_result.xls",

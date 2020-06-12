@@ -2,48 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a68f835-effe-4429-a687-34ebae545105" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/apitest/api_test_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apitest/test_result_for_api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/get_repeat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testdata/apidata/intent/gynaecology/hj_test.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testdata/apidata/intent/gynaecology/new_data_all_1.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithm/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithm/Test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithm/algorithm_func.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithm/algorithm_func.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/get_intent.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/get_intent.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/get_requests.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/get_requests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apitest/api_test_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/apitest/api_test_2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apitest/test_for_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/apitest/test_for_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apitest/testfortt.py" beforeDir="false" afterPath="$PROJECT_DIR$/apitest/testfortt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/common_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/common_function.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apitest/test_result_for_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/apitest/test_result_for_api.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pytest/api/test_get_intent.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytest/api/test_get_intent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testdata/apidata/intent/gynaecology/hj_test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/testdata/apidata/intent/gynaecology/hj_test.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testdata/apidata/intent/gynaecology/妇科-总测试数据-线上线下.csv" beforeDir="false" afterPath="$PROJECT_DIR$/testdata/apidata/intent/gynaecology/妇科-总测试数据-线上线下.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testdata/apidata/intent/gynaecology/线上target.txt" beforeDir="false" afterPath="$PROJECT_DIR$/testdata/apidata/intent/gynaecology/线上target.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/behaviors.json" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/behaviors.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/packages.json" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/packages.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/suites.csv" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/suites.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/suites.json" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/suites.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/62805e131c6c1cba.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/6aa2dd9b80915749.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/ab491f74a096efce.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/e360a2942e491682.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/eee80251ce5883d8.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/timeline.json" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/timeline.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/export/influxDbData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/pytestresult/data/html/export/influxDbData.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/export/prometheusData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/pytestresult/data/html/export/prometheusData.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/history/duration-trend.json" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/pytestresult/data/html/history/duration-trend.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/history/history.json" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/pytestresult/data/html/history/history.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/history/retry-trend.json" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/pytestresult/data/html/history/retry-trend.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/duration-trend.json" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/duration-trend.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/duration.json" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/duration.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/retry-trend.json" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/retry-trend.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/severity.json" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/severity.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/status-chart.json" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/status-chart.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/summary.json" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/summary.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_06_09-17_26_02gynaecology_intention_target_test_result.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_06_09-17_26_02gynaecology_intention_test_result.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_06_09-17_53_35gynaecology_intention_target_test_result.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_06_09-17_53_35gynaecology_intention_test_result.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/resultfile/test_result.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/resultfile/test_result.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,17 +139,10 @@
     <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/hj_test" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="RainbowCSV.Settings" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
     <property name="two.files.diff.last.used.folder" value="$PROJECT_DIR$/pytest/testresults" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\workspace\kuaishang_auto\apitest" />
-      <recent name="D:\workspace\kuaishang_auto\testdata\apidata\qamatcher" />
-      <recent name="D:\workspace\kuaishang_auto\testdata\apidata\intent\gynaecology" />
-      <recent name="D:\workspace\kuaishang_auto\testdata\apidata\intent\otolaryngology" />
-      <recent name="D:\workspace\kuaishang_auto\testdata\apidata\intent\ophthalmology" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\workspace\kuaishang_auto\testdata\apidata\intent\gynaecology" />
       <recent name="D:\workspace\kuaishang_auto\testdata\apidata\intent\psoriasis" />
@@ -188,8 +150,15 @@
       <recent name="D:\workspace\kuaishang_auto\apitest" />
       <recent name="D:\workspace\kuaishang_auto\testdata\apidata\similary\qa_similary" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\workspace\kuaishang_auto\apitest" />
+      <recent name="D:\workspace\kuaishang_auto\testdata\apidata\qamatcher" />
+      <recent name="D:\workspace\kuaishang_auto\testdata\apidata\intent\gynaecology" />
+      <recent name="D:\workspace\kuaishang_auto\testdata\apidata\intent\otolaryngology" />
+      <recent name="D:\workspace\kuaishang_auto\testdata\apidata\intent\ophthalmology" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.test_result_for_api">
+  <component name="RunManager" selected="Python.get_intent">
     <configuration name="api_test_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ZL_AUTO_TEST" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -204,6 +173,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/apitest/api_test_2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="get_intent" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ZL_AUTO_TEST" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api/get_intent.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -278,35 +269,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="testfortt" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="ZL_AUTO_TEST" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/apitest" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/apitest/testfortt.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.get_intent" />
         <item itemvalue="Python.test_result_for_api" />
         <item itemvalue="Python.api_test_2" />
-        <item itemvalue="Python.testfortt" />
-        <item itemvalue="Python.run_all" />
         <item itemvalue="Python.test_for_api" />
+        <item itemvalue="Python.run_all" />
       </list>
     </recent_temporary>
   </component>
@@ -378,7 +347,7 @@
       <workItem from="1591582480317" duration="10086000" />
       <workItem from="1591598334053" duration="22546000" />
       <workItem from="1591697084394" duration="38406000" />
-      <workItem from="1591856262824" duration="12157000" />
+      <workItem from="1591856262824" duration="39839000" />
     </task>
     <servers />
   </component>
@@ -398,42 +367,42 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1591868206065" />
-    <state width="1877" height="363" key="GridCell.Tab.0.bottom" timestamp="1591863053543">
+    <state width="1877" height="160" key="GridCell.Tab.0.bottom" timestamp="1591952238102">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591863053543" />
-    <state width="1877" height="363" key="GridCell.Tab.0.center" timestamp="1591863053543">
+    <state width="1877" height="160" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591952238102" />
+    <state width="1877" height="160" key="GridCell.Tab.0.center" timestamp="1591952238102">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591863053543" />
-    <state width="1877" height="363" key="GridCell.Tab.0.left" timestamp="1591863053543">
+    <state width="1877" height="160" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591952238102" />
+    <state width="1877" height="160" key="GridCell.Tab.0.left" timestamp="1591952238102">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591863053543" />
-    <state width="1877" height="363" key="GridCell.Tab.0.right" timestamp="1591863053543">
+    <state width="1877" height="160" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591952238102" />
+    <state width="1877" height="160" key="GridCell.Tab.0.right" timestamp="1591952238102">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="363" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591863053543" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1591855128839">
+    <state width="1877" height="160" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591952238102" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1591871577122">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591855128839" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1591855128839">
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591871577122" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1591871577122">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591855128839" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1591855128839">
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591871577122" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1591871577121">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591855128839" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1591855128839">
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591871577121" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1591871577122">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591855128839" />
-    <state x="758" y="169" key="SettingsEditor" timestamp="1591862691661">
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591871577122" />
+    <state x="408" y="121" key="SettingsEditor" timestamp="1591956514474">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="758" y="169" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1591862691661" />
+    <state x="408" y="121" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1591956514474" />
     <state x="645" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1591582355722">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -455,17 +424,17 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/kuaishang_auto$test_result_for_api.coverage" NAME="test_result_for_api Coverage Results" MODIFIED="1591863049871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apitest" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$test_result_for_api.coverage" NAME="test_result_for_api Coverage Results" MODIFIED="1591947929210" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apitest" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$test_get_intent_percent.coverage" NAME="test_get_intent_percent Coverage Results" MODIFIED="1591607274254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$test_item_process.coverage" NAME="test_item_process Coverage Results" MODIFIED="1591588956803" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pytest/ui" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$get_threshold_test.coverage" NAME="get_threshold_test Coverage Results" MODIFIED="1591608711400" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
-    <SUITE FILE_PATH="coverage/kuaishang_auto$get_intent.coverage" NAME="get_intent Coverage Results" MODIFIED="1591839697939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$get_intent.coverage" NAME="get_intent Coverage Results" MODIFIED="1591952238095" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$get_requests.coverage" NAME="get_requests Coverage Results" MODIFIED="1591585947507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
-    <SUITE FILE_PATH="coverage/kuaishang_auto$run_all.coverage" NAME="run_all Coverage Results" MODIFIED="1591860477767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pytest" />
-    <SUITE FILE_PATH="coverage/kuaishang_auto$test_for_api.coverage" NAME="test_for_api Coverage Results" MODIFIED="1591855154805" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apitest" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$run_all.coverage" NAME="run_all Coverage Results" MODIFIED="1591871829649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pytest" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$test_for_api.coverage" NAME="test_for_api Coverage Results" MODIFIED="1591929455171" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apitest" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$get_repeat.coverage" NAME="get_repeat Coverage Results" MODIFIED="1591777841043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$testfortt.coverage" NAME="testfortt Coverage Results" MODIFIED="1591861538324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apitest" />
-    <SUITE FILE_PATH="coverage/kuaishang_auto$api_test_2.coverage" NAME="api_test_2 Coverage Results" MODIFIED="1591863044764" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apitest" />
-    <SUITE FILE_PATH="coverage/kuaishang_auto$test_get_intent.coverage" NAME="test_get_intent Coverage Results" MODIFIED="1591585942329" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pytest/api" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$api_test_2.coverage" NAME="api_test_2 Coverage Results" MODIFIED="1591942905149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apitest" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$test_get_intent.coverage" NAME="test_get_intent Coverage Results" MODIFIED="1591871823196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pytest/api" />
   </component>
 </project>

@@ -15,14 +15,20 @@ rootPath = os.path.split(curPath)[0]
 
 class ApiTest:
 
-    def api_test(self):
+    @staticmethod
+    def api_test():
+        request_url = "http://192.168.1.74:8930/fuke_intention/new_39_v5"
+
         herder = {
             "Connection": "keep-alive",
-            "Content_type": "application/octet-stream"
-
+            "Content_type": "multipart/form-data; application/octet-stream"
         }
 
-        r = requests.get(url="http://192.168.120.6:8892/test_test_result/download", headers=herder,
+        params = {
+            "url": request_url
+        }
+
+        r = requests.get(url="http://192.168.120.6:8892/test_test_result/download", headers=herder, data=params,
                          timeout=999999)
         fp = open(rootPath + "\\testresults\\resultfile\\test_result.xlsx", "wb")
         fp.write(r.content)
