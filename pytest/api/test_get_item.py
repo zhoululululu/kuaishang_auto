@@ -16,5 +16,5 @@ class TestItem(object):
     @allure.feature("项目识别")
     def test_get_item(self):
         GetRequests().get_request("http://192.168.1.74:8900/meal", "GET", "item", "beauty_item.txt",
-                                  "test_for_request_item.csv", "sentence", "label",
+                                  "est_for_request_item.csv", "sentence", "label",
                                   "beauty_test_result.xls")

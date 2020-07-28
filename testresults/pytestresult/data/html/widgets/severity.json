@@ -1,10 +1,30 @@
 [ {
-  "uid" : "72f5bea38c94886d",
+  "uid" : "8ca0f5346634f996",
   "name" : "test_get_pro_intent",
   "time" : {
-    "start" : 1591860480251,
-    "stop" : 1591861329809,
-    "duration" : 849558
+    "start" : 1595502367355,
+    "stop" : 1595502706288,
+    "duration" : 338933
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c686a4eb92bf197f",
+  "name" : "test_get_common_ner",
+  "time" : {
+    "start" : 1595561070357,
+    "stop" : 1595561440843,
+    "duration" : 370486
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "d3ef569f4f56fd58",
+  "name" : "test_get_qa_similarity",
+  "time" : {
+    "start" : 1593332851397,
+    "stop" : 1593332912303,
+    "duration" : 60906
   },
   "status" : "passed",
   "severity" : "normal"

@@ -10,8 +10,8 @@ import os
 import requests
 import time
 from tqdm import tqdm
-from common.change_data_type import ChangeDataType
-from common.common_function import CommonFunction
+from commonfunc.change_data_type import ChangeDataType
+from commonfunc.common_function import CommonFunction
 from algorithm.algorithm_func import Binary
 
 curPath = os.path.abspath(os.path.dirname(__file__))

@@ -1,0 +1,61 @@
+{
+  "uid" : "9380220aba11f05a",
+  "name" : "test_get_pro_intent",
+  "fullName" : "pytest.api.test_get_intent.TestIntent#test_get_pro_intent",
+  "historyId" : "5577602bedd8563b8ebaf88513cfdf02",
+  "time" : {
+    "start" : 1592467435945,
+    "stop" : 1592472341967,
+    "duration" : 4906022
+  },
+  "status" : "broken",
+  "statusMessage" : "ValueError: Length of values does not match length of index",
+  "statusTrace" : "self = <test_get_intent.TestIntent object at 0x0000021D1AB7A518>\n\n    @pytest.mark.api_intention_test\n    @allure.feature(\"测试环境通用意图识别\")\n    def test_get_pro_intent(self):\n        # 意图测试\n        GetRequests().get_request(\"http://192.168.1.79:8900/intention/v2/skin\", \"GET\", \"skin_intent\",\n                                  \"intent\\\\dermatology\\\\target.txt\",\n                                  \"intent\\\\dermatology\\\\dermatology_test_data_3995.csv\", [\"sentence\"], \"label\",\n                                  \"dermatology_intention_test_result.xls\",\n>                                 \"dermatology_intention_target_test_result.xls\")\n\napi\\test_get_intent.py:23: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n..\\api\\get_requests.py:222: in get_request\n    test_data[\"response\"] = re_list  # 在testdata中拼接接口返回值，方便后期输出excel对齐显示\nE:\\Python3.7.3\\lib\\site-packages\\pandas\\core\\frame.py:2938: in __setitem__\n    self._set_item(key, value)\nE:\\Python3.7.3\\lib\\site-packages\\pandas\\core\\frame.py:3000: in _set_item\n    value = self._sanitize_column(key, value)\nE:\\Python3.7.3\\lib\\site-packages\\pandas\\core\\frame.py:3636: in _sanitize_column\n    value = sanitize_index(value, self.index, copy=False)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\ndata = ['咨询副作用', '咨询电话', '咨询微信', '咨询病因', '咨询副作用', '咨询电话', ...]\nindex = RangeIndex(start=0, stop=3996, step=1), copy = False\n\n    def sanitize_index(data, index, copy=False):\n        \"\"\"\n        Sanitize an index type to return an ndarray of the underlying, pass\n        through a non-Index.\n        \"\"\"\n    \n        if index is None:\n            return data\n    \n        if len(data) != len(index):\n>           raise ValueError(\"Length of values does not match length of index\")\nE           ValueError: Length of values does not match length of index\n\nE:\\Python3.7.3\\lib\\site-packages\\pandas\\core\\internals\\construction.py:611: ValueError",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "测试环境通用意图识别"
+  }, {
+    "name" : "tag",
+    "value" : "api_intention_test"
+  }, {
+    "name" : "parentSuite",
+    "value" : "pytest.api"
+  }, {
+    "name" : "suite",
+    "value" : "test_get_intent"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestIntent"
+  }, {
+    "name" : "host",
+    "value" : "WIN-OQ20V7UABJF"
+  }, {
+    "name" : "thread",
+    "value" : "20200-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "pytest.api.test_get_intent"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ "api_intention_test" ]
+  },
+  "source" : "9380220aba11f05a.json",
+  "parameterValues" : [ ]
+}

@@ -9,9 +9,10 @@ Created on 2020/3/23
 import os
 import requests
 import csv
-from common.common_function import CommonFunction
+from commonfunc.common_function import CommonFunction
 from algorithm.algorithm_func import MultiClassByWord
-from common.change_data_type import ChangeDataType
+from tqdm import tqdm
+from commonfunc.change_data_type import ChangeDataType
 
 curPath = os.path.abspath(os.path.dirname(__file__))
 rootPath = os.path.split(curPath)[0]
@@ -21,7 +22,7 @@ import time
 
 class GetNer:
 
-    def get_ner_result(self, target_file, exp_bio_list, re_bio_list):
+    def get_ner_result(self, target_file, exp_bio_list, re_bio_list, result_file):
         """
         通过获取target列表，以及人工及接口返回的bio值，来计算每个target及平均的准确率，召回率，F1
         :param target_file: 储存target的文件
@@ -31,7 +32,7 @@ class GetNer:
         target_list = CommonFunction.get_target(self, target_file)
         # 获取人工预期及接口返回的bio值list
         # exp_bio_list, re_bio_list = ChangeDataType.ner_csv_to_dict(
-        # rootPath + "\\testresults\\resultfile\\common_ner_test_result.csv")
+        # rootPath + "\\testresults\\resultfile\\1common_ner_test_result.csv")
         # 返回每个target的准确率，召回率，F1
         precision_list, recall_list, f1_list, pn_list, rn_list, tn_list = MultiClassByWord.multi_each_target(self,
                                                                                                              target_list,
@@ -64,9 +65,9 @@ class GetNer:
         sheet1.write(i + 1, 4, precision_list[i])
         sheet1.write(i + 1, 5, recall_list[i])
         sheet1.write(i + 1, 6, f1_list[i])
-        workbook.save(rootPath + '\\testresults\\resultfile\\' + now + "common_ner_target_test_result.xls")
+        workbook.save(rootPath + '\\testresults\\resultfile\\' + now + result_file)
 
-    def get_ner(self, api_url, origin_test_data_file, test_data_file, result_file, target_file):
+    def get_ner(self, api_url, test_data_file, result_file, target_file, target_result_file):
         """
         通过target列表，以及人工及接口返回的bio
         :param origin_test_data_file: 原始的只有单个字及人工bio值的文件
@@ -74,6 +75,7 @@ class GetNer:
         :param result_file: 接口运行后，生成的接口结果文件
         :param target_file: 储存target的文件
         """
+        now = time.strftime('%y_%m_%d-%H_%M_%S')
         # 调用get_txt_to_csv函数，将txt文件转换为csv文件
         # CommonFunction.get_txt_to_csv(origin_test_data_file, test_data_file)
         # 调用get_ner_to_words函数，返回字列表，句子列表，及人工预期bio列表
@@ -81,31 +83,40 @@ class GetNer:
         result_bio_list = []
         tf_list = []
         # 创建或打开result_file文件
-        f = open(rootPath + "\\testresults\\resultfile\\" + result_file, 'w+', encoding='utf-8',
+        f = open(rootPath + "\\testresults\\resultfile\\" + now + result_file, 'w+', encoding='utf-8',
                  newline="")
         csv_writer = csv.writer(f)
         # 输入csv文件四个列的title
         csv_writer.writerow(["word", "exp_bio", "re_bio", "tf"])
         # 计数，用于遍历word_list及bios_list对应的值
         n = -1
-        for temp in words_list:
+        for temp in tqdm(words_list):
+            params = {
+                'model_name': 'gynaecology',
+                'utterance': temp
+            }
             # 请求接口，循环words_list中的每句话
-            url = api_url.format(
-                temp)
+            # url = api_url.format(
+            #     temp)
             try:
-                r = requests.get(url, timeout=50)
+                r = requests.get(api_url, params=params, timeout=50)
                 result = r.json()
                 # 获取接口返回的data中的bio值
                 re_bio = result["data"]["bio"]
                 # 循环取接口返回的bio值
-                for i in range(0, len(re_bio)):
-                    n = n + 1
-                    # 调用函数，查看人工bio与接口返回bio是否一致
-                    tf = CommonFunction.get_tf(bios_list[n], re_bio[i])
-                    # csv循环填入字，人工bio值，接口返回bio值，以及tf值
-                    csv_writer.writerow([word_list[n], bios_list[n], re_bio[i], tf])
-                    result_bio_list.append(re_bio[i])
-                    tf_list.append(tf)
+                if len(re_bio) != bios_list[n]:
+                    print(temp)
+                    print(bios_list[n])
+                    print(re_bio)
+                else :
+                    for i in range(0, len(re_bio)):
+                        n = n + 1
+                        # 调用函数，查看人工bio与接口返回bio是否一致
+                        tf = CommonFunction.get_tf(bios_list[n], re_bio[i])
+                        # csv循环填入字，人工bio值，接口返回bio值，以及tf值
+                        csv_writer.writerow([word_list[n], bios_list[n], re_bio[i], tf])
+                        result_bio_list.append(re_bio[i])
+                        tf_list.append(tf)
             except Exception as e:
                 re_bio = "bad request"
         f.close()
@@ -113,10 +124,22 @@ class GetNer:
               "{:.2f}%".format(tf_list.count("TRUE") / len(tf_list) * 100), "，不一致率：",
               "{:.2f}%".format(tf_list.count("FALSE") / len(tf_list) * 100))
         # 调用函数，输出每个target及平均的准确率，召回率，F1
-        GetNer.get_ner_result(self, target_file, bios_list, result_bio_list)
+        GetNer.get_ner_result(self, target_file, bios_list, result_bio_list, target_result_file)
+
+    def just_ner_result(self, file, target_file, target_result_file):
+        test_data = ChangeDataType.csv_to_dict(rootPath + "\\testresults\\resultfile\\" + file)
+        exp_bio_list = test_data.exp_bio.tolist()
+        re_bio_list = test_data.re_bio.tolist()
+        GetNer.get_ner_result(self, target_file, exp_bio_list, re_bio_list, target_result_file)
 
 
 if __name__ == '__main__':
-    GetNer().get_ner("http://192.168.1.18:32060/ner/v1?utterance={}&model_name=all_area", "common_ner_test_case.txt",
-                     "bio_char_result.csv",
-                     "gynaenology_ner_test_result.csv", "ner\\common_ner_tag.txt")
+    GetNer().get_ner("http://192.168.1.74:8062/ner/v1",
+                     "ner\\gynaecology\\bio_char_result.csv",
+                     "gynaenology_ner_test_result.csv", "ner\\gynaecology\\tag.txt",
+                     "gynaenology_ner_target_test_result.xls")
+
+    # "common_ner_target_test_result.xls"
+    # GetNer().just_ner_result("gynaenology_ner_test_result1.csv",
+    #                          "ner\\gynaecology\\tag.txt",
+    #                          "gynaenology_ner_test_result1.xls")

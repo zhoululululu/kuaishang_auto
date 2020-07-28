@@ -1,5 +1,25 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
   "name" : "categories",
-  "children" : [ ]
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "UnboundLocalError: local variable 'total_num' referenced before assignment",
+      "children" : [ {
+        "name" : "test_get_common_ner",
+        "uid" : "c686a4eb92bf197f",
+        "parentUid" : "8a9c26778f65f1bb4e57f92ac3a3b8b1",
+        "status" : "broken",
+        "time" : {
+          "start" : 1595561070357,
+          "stop" : 1595561440843,
+          "duration" : 370486
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "8a9c26778f65f1bb4e57f92ac3a3b8b1"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ]
 }

@@ -3,11 +3,10 @@
 Created on 2020/5/14
 @File  : Qamatcher_Qastudio_comp.py
 @author: ZL
-@Desc  :
+@Desc  : 临时测试脚本，qamatcher与qastudio的对比效果
 '''
 import os
 import time
-
 import requests
 import xlwt
 
@@ -103,41 +102,42 @@ class Comp:
             sheet1.write(i + 1, 2, s2_questionlist2[i])
         workbook.save(rootPath + '\\testresults\\resultfile\\' + now + "qa_comp_result22.xls")
 
+if __name__ == '__main__':
 
-data = [["kst", "marketing_robot", "andrology", '["andrology"]', "包皮过长怎么办啊"],  # 男科
-        ["kst", "marketing_robot", "andrology", '["andrology"]', "尿频尿急怎么治"],
-        ["kst", "marketing_robot", "andrology", '["andrology"]', "早射怎么回事"],
-        ["kst", "marketing_robot", "andrology", '["andrology"]', "阳痿是什么情况呢"],
-        ["kst", "marketing_robot", "andrology", '["andrology"]', "早泄是什么情况呢"],
-        ["kst", "marketing_robot", "andrology", '["andrology"]', "包皮炎啊"],
-        ["kst", "marketing_robot", "andrology", '["andrology"]', "附睾炎是什么呀"],
-        ["kst", "marketing_robot", "andrology", '["andrology"]', "阴囊炎呢"],
-        ["kst", "marketing_robot", "andrology", '["andrology"]', "包茎治疗多少钱啊"],
-        ["kst", "marketing_robot", "andrology", '["andrology"]', "包皮 有疙瘩"],
-        ["kst", "marketing_robot", "andrology", '["andrology"]', "早泄 这个严重吗"],
-        ["kst", "marketing_robot_diy", "psoriasis", '["psoriasis"]', "能治好吗"],  # 银屑病
-        ["kst", "marketing_robot_diy", "psoriasis", '["psoriasis"]', "脓疱病 这病能根治吗"],
-        ["kst", "marketing_robot_diy", "psoriasis", '["psoriasis"]', "头癣咋治疗"],
-        ["kst", "marketing_robot_diy", "psoriasis", '["psoriasis"]', "牛皮癣好治吗"],
-        ["kst", "marketing_robot_diy", "psoriasis", '["psoriasis"]', "斑秃能治么"],
-        ["kst", "marketing_robot_diy", "psoriasis", '["psoriasis"]', "牛皮癣传染吗"],
-        ["kst", "marketing_robot_diy", "psoriasis", '["psoriasis"]', "银屑病 这病能治好吗？"],
-        ["kst", "marketing_robot_diy", "psoriasis", '["psoriasis"]', "头皮癣能除根吗"],
-        ["kst", "marketing_robot_diy", "psoriasis", '["psoriasis"]', "银屑病和牛皮癣是一样的吗"],
-        ["kst", "marketing_robot_diy", "psoriasis", '["psoriasis"]', "牛皮癣和银屑病的区别"],
-        ["kst", "marketing_robot_diy", "psoriasis", '["psoriasis"]', "冬季牛皮癣复发吗"],
-        ["kst", "marketing_robot_diy", "vitiligo", '["vitiligo"]', "白斑会扩散吗"],  # 白癜风
-        ["kst", "marketing_robot_diy", "vitiligo", '["vitiligo"]', "白癜风能完全医好吗"],
-        ["kst", "marketing_robot_diy", "vitiligo", '["vitiligo"]', "白癜风会传染吗"],
-        ["kst", "marketing_robot_diy", "vitiligo", '["vitiligo"]', "请问遗传性白癫风病能治好吗"],
-        ["kst", "marketing_robot_diy", "vitiligo", '["vitiligo"]', "白癜风有什么危害呢"],
-        ["kst", "marketing_robot_diy", "vitiligo", '["vitiligo"]', "白癜风会遗传么"],
-        ["kst", "marketing_robot_diy", "vitiligo", '["vitiligo"]', "为什么会得白癜风"],
-        ["kst", "marketing_robot_diy", "vitiligo", '["vitiligo"]', "白斑吃什么药好"],
-        ["kst", "marketing_robot_diy", "vitiligo", '["vitiligo"]', "白斑这是什么原因造成的"],
-        ["kst", "marketing_robot_diy", "vitiligo", '["vitiligo"]', "怎么确诊是不是白癜风"],
-        ["kst", "marketing_robot_diy", "vitiligo", '["vitiligo"]', "白癜风早期症状是什么"],
-        ["kst", "marketing_robot_diy", "vitiligo", '["vitiligo"]', "白斑和白癜风有啥区别"]
-        ]
-test = Comp()
-test.get_comp(data)
+    data = [["kst", "marketing_robot", "andrology", '["andrology"]', "包皮过长怎么办啊"],  # 男科
+            ["kst", "marketing_robot", "andrology", '["andrology"]', "尿频尿急怎么治"],
+            ["kst", "marketing_robot", "andrology", '["andrology"]', "早射怎么回事"],
+            ["kst", "marketing_robot", "andrology", '["andrology"]', "阳痿是什么情况呢"],
+            ["kst", "marketing_robot", "andrology", '["andrology"]', "早泄是什么情况呢"],
+            ["kst", "marketing_robot", "andrology", '["andrology"]', "包皮炎啊"],
+            ["kst", "marketing_robot", "andrology", '["andrology"]', "附睾炎是什么呀"],
+            ["kst", "marketing_robot", "andrology", '["andrology"]', "阴囊炎呢"],
+            ["kst", "marketing_robot", "andrology", '["andrology"]', "包茎治疗多少钱啊"],
+            ["kst", "marketing_robot", "andrology", '["andrology"]', "包皮 有疙瘩"],
+            ["kst", "marketing_robot", "andrology", '["andrology"]', "早泄 这个严重吗"],
+            ["kst", "marketing_robot_diy", "psoriasis", '["psoriasis"]', "能治好吗"],  # 银屑病
+            ["kst", "marketing_robot_diy", "psoriasis", '["psoriasis"]', "脓疱病 这病能根治吗"],
+            ["kst", "marketing_robot_diy", "psoriasis", '["psoriasis"]', "头癣咋治疗"],
+            ["kst", "marketing_robot_diy", "psoriasis", '["psoriasis"]', "牛皮癣好治吗"],
+            ["kst", "marketing_robot_diy", "psoriasis", '["psoriasis"]', "斑秃能治么"],
+            ["kst", "marketing_robot_diy", "psoriasis", '["psoriasis"]', "牛皮癣传染吗"],
+            ["kst", "marketing_robot_diy", "psoriasis", '["psoriasis"]', "银屑病 这病能治好吗？"],
+            ["kst", "marketing_robot_diy", "psoriasis", '["psoriasis"]', "头皮癣能除根吗"],
+            ["kst", "marketing_robot_diy", "psoriasis", '["psoriasis"]', "银屑病和牛皮癣是一样的吗"],
+            ["kst", "marketing_robot_diy", "psoriasis", '["psoriasis"]', "牛皮癣和银屑病的区别"],
+            ["kst", "marketing_robot_diy", "psoriasis", '["psoriasis"]', "冬季牛皮癣复发吗"],
+            ["kst", "marketing_robot_diy", "vitiligo", '["vitiligo"]', "白斑会扩散吗"],  # 白癜风
+            ["kst", "marketing_robot_diy", "vitiligo", '["vitiligo"]', "白癜风能完全医好吗"],
+            ["kst", "marketing_robot_diy", "vitiligo", '["vitiligo"]', "白癜风会传染吗"],
+            ["kst", "marketing_robot_diy", "vitiligo", '["vitiligo"]', "请问遗传性白癫风病能治好吗"],
+            ["kst", "marketing_robot_diy", "vitiligo", '["vitiligo"]', "白癜风有什么危害呢"],
+            ["kst", "marketing_robot_diy", "vitiligo", '["vitiligo"]', "白癜风会遗传么"],
+            ["kst", "marketing_robot_diy", "vitiligo", '["vitiligo"]', "为什么会得白癜风"],
+            ["kst", "marketing_robot_diy", "vitiligo", '["vitiligo"]', "白斑吃什么药好"],
+            ["kst", "marketing_robot_diy", "vitiligo", '["vitiligo"]', "白斑这是什么原因造成的"],
+            ["kst", "marketing_robot_diy", "vitiligo", '["vitiligo"]', "怎么确诊是不是白癜风"],
+            ["kst", "marketing_robot_diy", "vitiligo", '["vitiligo"]', "白癜风早期症状是什么"],
+            ["kst", "marketing_robot_diy", "vitiligo", '["vitiligo"]', "白斑和白癜风有啥区别"]
+            ]
+    test = Comp()
+    test.get_comp(data)

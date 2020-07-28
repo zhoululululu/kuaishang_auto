@@ -9,11 +9,9 @@ Created on 2020/2/26
 import os
 import requests
 import xlwt
-from common.change_data_type import ChangeDataType
-from common.common_function import CommonFunction
+from commonfunc.change_data_type import ChangeDataType
+from commonfunc.common_function import CommonFunction
 import time
-
-# from algorithm.algorithm_func import Binary
 
 curPath = os.path.abspath(os.path.dirname(__file__))
 rootPath = os.path.split(curPath)[0]
@@ -122,5 +120,5 @@ class GetSimilarySymptom:
 
 if __name__ == '__main__':
     GetSimilarySymptom().get_symptom("http://192.168.1.74:8233/bert_similarity/v2?str1={}&str2={}&model=psoriasis1",
-                                     "similary\\test_for_request_symptom_similary.csv",
+                                     "similary\\st_for_request_symptom_similary.csv",
                                      "ymptom_similary_test_result.xls")

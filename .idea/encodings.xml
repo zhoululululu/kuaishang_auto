@@ -2,19 +2,53 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/testdata/apidata/comp/comp_data.csv" charset="US-ASCII" />
-    <file url="file://$PROJECT_DIR$/testdata/apidata/intent/andrology_intent.csv" charset="US-ASCII" />
+    <file url="file://$PROJECT_DIR$/testdata/apidata/intent/andrology/andrology_intent.csv" charset="US-ASCII" />
+    <file url="file://$PROJECT_DIR$/testdata/apidata/intent/andrology/target.txt" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/testdata/apidata/intent/dermatology/dermatology_intention_test.csv" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/testdata/apidata/intent/gynaecology/gastroenterology_intent.csv" charset="US-ASCII" />
+    <file url="file://$PROJECT_DIR$/testdata/apidata/intent/dermatology/dermatology_intention_test1.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testdata/apidata/intent/gastroenterology/gastroenterology_intent.csv" charset="US-ASCII" />
     <file url="file://$PROJECT_DIR$/testdata/apidata/intent/gynaecology/hj_test.csv" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/testdata/apidata/intent/gynaecology/妇科-总测试数据-线上线下.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testdata/apidata/intent/gynaecology/妇科_few_case.csv" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/testdata/apidata/intent/gynaecology/线上target.txt" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/testdata/apidata/intent/gynaecology/线上线下test_case_31.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testdata/apidata/intent/infertility/intention_to_pro.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testdata/apidata/intent/infertility/pro_target.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testdata/apidata/intent/infertility/test_target.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testdata/apidata/intent/infertility/不孕不育测试数据.csv" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/testdata/apidata/intent/mix_intent_656.csv" charset="US-ASCII" />
+    <file url="file://$PROJECT_DIR$/testdata/apidata/intent/obstetrics/obstetrics_target_pro.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testdata/apidata/intent/obstetrics/obstetrics_to_pro.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testdata/apidata/intent/obstetrics/obstetrics_to_test_loss_4.csv" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/testdata/apidata/intent/otolaryngology/Otolaryngology_intent.csv" charset="US-ASCII" />
     <file url="file://$PROJECT_DIR$/testdata/apidata/intent/otolaryngology/ebh_all.csv" charset="US-ASCII" />
-    <file url="file://$PROJECT_DIR$/testdata/apidata/item/beauty_item_testdata.csv" charset="US-ASCII" />
+    <file url="file://$PROJECT_DIR$/testdata/apidata/item/beauty/beauty_item_testdata.csv" charset="US-ASCII" />
+    <file url="file://$PROJECT_DIR$/testdata/apidata/ner/gynaecology/test_gynaecology.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testdata/apidata/ner/gynaecology/test_gynaecology.txt" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/testdata/apidata/qamatcher/faq_threshold_test_data.txt" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/testdata/apidata/similary/qa_similary/vitiligo_to_test.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testdata/apidata/qamatcher/test_131.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testdata/apidata/qamatcher/test_200.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testdata/apidata/qamatcher/test_31.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testdata/apidata/qamatcher/test_464.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testdata/apidata/qamatcher/test_6_282.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testdata/apidata/qamatcher/test_83.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testdata/apidata/qamatcher/test_8_233.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testdata/apidata/qamatcher/vitiligo_to_test_.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testdata/apidata/qamatcher/不孕不育qa_matcher.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testdata/apidata/similary/all/全科室.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testdata/apidata/similary/infertility/test_464.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testdata/apidata/similary/qa_similary/全科室_lb.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testdata/apidata/similary/vitiligo/vitiligo_to_test.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testdata/apidata/similary/全科室.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testdata/knowledgegraph/all_item_knowledge.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testdata/knowledgegraph/cause.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testdata/knowledgegraph/check_simple.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testdata/knowledgegraph/test.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testdata/knowledgegraph/test.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testdata/similary/qa_similar/vitiligo_to_test.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testdata/similary/qa_similar/全科室.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testresults/resultfile/20_07_24-15_20_37gynaenology_ner_test_result.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testresults/resultfile/gynaenology_ner_test_result.csv" charset="UTF-8" />
     <file url="PROJECT" charset="GBK" />
   </component>
 </project>

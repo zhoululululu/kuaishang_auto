@@ -1,0 +1,61 @@
+{
+  "uid" : "8543327b521955cd",
+  "name" : "test_get_qa_similarity",
+  "fullName" : "pytest.api.test_get_qa_similarity.TestQASimilarity#test_get_qa_similarity",
+  "historyId" : "a8a223cf4cc8bf93341a15ddd2b4185d",
+  "time" : {
+    "start" : 1592204658213,
+    "stop" : 1592209085428,
+    "duration" : 4427215
+  },
+  "status" : "broken",
+  "statusMessage" : "ValueError: Input contains NaN, infinity or a value too large for dtype('float64').",
+  "statusTrace" : "self = <test_get_qa_similarity.TestQASimilarity object at 0x000001427B089358>\n\n    @pytest.mark.qa_similary_apitest\n    @allure.feature(\"线上全科室\")\n    def test_get_qa_similarity(self):\n        GetRequests().get_request(\"http://192.168.1.79:8234/bert_similarity/v2\", \"GET\", \"qa_similary\", \"None\",\n                                  \"similary\\\\qa_similary\\\\全科室.csv\", [\"sentence\", \"sentence2\"],\n                                  \"label\",\n>                                 \"全科室测试结果.xls\", \"None\")\n\napi\\test_get_qa_similarity.py:22: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n..\\api\\get_requests.py:197: in get_request\n    Binary.binary_plot_curve(exp_list, re_list)\n..\\algorithm\\algorithm_func.py:50: in binary_plot_curve\n    re_auc, fpr, tpr = Binary.get_auc(truth_value, prob_value)\n..\\algorithm\\algorithm_func.py:18: in get_auc\n    fpr, tpr, threshold = metrics.roc_curve(truth_value, prob_value)\nE:\\Python3.7.3\\lib\\site-packages\\sklearn\\metrics\\_ranking.py:771: in roc_curve\n    y_true, y_score, pos_label=pos_label, sample_weight=sample_weight)\nE:\\Python3.7.3\\lib\\site-packages\\sklearn\\metrics\\_ranking.py:533: in _binary_clf_curve\n    y_type = type_of_target(y_true)\nE:\\Python3.7.3\\lib\\site-packages\\sklearn\\utils\\multiclass.py:284: in type_of_target\n    _assert_all_finite(y)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nX = array([0., 0., 0., ..., 0., 0., 0.]), allow_nan = False, msg_dtype = None\n\n    def _assert_all_finite(X, allow_nan=False, msg_dtype=None):\n        \"\"\"Like assert_all_finite, but only for ndarray.\"\"\"\n        # validation is also imported in extmath\n        from .extmath import _safe_accumulator_op\n    \n        if _get_config()['assume_finite']:\n            return\n        X = np.asanyarray(X)\n        # First try an O(n) time, O(1) space solution for the common case that\n        # everything is finite; fall back to O(n) space np.isfinite to prevent\n        # false positives from overflow in sum method. The sum is also calculated\n        # safely to reduce dtype induced overflows.\n        is_float = X.dtype.kind in 'fc'\n        if is_float and (np.isfinite(_safe_accumulator_op(np.sum, X))):\n            pass\n        elif is_float:\n            msg_err = \"Input contains {} or a value too large for {!r}.\"\n            if (allow_nan and np.isinf(X).any() or\n                    not allow_nan and not np.isfinite(X).all()):\n                type_err = 'infinity' if allow_nan else 'NaN, infinity'\n                raise ValueError(\n                        msg_err.format\n                        (type_err,\n>                        msg_dtype if msg_dtype is not None else X.dtype)\n                )\nE               ValueError: Input contains NaN, infinity or a value too large for dtype('float64').\n\nE:\\Python3.7.3\\lib\\site-packages\\sklearn\\utils\\validation.py:60: ValueError",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "线上全科室"
+  }, {
+    "name" : "tag",
+    "value" : "qa_similary_apitest"
+  }, {
+    "name" : "parentSuite",
+    "value" : "pytest.api"
+  }, {
+    "name" : "suite",
+    "value" : "test_get_qa_similarity"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestQASimilarity"
+  }, {
+    "name" : "host",
+    "value" : "WIN-OQ20V7UABJF"
+  }, {
+    "name" : "thread",
+    "value" : "20060-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "pytest.api.test_get_qa_similarity"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ "qa_similary_apitest" ]
+  },
+  "source" : "8543327b521955cd.json",
+  "parameterValues" : [ ]
+}

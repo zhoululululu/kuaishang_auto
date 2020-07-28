@@ -9,8 +9,8 @@ Created on 2020/2/26
 import os
 import requests
 import time
-from common.change_data_type import ChangeDataType
-from common.common_function import CommonFunction
+from commonfunc.change_data_type import ChangeDataType
+from commonfunc.common_function import CommonFunction
 from algorithm.algorithm_func import Binary
 
 curPath = os.path.abspath(os.path.dirname(__file__))
@@ -29,9 +29,9 @@ class GetQASimilarity:
         lb_list = []
         for idx, temp in test_data.iterrows():
             label = int(temp["label"])
-            str1 = temp["症状a"]
-            str2 = temp["症状b"]
-            url = "http://192.168.1.74:8233/bert_similarity/v2?str1={}&str2={}&model".format(str1, str2)
+            str1 = temp["sentence1"]
+            str2 = temp["sentence2"]
+            url = "http://192.168.1.79:8234/bert_similarity/v2?str1={}&str2={}".format(str1, str2)
             try:
                 r = requests.get(url, timeout=50)
                 result = r.json()

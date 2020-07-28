@@ -1,0 +1,59 @@
+{
+  "uid" : "d3713406e528adef",
+  "name" : "test_get_qa_similarity",
+  "fullName" : "pytest.api.test_get_qa_similarity.TestQASimilarity#test_get_qa_similarity",
+  "historyId" : "a8a223cf4cc8bf93341a15ddd2b4185d",
+  "time" : {
+    "start" : 1592215266148,
+    "stop" : 1592215272476,
+    "duration" : 6328
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "线上全科室"
+  }, {
+    "name" : "tag",
+    "value" : "qa_similary_apitest"
+  }, {
+    "name" : "parentSuite",
+    "value" : "pytest.api"
+  }, {
+    "name" : "suite",
+    "value" : "test_get_qa_similarity"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestQASimilarity"
+  }, {
+    "name" : "host",
+    "value" : "WIN-OQ20V7UABJF"
+  }, {
+    "name" : "thread",
+    "value" : "2680-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "pytest.api.test_get_qa_similarity"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ "qa_similary_apitest" ]
+  },
+  "source" : "d3713406e528adef.json",
+  "parameterValues" : [ ]
+}

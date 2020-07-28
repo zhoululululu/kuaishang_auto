@@ -3,10 +3,10 @@
 Created on 2020/6/8
 @File  : get_threshold_test.py
 @author: ZL
-@Desc  :
+@Desc  : 阈值可调整临时脚本
 '''
 
-from common.change_data_type import ChangeDataType
+from commonfunc.change_data_type import ChangeDataType
 import os
 import requests
 import xlwt
@@ -26,11 +26,11 @@ class GetThreshold:
         self.params = {
             "org": "kst",
             "app": "marketing_robot",
-            "industry": "vitiligo",
-            "kb_names": ["vitiligo"],
+            "industry": "infertility",
+            "kb_names": ["infertility"],
             "question": question,
             "final": 10,
-            "threshold": 0.8
+            "threshold": 0.95
         }
         return self.params
 
@@ -40,18 +40,18 @@ class GetThreshold:
             GetThreshold.get_params(self, temp["sentence"])
             r = requests.post(api_url, data=self.params, timeout=50)
             result = r.json()
-            similar_faq = result["hit_question"]
-            if similar_faq:
-                self.faq_list.append(temp["sentence"])
-                self.similar_list.append(similar_faq)
-
+            if str(result).find("hit_question") > 1:
+                similar_faq = result["hit_question"]
+                if similar_faq != "":
+                    self.faq_list.append(temp["sentence"])
+                    self.similar_list.append(similar_faq)
         GetThreshold.get_similar(self)
 
     def get_similar(self):
         for i in range(0, len(self.faq_list)):
             str1 = self.faq_list[i]
             str2 = self.similar_list[i]
-            url = "http://192.168.1.79:8234/bert_similarity/v2?str1={}&str2={}".format(str1, str2)
+            url = "http://192.168.1.79:8234/bert_similarity/v2?str1={}&str2={}&model=rwms".format(str1, str2)
             r = requests.get(url=url, timeout=100)
             result = r.json()
             score = result["sim_score"]
@@ -68,9 +68,9 @@ class GetThreshold:
             sheet1.write(j + 1, 1, self.similar_list[j])
             sheet1.write(j + 1, 2, self.score_list[j])
 
-        workbook.save(rootPath + '\\testresults\\resultfile\\' + now + "qamatcher_similar_test_result.xls")
+        workbook.save(rootPath + '\\testresults\\resultfile\\' + now + "qamatcher_similar_test_result_0.8.xls")
 
 
 if __name__ == '__main__':
     GetThreshold().get_qamatcher_result("http://192.168.26.105:30086/qastudio/v2/qamatch",
-                                        "qamatcher\\faq_threshold_test_data.csv")
+                                        "qamatcher\\test_464.csv")

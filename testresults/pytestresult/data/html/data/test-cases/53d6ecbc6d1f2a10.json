@@ -1,0 +1,61 @@
+{
+  "uid" : "53d6ecbc6d1f2a10",
+  "name" : "test_get_qa_similarity",
+  "fullName" : "pytest.api.test_get_qa_similarity.TestQASimilarity#test_get_qa_similarity",
+  "historyId" : "a8a223cf4cc8bf93341a15ddd2b4185d",
+  "time" : {
+    "start" : 1592215551791,
+    "stop" : 1592215557506,
+    "duration" : 5715
+  },
+  "status" : "broken",
+  "statusMessage" : "ZeroDivisionError: division by zero",
+  "statusTrace" : "self = <test_get_qa_similarity.TestQASimilarity object at 0x000002664CE16470>\n\n    @pytest.mark.qa_similary_apitest\n    @allure.feature(\"线上全科室\")\n    def test_get_qa_similarity(self):\n        GetRequests().get_request(\"http://192.168.1.79:8234/bert_similarity/v2\", \"GET\", \"qa_similary\", \"None\",\n                                  \"similary\\\\qa_similary\\\\全科室.csv\", [\"sentence\", \"sentence2\",\"cos\"],\n                                  \"label\",\n>                                 \"全科室测试结果.xls\", \"None\")\n\napi\\test_get_qa_similarity.py:22: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n..\\api\\get_requests.py:197: in get_request\n    Binary.binary_plot_curve(exp_list, re_list)\n..\\algorithm\\algorithm_func.py:82: in binary_plot_curve\n    precision, recall, f1, accuracy = Binary.get_binary_score(truth_value, prob_value)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nbz_list = [0, 0, 0, 1, 1, 1, ...], re_list = [0, 1, 0, 1, 0, 1, ...]\n\n    @staticmethod\n    def get_binary_score(bz_list, re_list):\n        \"\"\"\n        传入标注内容\n        :param num: 接口返回的num值\n        :param mid：定义的相似值界限：大于这个界限即为相似，小于则不相似\n        :return re_score：返回一个证\n        \"\"\"\n        count_all_p = 0\n        count_p = 0\n        count_all_r = 0\n        count_r = 0\n        acc_num = 0\n        for i in range(0, len(bz_list)):\n            if bz_list[i] == \"1\":\n                count_all_r += 1\n                if bz_list[i] == re_list[i]:\n                    count_r += 1\n            if re_list[i] == \"1\":\n                count_all_p += 1\n                if re_list[i] == bz_list[i]:\n                    count_p += 1\n            if bz_list[i] == re_list[i]:\n                acc_num += 1\n>       P = count_p / count_all_p\nE       ZeroDivisionError: division by zero\n\n..\\algorithm\\algorithm_func.py:46: ZeroDivisionError",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "线上全科室"
+  }, {
+    "name" : "tag",
+    "value" : "qa_similary_apitest"
+  }, {
+    "name" : "parentSuite",
+    "value" : "pytest.api"
+  }, {
+    "name" : "suite",
+    "value" : "test_get_qa_similarity"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestQASimilarity"
+  }, {
+    "name" : "host",
+    "value" : "WIN-OQ20V7UABJF"
+  }, {
+    "name" : "thread",
+    "value" : "14584-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "pytest.api.test_get_qa_similarity"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ "qa_similary_apitest" ]
+  },
+  "source" : "53d6ecbc6d1f2a10.json",
+  "parameterValues" : [ ]
+}

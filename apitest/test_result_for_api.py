@@ -17,20 +17,20 @@ class ApiTest:
 
     @staticmethod
     def api_test():
-        request_url = "http://192.168.1.74:8930/fuke_intention/new_39_v5"
-
+        request_url = "http://192.168.120.37:8911/gynaecology_intention/v1"
+        industry = "妇科"
         herder = {
             "Connection": "keep-alive",
             "Content_type": "multipart/form-data; application/octet-stream"
         }
 
         params = {
-            "url": request_url
+            "url": request_url,
+            "industry": industry
         }
-
-        r = requests.get(url="http://192.168.120.6:8892/test_test_result/download", headers=herder, data=params,
+        r = requests.get(url="http://192.168.120.67:8895/test_test_result/download", headers=herder, data=params,
                          timeout=999999)
-        fp = open(rootPath + "\\testresults\\resultfile\\test_result.xlsx", "wb")
+        fp = open(rootPath + "\\testresults\\resultfile\\1test_result.xlsx", "wb")
         fp.write(r.content)
         fp.close()
 

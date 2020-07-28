@@ -5,8 +5,8 @@ Created on 2020/5/13
 @author: ZL
 @Desc  :
 '''
-from common.common_function import CommonFunction
-from common.change_data_type import ChangeDataType
+from commonfunc.common_function import CommonFunction
+from commonfunc.change_data_type import ChangeDataType
 import os
 import requests
 import time
@@ -29,11 +29,23 @@ class GetRequests:
         :param api_name: 请求接口属于哪个类型
         :param data: 读取的testdata值，拼接params值
         """
-        # 意图
-        if api_name == "intent":
+        # 线上意图
+        if api_name == "pro_intent":
             params = {
-                # "utterance": data
+                "utterance": data[0],
+                "multi_intent_mode": data[1],
+                "enterprise": data[2]
+            }
+        # 测试环境意图
+        if api_name == "test_intent":
+            params = {
                 "sentence": data
+            }
+
+        # 皮肤科意图
+        if api_name == "a_intent":
+            params = {
+                "utterance": data
             }
         # 项目
         elif api_name == "item":
@@ -73,9 +85,19 @@ class GetRequests:
         :param data: 接口返回的result
         """
         # 意图
-        if api_name == "intent":
+        if api_name == "pro_intent":
+            result = result["data"]["intent"]
+
+        # 意图
+        if api_name == "test_intent":
+            #result = result["data"]["intention"]
+            result = result["label"]
+
+        # 意图
+        if api_name == "a_intent":
             # result = result["data"]["intent"]
-            result = result["data"]["intention"]
+            result = result["data"]["intent"]
+
         # 项目
         elif api_name == "item":
             result = result["data"]["item"]
@@ -85,6 +107,7 @@ class GetRequests:
         # 句子相似度
         elif api_name == "qa_similary":
             result = result["data"]["score"]
+            # result = result["sim_score"]
         # 症状相似度
         elif api_name == "symptom_similary":
             result = result["data"]["score"]
@@ -162,17 +185,21 @@ class GetRequests:
                     response = GetRequests.get_response(api_category, result)  # 获取返回结果中所需要的对比值
                     # 对妇科多意图进行特定判断，处理
                     if "intent" in api_category and "gynaecology" in testdata_param:
-                        assert_param_list = temp[assert_param].split("、")  # 先对意图进行拆分，根据"、"进行拆分成列表（若只有一个则直接为本值）
-                        # 对拆分后的意图及返回结果的意图也进行排序
-                        assert_param_list.sort()
-                        response.sort()
-                        tf = CommonFunction.get_mult_tf(assert_param_list, response)  # 判断排序后的意图是否完全一致，完全一致则匹配成功
+                        if "、" in temp[assert_param]:
+                            assert_param_list = temp[assert_param].split("、")  # 先对意图进行拆分，根据"、"进行拆分成列表（若只有一个则直接为本值）
+                            # 对拆分后的意图及返回结果的意图也进行排序
+                            assert_param_list.sort()
+                            response.sort()
+                            tf = CommonFunction.get_tf(assert_param_list, response)  # 判断排序后的意图是否完全一致，完全一致则匹配成功
+                        else:
+                            assert_param_list = temp[assert_param]
+                            tf = CommonFunction.get_tf(assert_param_list, response)  # 判断是否一致，为后面输出做准备
                         exp_list.append(assert_param_list)  # 拼接已拆解并排序后的意图原始值
                         re_list.append(response)  # 拼接已排序后的结果意图返回值
                     else:
                         # 针对相似度进行一个相似匹配，0.5为匹配阈值，可根据需要修改
                         if "qa_similary" in api_category:
-                            response = CommonFunction.get_re_score(response, 0.5)
+                            response = CommonFunction.get_re_score(response, 0.9)
                         if "symptom_similary" in api_category:
                             response = CommonFunction.get_sys_similary_tf(response, temp["标准症状"])
                         tf = CommonFunction.get_tf(temp[assert_param], response)  # 判断是否一致，为后面输出做准备
@@ -183,7 +210,7 @@ class GetRequests:
 
                 # 如果请求失败，打印bad request
                 except Exception as e:
-                    print("bad request")
+                    print(e)
 
             test_data["response"] = re_list  # 在testdata中拼接接口返回值，方便后期输出excel对齐显示
             # 调用方法控制台打印输出相关信息（是否一致，总数，一致数，不一直数，一致率，不一致率等）
@@ -197,7 +224,7 @@ class GetRequests:
         else:  # 其他接口（多分类算法，通过调用调用输出显示每个target的prf值）
             file_name = GetRequests.get_target_result(self, target_file, exp_list, re_list, target_result_file,
                                                       total_num, accuracy)
-        return file_name
+            return file_name
 
     def get_target_result(self, target_file, bz_intent_list, re_intent_list, target_result_file, total_num, accuracy):
         """
@@ -213,15 +240,6 @@ class GetRequests:
                                                                                                              target_list,
                                                                                                              bz_intent_list,
                                                                                                              re_intent_list)
-        # 返回NER中非O平均的准确率，召回率，F1
-        # target_list.append("平均值（不含O）")
-        # p, r, f1, pn, rn, tn = MultiClassByWord.multi_ave_target(self, bz_intent_list, re_intent_list, "O")
-        # precision_list.append(p)
-        # recall_list.append(r)
-        # f1_list.append(f1)
-        # pn_list.append(pn)
-        # rn_list.append(rn)
-        # tn_list.append(tn)
         target_list.append("汇总")
         precision_list.append("用例数：" + str(total_num))
         recall_list.append("accuracy：" + str(accuracy))
@@ -253,8 +271,15 @@ class GetRequests:
 
 if __name__ == '__main__':
     # 参数解释：url+路径，方法，接口名，标签文件，测试用例文件，测试用例中的字段列，校验的返回数据字段，原始数据测试结果文件，标签prf的结果文件
-    GetRequests().get_request("http://192.16.1.79:8900/intention/v2/tcnn", "GET", "intent",
-                              "intent\\dermatology\\target.txt",
-                              "intent\\dermatology\\dermatology_test_data_3995.csv", ["sentence"], "label",
-                              "dermatology_intention_test_result.xls",
-                              "dermatology_intention_target_test_result.xls")
+    # GetRequests().get_request("http://192.16.1.79:8900/intention/v2/tcnn", "GET", "intent",
+    #                           "intent\\dermatology\\target.txt",
+    #                           "intent\\dermatology\\dermatology_test_data_3995.csv", ["sentence"], "label",
+    #                           "dermatology_intention_test_result.xls",
+    #                           "dermatology_intention_target_test_result.xls")
+
+    GetRequests().get_request("http://192.168.26.105:30014/gynaecology_intention/v1", "GET", "pro_intent",
+                              "intent\\gynaecology\\线上target.txt",
+                              "intent\\gynaecology\\妇科-总测试数据-线上线下.csv",
+                              ["sentence", "False", "gynaecology"], "label",
+                              "gynaecology_intention_test_evn.xls",
+                              "gynaecology_intention_target_test_evn.xls")

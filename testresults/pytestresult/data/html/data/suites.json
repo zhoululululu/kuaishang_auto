@@ -4,18 +4,38 @@
   "children" : [ {
     "name" : "pytest.api",
     "children" : [ {
+      "name" : "test_get_qa_similarity",
+      "children" : [ {
+        "name" : "TestQASimilarity",
+        "children" : [ {
+          "name" : "test_get_qa_similarity",
+          "uid" : "d3ef569f4f56fd58",
+          "parentUid" : "8f4b4622ed0992b8304b634fb2b5b251",
+          "status" : "passed",
+          "time" : {
+            "start" : 1593332851397,
+            "stop" : 1593332912303,
+            "duration" : 60906
+          },
+          "flaky" : true,
+          "parameters" : [ ]
+        } ],
+        "uid" : "8f4b4622ed0992b8304b634fb2b5b251"
+      } ],
+      "uid" : "9c398ae57de72949367681f83a930551"
+    }, {
       "name" : "test_get_intent",
       "children" : [ {
         "name" : "TestIntent",
         "children" : [ {
           "name" : "test_get_pro_intent",
-          "uid" : "72f5bea38c94886d",
+          "uid" : "8ca0f5346634f996",
           "parentUid" : "2c4413a290385174ebd37281b89d6e89",
           "status" : "passed",
           "time" : {
-            "start" : 1591860480251,
-            "stop" : 1591861329809,
-            "duration" : 849558
+            "start" : 1595502367355,
+            "stop" : 1595502706288,
+            "duration" : 338933
           },
           "flaky" : true,
           "parameters" : [ ]
@@ -23,6 +43,26 @@
         "uid" : "2c4413a290385174ebd37281b89d6e89"
       } ],
       "uid" : "678e135c51af3469e2c20fa9fe4ae59e"
+    }, {
+      "name" : "test_get_ner",
+      "children" : [ {
+        "name" : "TestNer",
+        "children" : [ {
+          "name" : "test_get_common_ner",
+          "uid" : "c686a4eb92bf197f",
+          "parentUid" : "ea7aff6277416ff295f827079069cb26",
+          "status" : "broken",
+          "time" : {
+            "start" : 1595561070357,
+            "stop" : 1595561440843,
+            "duration" : 370486
+          },
+          "flaky" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "ea7aff6277416ff295f827079069cb26"
+      } ],
+      "uid" : "981172c492ca2fdc2ba7812ac2bd2fab"
     } ],
     "uid" : "3436f76b4fbf923b7c164f1629748eba"
   } ]

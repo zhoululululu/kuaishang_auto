@@ -16,13 +16,38 @@ class TestIntent(object):
     @allure.feature("测试环境通用意图识别")
     def test_get_pro_intent(self):
         # 意图测试
-        GetRequests().get_request("http://192.168.1.74:8900/fuke_intention/new_39_v2", "GET", "intent",
-                                  "intent\\gynaecology\\线上target.txt",
-                                  "intent\\gynaecology\\妇科-总测试数据-线上线下.csv", ["sentence"], "label",
-                                  "gynaecology_intention_test_result.xls",
-                                  "gynaecology_intention_target_test_result.xls")
-        # GetRequests().get_request("http://192.168.1.74:8900/fuke_intention/v1", "GET", "intent",
-        #                           "intent\\gynaecology\\线上target.txt",
-        #                           "intent\\gynaecology\\妇科-总测试数据-线上线下.csv", ["sentence"], "label",
-        #                           "gynaecology_intention_test_result.xls",
-        #                           "gynaecology_intention_target_test_result.xls")
+        # GetRequests().get_request("http://192.168.1.79:8900/intention/v2/skin", "GET", "skin_intent",
+        #                           "intent\\dermatology\\target.txt",
+        #                           "intent\\dermatology\\dermatology_test_data_3995.csv", ["sentence"], "label",
+        #                           "dermatology_intention_test_result.xls",
+        #                           "dermatology_intention_target_test_result.xls")
+        GetRequests().get_request("http://192.168.1.74:1126/intention", "GET", "test_intent",
+                                  "intent\\infertility\\test_target.txt",
+                                  "intent\\infertility\\intention_to_test.csv", ["sentence"],
+                                  "label",
+                                  "infertility_intention_test_result.xls",
+                                  "infertility_intention_target_test_result.xls")
+        # GetRequests().get_request("http://10.13.8.230:8204//intention/v2/anorectal", "GET", "a_intent",
+        #                           "intent\\anorectal\\target.txt",
+        #                           "intent\\anorectal\\anorectal_intention_to_test_4930.csv", ["sentence"],
+        #                           "label",
+        #                           "anorectal_intention_test_result.xls",
+        #                           "anorectal_intention_target_test_result.xls")
+        # GetRequests().get_request("http://192.168.26.105:32098/andrology_intent/v2", "GET", "a_intent",
+        #                           "intent\\andrology\\target.txt",
+        #                           "intent\\andrology\\andrology_intent.csv", ["sentence"],
+        #                           "label",
+        #                           "andrology_intention_test_result.xls",
+        #                           "andrology_intention_target_test_result.xls")
+        # GetRequests().get_request("http://192.168.1.79:8905/intention/v2/infertility", "GET", "a_intent",
+        #                           "intent\\infertility\\test_target.txt",
+        #                           "intent\\infertility\\intention_to_test.csv", ["sentence"],
+        #                           "label",
+        #                           "infertility_intention_test_result.xls",
+        #                           "infertility_intention_target_test_result.xls")
+        # GetRequests().get_request("http://192.168.1.79:8905/intention/v2/common", "GET", "a_intent",
+        #                           "intent\\common\\common_intent.txt",
+        #                           "intent\\common\\commo_intent_4000.csv", ["sentence"],
+        #                           "label",
+        #                           "obstetrics_intention_test_result.xls",
+        #                           "obstetrics_intention_target_test_result.xls")
