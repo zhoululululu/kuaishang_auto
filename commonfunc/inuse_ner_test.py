@@ -3,7 +3,7 @@ import codecs
 import logging
 from tqdm import tqdm
 
-def ner_predict(utterance, model_name='gynaecology', url='http://192.168.1.74:8062/ner/v1'):
+def ner_predict(utterance, model_name='gynaecology', url='http://192.168.26.105:32060/ner/v1'):
     params = {
         'utterance': utterance,
         'model_name': model_name
@@ -49,8 +49,6 @@ for line in tqdm(test_corpus_f.readlines()):
         sent.append(line.split("\t\t")[0])
         bio.append(line.split("\t\t")[1])
 import pandas as pd
-
-df_result = pd.DataFrame({"人工": bios})
-df_result2 = pd.DataFrame({"预测": bio_s})
+print(len(bios),len(bio_s))
+df_result = pd.DataFrame({"人工": bios,"预测": bio_s})
 df_result.to_csv("bios.csv", index=False, encoding="utf-8")
-df_result2.to_csv("bio_s.csv", index=False, encoding="utf-8")

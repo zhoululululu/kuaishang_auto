@@ -21,7 +21,7 @@ class GetTest:
 
     def get_test(self):
         test_data = ChangeDataType.csv_to_dict(
-            rootPath + "\\testdata\\apidata\\intent\\" + "anorectal\\anorectal_intention_to_test_4930.csv")
+            rootPath + "\\testdata\\apidata\\intent\\" + "andrology\\andrology_intent.csv")
         test = test_data.sentence.tolist()
         for i in test:
             print('"' + i + '",')
@@ -66,4 +66,4 @@ class GetTest:
 
 if __name__ == '__main__':
     # GetTest().get_accuracy("20_07_24-18_59_38infertility_intention_test1.xls")
-    GetTest().get_es()
+    GetTest().get_test()

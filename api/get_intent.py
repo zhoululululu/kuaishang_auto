@@ -106,7 +106,7 @@ class GetIntent:
         test_data["re_intent2"] = re_intent2_list
         now = time.strftime('%y_%m_%d-%H_%M_%S')
         test_data.to_excel(rootPath + '\\testresults\\resultfile\\' + now + result_file, index=False,
-                            encoding="utf-8")
+                           encoding="utf-8")
         # test_data1, total_num, accuracy = CommonFunction.get_collection_1(test_data, tf1_list)
         # test_data2, total_num, accuracy = CommonFunction.get_collection_1(test_data, tf2_list)
         # now = time.strftime('%y_%m_%d-%H_%M_%S')
@@ -282,14 +282,14 @@ class GetIntent:
         # GetMultCount.get_half_threshold(self, exp_list, re_list, target_file)
         GetMultCount.get_half_threshold(self, target_file)
 
-    def get_infer_intent(self, api_url, target_file, test_data_file, result_file, test_result_file):
+    def get_andrology_intent(self, api_url, target_file, test_data_file, result_file, test_result_file):
         """
         通过抽取测试集的数据，调用意图接口，得出的测试结果，在调用函数获取每个target的准确率，召回率，F1
         :param target_file: 储存target的文件
         :param data_file: 储存接口结果数据的文件
         """
         # 获取测试集的data
-        test_data = ChangeDataType.csv_to_dict(rootPath + "\\testdata\\apidata\\intent\\" + test_data_file)
+        test_data = ChangeDataType.csv_to_dict(rootPath + "\\testdata\\apidata\\" + test_data_file)
         re_intent_list, re_score_list, re_modify_list = [], [], []
         exp_intent_list = []
         tf_list = []
@@ -303,19 +303,14 @@ class GetIntent:
                 result = r.json()
 
                 re_intent = result["data"]["intent"]  # 获取返回data的intent
-                re_score = result["data"]["score"]  # 获取返回data的score
-                modify = result["modify"]  # 获取返回data的intent
                 tf = CommonFunction.get_tf(intent, re_intent)
             except Exception as e:
                 score = "bad request"
+                re_intent = "score"
             exp_intent_list.append(intent)
             re_intent_list.append(re_intent)
-            re_score_list.append(re_score)
-            re_modify_list.append(modify)
             tf_list.append(tf)
         test_data["re_intent"] = re_intent_list
-        test_data["re_score"] = re_score_list
-        test_data["re_modify"] = re_modify_list
         test_data, total_num, accuracy = CommonFunction.get_collection_1(test_data, tf_list)
         now = time.strftime('%y_%m_%d-%H_%M_%S')
         # 输出excel
@@ -326,11 +321,11 @@ class GetIntent:
 
 if __name__ == '__main__':
     # GetIntent().get_final_excel("intent\\infertility\\test_target.txt", "result1.xls", "result2.xls")
-    GetIntent().get_intent("http://192.168.1.79:8906/intention/v2/infertility?utterance={}",
-                                   "intent\\infertility\\test_target.txt",
-                                   "infertility\\intention_to_test.csv",
-                                   "infertility_intention_test.xls",
-                                   "infertility_intention_target_test.xls")
+    GetIntent().get_andrology_intent("http://192.168.26.105:30098/andrology_intent/v2?sentence={}",
+                                     "intent\\andrology\\target.txt",
+                                     "intent\\andrology\\andrology_intent.csv",
+                                     "andrology_intention_test.xls",
+                                     "andrology_intention_target_test.xls")
 # GetRequests().get_request("http://10.13.8.230:8062/intention/v1", "GET", "pro_intent",
 #                               "intent\\gynaecology\\线上target.txt",
 #                               "intent\\gynaecology\\妇科-总测试数据-线上线下.csv",

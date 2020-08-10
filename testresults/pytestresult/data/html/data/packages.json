@@ -7,7 +7,7 @@
       "name" : "test_get_qa_similarity",
       "children" : [ {
         "name" : "test_get_qa_similarity",
-        "uid" : "d3ef569f4f56fd58",
+        "uid" : "768d85ab2173512",
         "parentUid" : "abd937061ffb49e886a6b8a59fc0b65c",
         "status" : "passed",
         "time" : {
@@ -20,26 +20,10 @@
       } ],
       "uid" : "abd937061ffb49e886a6b8a59fc0b65c"
     }, {
-      "name" : "test_get_intent",
-      "children" : [ {
-        "name" : "test_get_pro_intent",
-        "uid" : "8ca0f5346634f996",
-        "parentUid" : "6e996aa1bb2a364a84711696007b8cf8",
-        "status" : "passed",
-        "time" : {
-          "start" : 1595502367355,
-          "stop" : 1595502706288,
-          "duration" : 338933
-        },
-        "flaky" : true,
-        "parameters" : [ ]
-      } ],
-      "uid" : "6e996aa1bb2a364a84711696007b8cf8"
-    }, {
       "name" : "test_get_ner",
       "children" : [ {
         "name" : "test_get_common_ner",
-        "uid" : "c686a4eb92bf197f",
+        "uid" : "6736b9ce6b4a11ee",
         "parentUid" : "cb4471c41942984d5532be4c1ac2eb24",
         "status" : "broken",
         "time" : {
@@ -51,6 +35,22 @@
         "parameters" : [ ]
       } ],
       "uid" : "cb4471c41942984d5532be4c1ac2eb24"
+    }, {
+      "name" : "test_get_intent",
+      "children" : [ {
+        "name" : "test_get_pro_intent",
+        "uid" : "7e7f9deb4d88bd0",
+        "parentUid" : "6e996aa1bb2a364a84711696007b8cf8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1596179266210,
+          "stop" : 1596179495707,
+          "duration" : 229497
+        },
+        "flaky" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "6e996aa1bb2a364a84711696007b8cf8"
     } ],
     "uid" : "pytest.api"
   } ]

@@ -28,7 +28,7 @@ class ApiTest:
             "url": request_url,
             "industry": industry
         }
-        r = requests.get(url="http://192.168.120.67:8895/test_test_result/download", headers=herder, data=params,
+        r = requests.get(url="http://192.168.120.67:8959/test_test_result/download", headers=herder, data=params,
                          timeout=999999)
         fp = open(rootPath + "\\testresults\\resultfile\\1test_result.xlsx", "wb")
         fp.write(r.content)

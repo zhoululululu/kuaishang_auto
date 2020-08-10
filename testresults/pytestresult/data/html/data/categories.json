@@ -7,7 +7,7 @@
       "name" : "UnboundLocalError: local variable 'total_num' referenced before assignment",
       "children" : [ {
         "name" : "test_get_common_ner",
-        "uid" : "c686a4eb92bf197f",
+        "uid" : "6736b9ce6b4a11ee",
         "parentUid" : "8a9c26778f65f1bb4e57f92ac3a3b8b1",
         "status" : "broken",
         "time" : {

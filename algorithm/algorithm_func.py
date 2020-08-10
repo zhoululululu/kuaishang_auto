@@ -195,7 +195,7 @@ class MultiClassByWord:
         recall_list, precision_list, f1_list, pn_list, rn_list, tn_list = [], [], [], [], [], []
         for i in range(0, len(target_list)):
             print("------", target_list[i], "------")
-            p, r, f1, pn, rn, tn = MultiClassByWord.class_target(self, bz_intent_list, re_intent_list, target_list[i])
+            p, r, f1, pn, rn, tn = MultiClassByWord.class_target_for_ner(self, bz_intent_list, re_intent_list, target_list[i])
             print("人工标注数量为：", pn)
             print("接口预测数量为：", rn)
             print("结果一致数量为：", tn)

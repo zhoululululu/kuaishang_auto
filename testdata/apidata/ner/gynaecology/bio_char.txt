@@ -1,3 +1,4 @@
+word		bio
 2		B_age
 5		I_age
 是		O
@@ -13341,7 +13342,7 @@ g		O
 的		O
 哦		O
 
-➕		O
+加		O
 您		O
 个		O
 微		O
@@ -13590,7 +13591,7 @@ Q		O
 下		O
 感		B_symptom
 染		I_symptom
-￼		O
+？		O
 
 但		O
 是		O
@@ -27063,7 +27064,6 @@ b		B_check
 谢		O
 谢		O
 您		O
-😊		O
 
 上		O
 次		O
@@ -37812,7 +37812,7 @@ p		I_surgery
 阴		B_sickness
 道		I_sickness
 炎		I_sickness
-➕		O
+加		O
 外		B_sickness
 阴		I_sickness
 炎		I_sickness
@@ -39431,7 +39431,6 @@ B		B_check
 么		O
 吗		O
 
-😓		O
 和		O
 你		O
 说		O
@@ -45010,7 +45009,6 @@ m		I_symptom
 打		O
 扰		O
 了		O
-😊		O
 
 老		O
 婆		O
@@ -46141,7 +46139,6 @@ m		I_symptom
 么		O
 意		O
 思		O
-😳		O
 
 我		O
 的		O
@@ -51144,7 +51141,6 @@ B		B_check
 欢		O
 吃		O
 辣		O
-😂		O
 
 出		B_symptom
 血		I_symptom
@@ -57210,18 +57206,12 @@ B		I_check
 上		O
 
 好		O
-ృ		O
 的		O
-ృ		O
 ，		O
 我		O
-ృ		O
 知		O
-ృ		O
 道		O
-ృ		O
 了		O
-ృ		O
 
 好		O
 的		O
@@ -61037,16 +61027,6 @@ T		I_check
 日		O
 快		O
 乐		O
-✧		O
-٩		O
-(		O
-ˊ		O
-ω		O
-ˋ		O
-*		O
-)		O
-و		O
-✧		O
 
 可		O
 是		O
@@ -64945,7 +64925,6 @@ g		I_symptom
 优		O
 惠		O
 啊		O
-😳		O
 
 也		O
 没		O
@@ -67388,7 +67367,6 @@ c		O
 多		O
 少		O
 钱		O
-😊		O
 
 我		O
 今		O
@@ -78247,9 +78225,9 @@ a		O
 这		O
 个		O
 6		B_symptom
-✘		I_symptom
+*		I_symptom
 8		I_symptom
-✘		I_symptom
+*		I_symptom
 4		I_symptom
 m		I_symptom
 m		I_symptom
@@ -96504,7 +96482,6 @@ m		I_symptom
 7		I_datetime
 号		I_datetime
 了		O
-😷		O
 
 我		O
 是		O

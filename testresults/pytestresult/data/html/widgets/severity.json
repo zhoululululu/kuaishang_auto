@@ -1,15 +1,5 @@
 [ {
-  "uid" : "8ca0f5346634f996",
-  "name" : "test_get_pro_intent",
-  "time" : {
-    "start" : 1595502367355,
-    "stop" : 1595502706288,
-    "duration" : 338933
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "c686a4eb92bf197f",
+  "uid" : "6736b9ce6b4a11ee",
   "name" : "test_get_common_ner",
   "time" : {
     "start" : 1595561070357,
@@ -19,7 +9,17 @@
   "status" : "broken",
   "severity" : "normal"
 }, {
-  "uid" : "d3ef569f4f56fd58",
+  "uid" : "7e7f9deb4d88bd0",
+  "name" : "test_get_pro_intent",
+  "time" : {
+    "start" : 1596179266210,
+    "stop" : 1596179495707,
+    "duration" : 229497
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "768d85ab2173512",
   "name" : "test_get_qa_similarity",
   "time" : {
     "start" : 1593332851397,

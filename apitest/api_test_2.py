@@ -43,7 +43,7 @@ def download():
     file_name = GetRequests().get_request(url, "GET", "pro_intent",
                                           "intent\\gynaecology\\线上target.txt",
                                           "intent\\gynaecology\\妇科-总测试数据-线上线下.csv",
-                                          ["sentence", "xxx", "False"], "label",
+                                          ["sentence", "label", "False"], "label",
                                           "gynaecology_intention_test_result.xls",
                                           "gynaecology_intention_target_test_result.xls")
     time.sleep(2)
@@ -62,4 +62,4 @@ def download():
     )
 
 
-app.run(host='0.0.0.0', port=8895, debug=True)
+app.run(host='0.0.0.0', port=8759, debug=True)

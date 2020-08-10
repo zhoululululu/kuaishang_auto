@@ -22,6 +22,3 @@ class TestItemProcess(object):
         '''验证测试流程'''
         ItemProcess().item_process(self.url, self.file, self.dialog_result_file, self.comp_result_file)
 
-
-if __name__ == '__main__':
-    TestItemProcess().test_item_process()

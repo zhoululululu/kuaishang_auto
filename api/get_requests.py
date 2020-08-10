@@ -90,8 +90,8 @@ class GetRequests:
 
         # 意图
         if api_name == "test_intent":
-            #result = result["data"]["intention"]
-            result = result["label"]
+            result = result["data"]["intent"]
+            # result = result["label"]
 
         # 意图
         if api_name == "a_intent":
@@ -160,7 +160,7 @@ class GetRequests:
                 except Exception as e:
                     print("bad request")
         else:
-            test_data = ChangeDataType.csv_to_dict(rootPath + "\\testdata\\apidata\\" + test_data_file)
+            test_data = ChangeDataType.file_to_dict(rootPath + "\\testdata\\apidata\\" + test_data_file)
             circle_data = test_data.iterrows()
             for idx, temp in tqdm(circle_data):  # 循环读取参数，并传入参数值
                 # 获取params参数

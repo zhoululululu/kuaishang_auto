@@ -9,12 +9,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "8ca0f5346634f996",
+      "uid" : "7e7f9deb4d88bd0",
       "status" : "passed",
       "time" : {
-        "start" : 1595502367355,
-        "stop" : 1595502706288,
-        "duration" : 338933
+        "start" : 1596179266210,
+        "stop" : 1596179495707,
+        "duration" : 229497
       }
     } ]
   },
@@ -28,7 +28,7 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "c686a4eb92bf197f",
+      "uid" : "6736b9ce6b4a11ee",
       "status" : "broken",
       "statusDetails" : "UnboundLocalError: local variable 'total_num' referenced before assignment",
       "time" : {
@@ -48,7 +48,7 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "d3ef569f4f56fd58",
+      "uid" : "768d85ab2173512",
       "status" : "passed",
       "time" : {
         "start" : 1593332851397,

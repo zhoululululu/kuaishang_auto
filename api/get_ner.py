@@ -48,6 +48,7 @@ class GetNer:
         rn_list.append(rn)
         tn_list.append(tn)
         now = time.strftime('%y_%m_%d-%H_%M_%S')
+
         workbook = xlwt.Workbook()
         sheet1 = workbook.add_sheet('意图统计结果', cell_overwrite_ok=True)
         sheet1.write(0, 0, "NER列表")
@@ -92,7 +93,7 @@ class GetNer:
         n = -1
         for temp in tqdm(words_list):
             params = {
-                'model_name': 'gynaecology',
+                'model_name': 'andrology',
                 'utterance': temp
             }
             # 请求接口，循环words_list中的每句话
@@ -104,19 +105,14 @@ class GetNer:
                 # 获取接口返回的data中的bio值
                 re_bio = result["data"]["bio"]
                 # 循环取接口返回的bio值
-                if len(re_bio) != bios_list[n]:
-                    print(temp)
-                    print(bios_list[n])
-                    print(re_bio)
-                else :
-                    for i in range(0, len(re_bio)):
-                        n = n + 1
-                        # 调用函数，查看人工bio与接口返回bio是否一致
-                        tf = CommonFunction.get_tf(bios_list[n], re_bio[i])
-                        # csv循环填入字，人工bio值，接口返回bio值，以及tf值
-                        csv_writer.writerow([word_list[n], bios_list[n], re_bio[i], tf])
-                        result_bio_list.append(re_bio[i])
-                        tf_list.append(tf)
+                for i in range(0, len(re_bio)):
+                    n = n + 1
+                    # 调用函数，查看人工bio与接口返回bio是否一致
+                    tf = CommonFunction.get_tf(bios_list[n], re_bio[i])
+                    # csv循环填入字，人工bio值，接口返回bio值，以及tf值
+                    csv_writer.writerow([word_list[n], bios_list[n], re_bio[i], tf])
+                    result_bio_list.append(re_bio[i])
+                    tf_list.append(tf)
             except Exception as e:
                 re_bio = "bad request"
         f.close()
@@ -135,9 +131,9 @@ class GetNer:
 
 if __name__ == '__main__':
     GetNer().get_ner("http://192.168.1.74:8062/ner/v1",
-                     "ner\\gynaecology\\bio_char_result.csv",
-                     "gynaenology_ner_test_result.csv", "ner\\gynaecology\\tag.txt",
-                     "gynaenology_ner_target_test_result.xls")
+                     "ner\\common\\common_mix.csv",
+                     "common_ner_test_result.csv", "ner\\common\\mix_target.txt",
+                     "common_ner_target_test_result.xls")
 
     # "common_ner_target_test_result.xls"
     # GetNer().just_ner_result("gynaenology_ner_test_result1.csv",

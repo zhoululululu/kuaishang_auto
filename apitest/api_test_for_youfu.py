@@ -77,6 +77,13 @@ def download():
                                               ["sentence", "xxx", "False"], "label",
                                               "gynaecology_intention_test_result.xls",
                                               "gynaecology_intention_target_test_result.xls")
+    if industry == "不孕不育":
+        file_name = GetRequests().get_request(url, "GET", "a_intent",
+                                              "intent\\infertility\\test_target.txt",
+                                              "intent\\infertility\\intention_to_test.csv", ["sentence"],
+                                              "label",
+                                              "infertility_intention_test_result.xls",
+                                              "infertility_intention_target_test_result.xls")
     time.sleep(2)
     test_data = ChangeDataType.excel_to_dict(file_name,
                                              sheet_name="统计结果")
@@ -94,4 +101,4 @@ def download():
     )
 
 
-app.run(host='0.0.0.0', port=8892, debug=True)
+app.run(host='0.0.0.0', port=8999, debug=True)

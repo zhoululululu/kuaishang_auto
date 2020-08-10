@@ -17,6 +17,31 @@ rootPath = os.path.split(curPath)[0]
 class ChangeDataType:
 
     @staticmethod
+    def file_to_dict(path, sheet_name=None):
+        test_data = []
+        form = str(path).split(".")[-1]
+        try:
+            if form == "txt":
+                f = open(path, "r", encoding="UTF-8")
+                for line in f.readlines():
+                    test_data.append(line.strip("\n"))
+
+            elif form == "csv":
+                test_data = pandas.read_csv(path, encoding="utf-8")
+
+            elif form == "xls" or form == "xlsx":
+                test_data = pandas.read_excel(path, sheet_name=sheet_name, encoding="utf-8")
+                return test_data
+
+            elif form == "json":
+                with open(path, mode='r', encoding='utf-8') as f2:
+                    test_data = json.load(f2)
+
+        except Exception as e:
+            print(e)
+        return test_data
+
+    @staticmethod
     def json_to_dict(path):
         """
         将数据由json转为dict
@@ -98,3 +123,12 @@ class ChangeDataType:
             test_data.append(line.strip("\n"))
         return test_data
 
+
+if __name__ == '__main__':
+    print(ChangeDataType().file_to_dict(rootPath + "\\testdata\\apidata\\" + "intent\\andrology\\andrology_intent.csv"))
+    print(ChangeDataType().file_to_dict(rootPath + "\\testdata\\apidata\\" + "intent\\andrology\\target.txt"))
+    print(ChangeDataType().file_to_dict(rootPath + "\\testdata\\apidata\\" + "symptom\\口语-标准症状映射.json"))
+    print(ChangeDataType().file_to_dict(rootPath + "\\testdata\\apidata\\" + "similary\\all\\全科室相似标注-v1.xlsx",
+                                        sheet_name="Sheet1"))
+    print(ChangeDataType().file_to_dict(
+        rootPath + "\\testresults\\resultfile\\" + "20_07_28-14_05_30gynaecology_intention_target_test_result.xls"))

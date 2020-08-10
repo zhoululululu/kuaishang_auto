@@ -5,7 +5,7 @@
     "name" : "线上全科室",
     "children" : [ {
       "name" : "test_get_qa_similarity",
-      "uid" : "d3ef569f4f56fd58",
+      "uid" : "768d85ab2173512",
       "parentUid" : "1734e92aeac9e0794e5020c2e1daf021",
       "status" : "passed",
       "time" : {
@@ -18,26 +18,10 @@
     } ],
     "uid" : "1734e92aeac9e0794e5020c2e1daf021"
   }, {
-    "name" : "测试环境通用意图识别",
-    "children" : [ {
-      "name" : "test_get_pro_intent",
-      "uid" : "8ca0f5346634f996",
-      "parentUid" : "c8e7f5ba17e5e618af1393c204f90170",
-      "status" : "passed",
-      "time" : {
-        "start" : 1595502367355,
-        "stop" : 1595502706288,
-        "duration" : 338933
-      },
-      "flaky" : true,
-      "parameters" : [ ]
-    } ],
-    "uid" : "c8e7f5ba17e5e618af1393c204f90170"
-  }, {
     "name" : "Ner实体识别",
     "children" : [ {
       "name" : "test_get_common_ner",
-      "uid" : "c686a4eb92bf197f",
+      "uid" : "6736b9ce6b4a11ee",
       "parentUid" : "ff03dcdeb0e9528d5bdca058c38677c4",
       "status" : "broken",
       "time" : {
@@ -49,5 +33,21 @@
       "parameters" : [ ]
     } ],
     "uid" : "ff03dcdeb0e9528d5bdca058c38677c4"
+  }, {
+    "name" : "测试环境通用意图识别",
+    "children" : [ {
+      "name" : "test_get_pro_intent",
+      "uid" : "7e7f9deb4d88bd0",
+      "parentUid" : "c8e7f5ba17e5e618af1393c204f90170",
+      "status" : "passed",
+      "time" : {
+        "start" : 1596179266210,
+        "stop" : 1596179495707,
+        "duration" : 229497
+      },
+      "flaky" : true,
+      "parameters" : [ ]
+    } ],
+    "uid" : "c8e7f5ba17e5e618af1393c204f90170"
   } ]
 }

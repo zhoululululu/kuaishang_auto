@@ -55,13 +55,10 @@ class UserBehavior(TaskSet):
     @task(4)
     def get_es_test(self):
         params = {
-            "org": "kst",
-            "app": "marketing_robot",
-            "industry": "andrology",
-            "kb_names": ["测试环境医美模板1_andrology_114"],
-            "question": "是尿不尽是吧睡觉用手碰了下尿道口有湿湿的湿润的潮湿的"
+            "str1": ["多少钱啊"],
+            "str2": ["这个多少钱"]
         }
-        self.client.post(url="/qastudio/v2/qamatch", params=params)
+        self.client.post(url="/without_bert_similarity/v2/sim", params=params)
 
 
 class WebsiteUser(HttpLocust):
@@ -71,4 +68,4 @@ class WebsiteUser(HttpLocust):
 
 if __name__ == "__main__":
     import os
-    os.system("locust -f test_performs.py --host=http://192.168.1.79:8086")
+    os.system("locust -f test_performs.py --host=http://10.0.210.249:8236")

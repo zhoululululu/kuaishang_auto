@@ -229,7 +229,7 @@ class CommonFunction:
         f1 = open((rootPath + "\\testdata\\apidata\\" + test_data_file), 'r+', encoding='UTF-8',
                   errors='ignore')
         infos = f1.read()
-        line_new = re.sub('	', ',', infos)  # 替换功能
+        line_new = re.sub(' ', ',', infos)  # 替换功能
         f1.seek(0)  # 清空文件
         f1.truncate()
         f1.write(line_new)  # 重写
@@ -336,5 +336,6 @@ if __name__ == '__main__':
     # precision_list, recall_list, f1_list, pn_list, rn_list, tn_list = MultiClassByWord().multi_each_target(target_list,
     #                                                                                                      bz_label,
     #                                                                                                      re_label)
-    CommonFunction().get_txt_to_csv("ner\\gynaecology\\" + "test_gynaecology.txt",
-                                    "ner\\gynaecology\\" + "test_gynaecology.csv")
+    CommonFunction().get_txt_to_csv("ner\\common\\" + "common_mix1.txt",
+                                    "ner\\common\\" + "common_mix.csv")
+    # CommonFunction().change_space_to_comma("ner\\common\\" + "common_mix1.txt")
