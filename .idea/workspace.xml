@@ -1,160 +1,179 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a68f835-effe-4429-a687-34ebae545105" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api/get_ner_v2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/get_qastadio.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commonfunc/get_different_pro_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commonfunc/handle_csv.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testdata/apidata/ner/andrology/andrology_target.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testdata/apidata/ner/andrology/new_andrology_target.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testdata/apidata/ner/andrology/test_andrology_bio.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testdata/apidata/ner/common/common_mix.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testdata/apidata/ner/common/common_mix1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testdata/apidata/ner/common/mix_target.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testdata/apidata/ner/gynaecology/bio_char_for_test.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testdata/apidata/ner/gynaecology/tag_for_test.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testdata/apidata/ner/gynaecology/train_data.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testdata/apidata/ner/gynaecology/train_quchong.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testdata/apidata/similary/beauty/first_test_23202.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testdata/apidata/similary/beauty/origin_test_21753.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testdata/apidata/similary/beauty/second_test_30000.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="2a68f835-effe-4429-a687-34ebae545105" name="Default Changelist" comment="&quot;first pycharm update&quot;">
+      <change afterPath="$PROJECT_DIR$/commonfunc/get_standard_ner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testdata/apidata/intent/gynaecology/new_test_data.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testdata/apidata/intent/gynaecology/train_data_3-best.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testdata/apidata/intent/infertility/infertility_to_test6000_third.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testdata/apidata/intent/infertility/intention_to_test_6000_1.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testdata/apidata/ner/andrology/bio_char.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testdata/apidata/ner/andrology/new_test_andrology_bio.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testdata/apidata/ner/andrology/train_plus.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testdata/apidata/ner/common/common_mix.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testdata/apidata/ner/common/testresult.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testdata/apidata/ner/common/to_csv_test.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testdata/apidata/ner/gynaecology/same_list.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testdata/apidata/ner/gynaecology/test_list.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testdata/apidata/ner/gynaecology/train_list.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testdata/apidata/similary/all/first_test_23202.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testdata/apidata/similary/all/origin_test_21753.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testdata/apidata/similary/all/second_test_30000.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testresults/resultfile/1test_result.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testresults/resultfile/20_07_08-20_19_14新全科室统计结果.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testresults/resultfile/20_08_07-11_14_24ner_gynaecology_target_testresult.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testresults/resultfile/20_08_07-11_14_24ner_gynaecology_testresult.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testresults/resultfile/20_08_10-09_07_05ner_gynaecology_testresult.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testresults/resultfile/20_08_10-09_07_06ner_gynaecology_target_testresult.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testresults/resultfile/20_08_10-10_31_57ner_gynaecology_testresult.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testresults/resultfile/20_08_10-10_31_58ner_gynaecology_target_testresult.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testresults/resultfileqastadio测试结果.xls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/algorithm/algorithm_func.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithm/algorithm_func.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/get_intent.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/get_intent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/get_ner.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/get_ner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/get_ner_v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/get_ner_v2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/get_requests.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/get_requests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/get_tt_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/get_tt_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apitest/api_test_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/apitest/api_test_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apitest/api_test_for_youfu.py" beforeDir="false" afterPath="$PROJECT_DIR$/apitest/api_test_for_youfu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apitest/test_result_for_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/apitest/test_result_for_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commonfunc/bio_s.csv" beforeDir="false" afterPath="$PROJECT_DIR$/commonfunc/bio_s.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commonfunc/bios.csv" beforeDir="false" afterPath="$PROJECT_DIR$/commonfunc/bios.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/get_sentence_similarity.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/get_sentence_similarity.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/commonfunc/change_data_type.py" beforeDir="false" afterPath="$PROJECT_DIR$/commonfunc/change_data_type.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commonfunc/common_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/commonfunc/common_function.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/commonfunc/get_repeat.py" beforeDir="false" afterPath="$PROJECT_DIR$/commonfunc/get_repeat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commonfunc/get_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/commonfunc/get_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commonfunc/inuse_ner_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/commonfunc/inuse_ner_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commonfunc/nertest.py" beforeDir="false" afterPath="$PROJECT_DIR$/commonfunc/nertest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commonfunc/test_for_jieba.py" beforeDir="false" afterPath="$PROJECT_DIR$/commonfunc/test_for_jieba.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/performs/test_performs.py" beforeDir="false" afterPath="$PROJECT_DIR$/performs/test_performs.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pytest/api/test_get_intent.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytest/api/test_get_intent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytest/ui/test_item_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytest/ui/test_item_process.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testdata/apidata/ner/gynaecology/bio_char.txt" beforeDir="false" afterPath="$PROJECT_DIR$/testdata/apidata/ner/gynaecology/bio_char.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testdata/apidata/ner/gynaecology/bio_char_result.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testdata/apidata/ner/gynaecology/test_gynaecology.txt" beforeDir="false" afterPath="$PROJECT_DIR$/testdata/apidata/ner/gynaecology/test_gynaecology.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testdata/estest/男科随机10万句.csv" beforeDir="false" afterPath="$PROJECT_DIR$/testdata/estest/男科随机10万句.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/behaviors.csv" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/behaviors.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/behaviors.json" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/behaviors.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/categories.json" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/categories.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/packages.json" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/packages.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/suites.csv" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/suites.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/suites.json" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/suites.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/112bf3736d19ac8c.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/123867694c723c43.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/128dff5b4b5f51ae.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/12c2507766f1c61f.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/13a88e1b82a3df80.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/17c05b7132b16da5.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/1e1871e0482a2d46.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/1efa95a8a4b18ac9.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/1f2bc1fd49ee9c46.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/25b1be778600fd4e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/26c2fab0ee0a85c1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/2867cc46ed80fc0.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/296d2dbe168c26fd.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/2e0ecbfc5937e131.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/3350d13ff496a4c.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/34accbfc78180d32.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/399370546ebbc92c.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/3a103438cdac7be0.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/3b901f592fa12edf.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/45f4f398de9177b2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/52154bc68b2efcc2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/53d6ecbc6d1f2a10.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/582d167986ef344.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/59ac24ba423ea037.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/5aef9307ba97ecc4.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/5e925f548ab17829.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/6073748c6beea81c.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/60d2270d700a4976.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/6163b21afe79da48.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/64cf624e6f074863.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/67daec0521645537.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/68c1c207e04f304a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/6a0e48211d529f5b.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/6a4714bc04e0a017.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/72650a4f62a184cb.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/739faff221695a1e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/789bcf18e7491b49.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/852b9f749e576fcd.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/8543327b521955cd.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/860a5a37b690e129.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/868c936397446e5b.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/88b3789f4cb0bfff.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/8b7ab1841812a512.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/8c95e66aed33b7ee.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/8ca0f5346634f996.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/8d6f9f84128a73cc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/8f8c72855a7675ab.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/90bfa769db1ae7ad.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/90f224d90cc3ad0f.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/9293338acb856960.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/9380220aba11f05a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/94d786a814292228.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/977237414993eba3.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/97a4c4cb26d7b0cf.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/9bf8bbaf3a6ccecd.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/a469503cb478b94b.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/a9fc85f779b98303.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/ab0767aa95619b33.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/b49dedb7f1ba11d6.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/b727bc66560c279a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/ba57d59665a9f5a3.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/bb44b635ce6bab0.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/bd8eace8c2a2c77b.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/c1f943dd98a8efeb.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/c209d72f723a4c7b.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/c30ad04eabcb8fce.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/c3ae5816824dd021.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/c686a4eb92bf197f.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/c7e1cd0e21c069d4.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/c84321351c90e28c.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/cd18dc8003a5af69.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/ce722a23d07d5c1f.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/d2d4eed393a18631.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/d3713406e528adef.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/d3ef569f4f56fd58.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/d42b177dd9408728.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/d6b78baa97ffdcac.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/d77d5d756723c418.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/da1ecd3cef2d81b7.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/db1d04d17be67a19.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/dbc6f4859f5e57a4.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/df5955d1af453427.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/df862e3366a28102.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/dfa1c0bc302b073c.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/e06b68ab327652ce.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/e5940d7e55a0c237.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/e993ffaef4507351.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/eee4df09eade129b.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/f478d54f24b90fb.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/f697f3af6e39b62a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/test-cases/fcc9c811f7e1c64e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/timeline.json" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/timeline.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/export/influxDbData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/pytestresult/data/html/export/influxDbData.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/export/prometheusData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/pytestresult/data/html/export/prometheusData.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/history/duration-trend.json" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/pytestresult/data/html/history/duration-trend.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/history/history.json" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/pytestresult/data/html/history/history.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/history/retry-trend.json" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/pytestresult/data/html/history/retry-trend.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/duration-trend.json" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/duration-trend.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/duration.json" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/duration.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/retry-trend.json" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/retry-trend.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/severity.json" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/severity.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/status-chart.json" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/status-chart.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/summary.json" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/summary.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_07_24-15_55_20infertility_intention_test.xls" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/resultfile/20_07_24-15_55_20infertility_intention_test.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytest/api/test_get_qa_similarity.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytest/api/test_get_qa_similarity.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytest/run_all.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytest/run_all.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testdata/apidata/intent/andrology/andrology_intent.csv" beforeDir="false" afterPath="$PROJECT_DIR$/testdata/apidata/intent/andrology/andrology_intent.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testdata/apidata/intent/gynaecology/妇科-总测试数据-线上线下.csv" beforeDir="false" afterPath="$PROJECT_DIR$/testdata/apidata/intent/gynaecology/妇科-总测试数据-线上线下.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testdata/apidata/ner/andrology/andrology_target.txt" beforeDir="false" afterPath="$PROJECT_DIR$/testdata/apidata/ner/andrology/andrology_target_pro.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testdata/apidata/ner/andrology/new_andrology_target.txt" beforeDir="false" afterPath="$PROJECT_DIR$/testdata/apidata/ner/andrology/andrology_target_test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testdata/apidata/ner/gynaecology/tag.txt" beforeDir="false" afterPath="$PROJECT_DIR$/testdata/apidata/ner/gynaecology/tag.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/01622d14-c8c1-4edc-b5c6-4ce7b781906d-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/06b19938-cf3b-4ebd-9c42-e726340924fd-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/0ce6e738-313e-405b-a219-28ba38378445-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/0d7ddf48-0eb2-4bd6-8ed1-c1e990703837-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/0ee1ec92-792b-446c-b120-324b4e147025-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/0f360131-f3e6-489f-8482-45a8089bc4cc-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/12fad788-9cd1-48c6-8c3f-bdf9a75d41e9-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/19aff889-b708-4180-a0a0-b840c8bfb61b-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/1a279af2-9762-471d-b826-599ac3acec6f-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/1ed36bec-6804-4d74-b75c-c3987795b210-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/23243dd4-07f1-458a-9d27-adc7b23cfa4f-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/2364d085-d2cc-40f8-ab9b-a24977796574-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/23d64483-46d8-4518-9ba1-e1d341884e80-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/23ea49ad-79a4-4f3e-893e-e52fc1b6da05-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/2b4d5af2-a4ef-4db4-801b-1c5808699b22-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/2ba5bd62-49c1-4811-b5ec-66f79e67239b-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/2c5f8bc5-bc42-4f2a-bfb0-d074bbada9c5-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/2d1422f7-a13c-4f0d-a43f-0b3dc681bcd3-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/33b07e50-a118-48c0-b7a6-d22250a77631-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/33cdcd13-1fc8-4f7d-a24b-4dff08f40115-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/358b60d6-a7ee-4bd5-8435-03d436fc2ab2-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/37fc93f0-af84-4f33-ad27-91d1954d1c70-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/38220328-3117-4f23-bca7-b03b3bb51bde-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/3848b9c5-a2c3-4bd3-9d1b-5aa7fdd7553a-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/3c68762e-0ebe-478c-a413-87263a5daa51-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/3d7e6498-7c4b-471f-a133-66edf3d52261-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/445d0cc5-89ba-43c4-91fa-cf8dc5e3d615-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/462a7836-936d-414a-a1ad-b7ce535066ea-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/4cd5a6e7-dd56-4eef-ae20-77d4a2d87fd9-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/4ce995db-a00f-40f8-8faf-183ec0ef2280-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/4dc961ea-68fb-45f6-ae09-528264976d92-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/51f32aca-aae9-4d54-b4bf-b246ffbbfe1c-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/54fca139-e58e-4fe2-9fb3-aa0e9f5bb192-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/57f89307-a0c8-4c82-ad7f-2c671c7e5128-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/5a58e281-c9fb-436f-a81a-fcc7322c3f81-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/5b060db8-621f-4588-9bef-165d17982322-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/5be98abd-e29f-4535-be2e-31ddbf30e0dd-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/5d76e5b2-3ee4-4df1-aef0-50b8d8ee2e3f-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/5dc3c292-ae4a-450a-9360-a5330f988f21-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/5e9069c3-82de-4f3c-9739-2800745dca9e-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/6d2ec089-b9a2-4f0f-895d-c5d06a931c5b-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/70b34e75-7434-433f-924f-5f49fe618889-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/71d6bbbd-bf89-4743-b93d-3b0502799df2-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/7220281b-9913-45d7-ad49-d6fa229e84de-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/83472767-d5ad-432b-b574-c925247216d5-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/83702b7c-d99c-4e50-8abc-3008520e0d55-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/84e2a271-1aef-48ce-9b73-facc108ab656-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/868b6b78-6bf3-4eae-b45b-bbcd7713b65c-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/9274044c-0984-426e-bbe7-ff931a3f6a7c-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/937c94e0-500b-41c8-90f5-38d3aa626648-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/9f04b10f-956d-4775-aeb9-a4771c0f1b9a-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/a0108ce5-da61-4113-a85c-77604898b13a-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/ab22f919-865c-4539-9427-79504a6a9c92-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/ad4ab25f-33ce-4662-bfcd-49fc568bceb3-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/af180112-5653-4d58-91a8-16091a0b7016-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/af960194-648b-4685-ae48-0bfcf8d26951-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/b0044f46-a08b-4044-b075-bfbb7b7c4aa9-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/b2a1ceca-8927-449c-9b24-a29fda108d38-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/b3d436d2-4081-4060-9bb1-bf0fb00d7fa7-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/b614e871-d79b-4b8b-a134-4f0713971959-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/b95a16ec-ef80-4810-9d61-a13c5f0bd279-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/b9f99a09-15a7-4b2b-bc2b-335553a123b0-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/ba14fdd3-bacd-49c7-9c39-f5892a96f8de-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/bb1bd722-5e90-4e57-a9dd-2d15d6f2258f-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/bb3a40ae-a359-4b3c-bc66-6c56d28451e9-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/bb8c7503-2017-4980-9814-83e78e5d1084-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/bd73957e-a960-40d3-95a6-f38881a4c5e9-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/bdd11c08-9258-4007-9f35-6e3e9a922bc6-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/be69af65-2ff1-42bf-9f41-10be2186eea9-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/bf3ceea7-2316-4d83-a592-b20c2f4336f8-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/c130872f-7caa-4037-ab75-b5e71564bdd7-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/c229dd48-b9d9-444d-8698-0098080ce640-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/c6a22910-e8cf-49f8-bb11-b38e20ff504a-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/cf3ed291-a22b-4227-8ba3-5307bafa7122-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/d137c3be-f194-4972-80c7-5cb118f2e93f-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/d46d3e80-bc6e-488a-849b-514558b4d869-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/d84c0988-e2ba-4bea-bb8f-e395e66dd0a8-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/d89f2a68-17ec-4f14-823c-2bc166e17946-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/d9c6e4bf-8bc8-45b3-ba66-c2f296e19ce3-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/dac198c2-56bb-431f-b514-167c94c05b10-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/de7b7584-fe66-442e-bf2d-3fd41810ff43-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/e1666f14-dd4e-490a-a8b0-7addfc5281b8-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/e4081413-74c0-4fa8-8565-4835cbe123e9-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/e4899023-8355-4fd4-9cb4-efc90b26fa89-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/e5c0707c-813f-4b92-b1e4-0c113ee3f863-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/e870a686-b260-4301-9218-76f6aedce1e2-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/ebcfd044-0b79-4f89-9dc3-4c22ff711142-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/effb3d10-0148-4312-a698-f538ce430eae-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/f68a8f06-ca0b-4933-afc8-80e6b104b2dd-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/f8667257-f043-41a9-8db6-d19804cd1899-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/f964354e-ad95-47ba-9ada-80d224bdf433-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/behaviors.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/behaviors.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/categories.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/categories.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/packages.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/suites.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/suites.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/data/timeline.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/export/influxDbData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/export/mail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/export/prometheusData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/history/categories-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/history/duration-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/history/history-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/history/history.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/history/retry-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/plugins/behaviors/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/plugins/packages/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/plugins/screen-diff/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/plugins/screen-diff/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/behaviors.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/categories-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/categories.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/duration-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/duration.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/environment.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/executors.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/history-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/retry-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/severity.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/status-chart.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/suites.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/pytestresult/data/html/widgets/summary.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_07_24-15_55_20infertility_intention_test.xls" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -278,10 +297,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/testdata/apidata/ner/gynaecology" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/testdata/apidata/intent/infertility" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -296,15 +316,15 @@
       <recent name="D:\workspace\kuaishang_auto\testdata\apidata\similary\infertility" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\workspace\kuaishang_auto\testdata\apidata\ner\gynaecology" />
+      <recent name="D:\workspace\kuaishang_auto\testdata\apidata\intent\infertility" />
       <recent name="D:\workspace\kuaishang_auto\testdata\apidata\ner\andrology" />
-      <recent name="D:\workspace\kuaishang_auto\testdata\apidata\ner\common" />
-      <recent name="D:\workspace\kuaishang_auto\testdata\apidata\similary\beauty" />
-      <recent name="D:\workspace\kuaishang_auto\commonfunc" />
+      <recent name="D:\workspace\kuaishang_auto\testdata\apidata\intent\gynaecology" />
+      <recent name="D:\workspace\kuaishang_auto\testdata\apidata\similary\all" />
+      <recent name="D:\workspace\kuaishang_auto\testdata\apidata\ner\gynaecology" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.get_different_pro_test">
-    <configuration name="get_different_pro_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.get_ner_v2">
+    <configuration name="get_intent" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ZL_AUTO_TEST" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -312,12 +332,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/commonfunc" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/commonfunc/get_different_pro_test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api/get_intent.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -348,7 +368,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="get_qastadio" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="get_sentence_similarity" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ZL_AUTO_TEST" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -361,7 +381,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api/get_qastadio.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api/get_sentence_similarity.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -370,7 +390,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="get_repeat" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="run_all" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ZL_AUTO_TEST" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -378,12 +398,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/commonfunc" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pytest" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/commonfunc/get_repeat.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pytest/run_all.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -392,7 +412,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="nertest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="test_get_qa_similarity" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ZL_AUTO_TEST" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -400,12 +420,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/commonfunc" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pytest/api" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/commonfunc/nertest.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pytest/api/test_get_qa_similarity.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -416,11 +436,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.get_different_pro_test" />
         <item itemvalue="Python.get_ner_v2" />
-        <item itemvalue="Python.get_repeat" />
-        <item itemvalue="Python.get_qastadio" />
-        <item itemvalue="Python.nertest" />
+        <item itemvalue="Python.get_intent" />
+        <item itemvalue="Python.get_sentence_similarity" />
+        <item itemvalue="Python.run_all" />
+        <item itemvalue="Python.test_get_qa_similarity" />
       </list>
     </recent_temporary>
   </component>
@@ -508,12 +528,27 @@
       <workItem from="1595993445945" duration="3116000" />
       <workItem from="1596015182742" duration="381000" />
       <workItem from="1596103994770" duration="3774000" />
-      <workItem from="1596179172033" duration="125519000" />
+      <workItem from="1596179172033" duration="135573000" />
+      <workItem from="1597202436977" duration="29484000" />
+      <workItem from="1597305783223" duration="14392000" />
+      <workItem from="1597391970760" duration="12189000" />
     </task>
+    <task id="LOCAL-00001" summary="&quot;first pycharm update&quot;">
+      <created>1597047540353</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1597047540353</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="&quot;first pycharm update&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;first pycharm update&quot;" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Notifications" timestamp="1591597999408">
@@ -528,62 +563,70 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595568397830" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1594981607039">
+    <state x="560" y="110" key="CommitChangelistDialog2" timestamp="1597047647453">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1594981607039" />
-    <state width="1877" height="123" key="GridCell.Tab.0.bottom" timestamp="1597042200003">
+    <state x="560" y="110" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1597047647453" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1597391987829">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="123" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597042200003" />
-    <state width="1877" height="123" key="GridCell.Tab.0.center" timestamp="1597042200003">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1597391987829" />
+    <state width="1877" height="2" key="GridCell.Tab.0.bottom" timestamp="1597644195213">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="123" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597042200003" />
-    <state width="1877" height="123" key="GridCell.Tab.0.left" timestamp="1597042200002">
+    <state width="1877" height="2" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597644195213" />
+    <state width="1877" height="2" key="GridCell.Tab.0.center" timestamp="1597644195213">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="123" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597042200002" />
-    <state width="1877" height="123" key="GridCell.Tab.0.right" timestamp="1597042200003">
+    <state width="1877" height="2" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597644195213" />
+    <state width="1877" height="2" key="GridCell.Tab.0.left" timestamp="1597644195213">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="123" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597042200003" />
-    <state width="1877" height="416" key="GridCell.Tab.1.bottom" timestamp="1596782738541">
+    <state width="1877" height="2" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597644195213" />
+    <state width="1877" height="2" key="GridCell.Tab.0.right" timestamp="1597644195213">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="416" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596782738541" />
-    <state width="1877" height="416" key="GridCell.Tab.1.center" timestamp="1596782738540">
+    <state width="1877" height="2" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597644195213" />
+    <state width="1877" height="416" key="GridCell.Tab.1.bottom" timestamp="1597305751995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="416" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596782738540" />
-    <state width="1877" height="416" key="GridCell.Tab.1.left" timestamp="1596782738540">
+    <state width="1877" height="416" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597305751995" />
+    <state width="1877" height="416" key="GridCell.Tab.1.center" timestamp="1597305751995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="416" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596782738540" />
-    <state width="1877" height="416" key="GridCell.Tab.1.right" timestamp="1596782738540">
+    <state width="1877" height="416" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597305751995" />
+    <state width="1877" height="416" key="GridCell.Tab.1.left" timestamp="1597305751995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="416" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596782738540" />
+    <state width="1877" height="416" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597305751995" />
+    <state width="1877" height="416" key="GridCell.Tab.1.right" timestamp="1597305751995">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="416" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597305751995" />
     <state x="784" y="230" key="RollbackChangesDialog" timestamp="1596697306434">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="784" y="230" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596697306434" />
-    <state x="408" y="121" key="SettingsEditor" timestamp="1596525938396">
+    <state x="408" y="121" key="SettingsEditor" timestamp="1597218773363">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="408" y="121" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1596525938396" />
+    <state x="408" y="121" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1597218773363" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1597048063997">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597048063997" />
     <state x="645" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1591582355722">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="645" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591582355722" />
-    <state x="752" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595934441508">
+    <state x="752" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597136999199">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="752" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1595934441508" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1596793693542">
+    <state x="752" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597136999199" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1597636084932">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1596793693542" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1597636084932" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -599,9 +642,10 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/kuaishang_auto$get_tt_test.coverage" NAME="get_tt_test Coverage Results" MODIFIED="1596532740568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$get_ner.coverage" NAME="get_ner Coverage Results" MODIFIED="1596505735894" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$get_standard_ner.coverage" NAME="get_standard_ner Coverage Results" MODIFIED="1597297676660" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commonfunc" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$test_item_process.coverage" NAME="test_item_process Coverage Results" MODIFIED="1594187215615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pytest/ui" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$test_get_ner.coverage" NAME="test_get_ner Coverage Results" MODIFIED="1595562139516" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pytest/api" />
-    <SUITE FILE_PATH="coverage/kuaishang_auto$get_ner_v2.coverage" NAME="get_ner_v2 Coverage Results" MODIFIED="1597026619326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$get_ner_v2.coverage" NAME="get_ner_v2 Coverage Results" MODIFIED="1597643181584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$get_null_answer.coverage" NAME="get_null_answer Coverage Results" MODIFIED="1594982598622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/knowledgegraph" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$algorithm_func.coverage" NAME="algorithm_func Coverage Results" MODIFIED="1593614895227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithm" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$api_test_for_youfu.coverage" NAME="api_test_for_youfu Coverage Results" MODIFIED="1596616649119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apitest" />
@@ -624,15 +668,15 @@
     <SUITE FILE_PATH="coverage/kuaishang_auto$test_for_ultra.coverage" NAME="test_for_ultra Coverage Results" MODIFIED="1592207049655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ui" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$get_label_value.coverage" NAME="get_label_value Coverage Results" MODIFIED="1592463982668" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$get_yf_intent_threshold.coverage" NAME="get_yf_intent_threshold Coverage Results" MODIFIED="1594362794877" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
-    <SUITE FILE_PATH="coverage/kuaishang_auto$run_all.coverage" NAME="run_all Coverage Results" MODIFIED="1596185277222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pytest" />
-    <SUITE FILE_PATH="coverage/kuaishang_auto$get_repeat.coverage" NAME="get_repeat Coverage Results" MODIFIED="1597025589471" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commonfunc" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$run_all.coverage" NAME="run_all Coverage Results" MODIFIED="1597308888215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pytest" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$get_repeat.coverage" NAME="get_repeat Coverage Results" MODIFIED="1597226951634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commonfunc" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$test_for_jieba.coverage" NAME="test_for_jieba Coverage Results" MODIFIED="1596441969651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commonfunc" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$api_test_2.coverage" NAME="api_test_2 Coverage Results" MODIFIED="1596158792882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apitest" />
-    <SUITE FILE_PATH="coverage/kuaishang_auto$test_get_qa_similarity.coverage" NAME="test_get_qa_similarity Coverage Results" MODIFIED="1592203471355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pytest/api" />
-    <SUITE FILE_PATH="coverage/kuaishang_auto$get_sentence_similarity.coverage" NAME="get_sentence_similarity Coverage Results" MODIFIED="1594805992320" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$test_result_for_api.coverage" NAME="test_result_for_api Coverage Results" MODIFIED="1595993523321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apitest" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$test_get_qa_similarity.coverage" NAME="test_get_qa_similarity Coverage Results" MODIFIED="1597304480280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pytest/api" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$get_sentence_similarity.coverage" NAME="get_sentence_similarity Coverage Results" MODIFIED="1597406291050" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$test_get_intent_percent.coverage" NAME="test_get_intent_percent Coverage Results" MODIFIED="1591607274254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
-    <SUITE FILE_PATH="coverage/kuaishang_auto$get_intent.coverage" NAME="get_intent Coverage Results" MODIFIED="1596195813744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$get_intent.coverage" NAME="get_intent Coverage Results" MODIFIED="1597636790117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$Test.coverage" NAME="Test Coverage Results" MODIFIED="1592386089751" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithm" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$test_for_applitools.coverage" NAME="test_for_applitools Coverage Results" MODIFIED="1592271751557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ui" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$item_process.coverage" NAME="item_process Coverage Results" MODIFIED="1592803472484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ui" />

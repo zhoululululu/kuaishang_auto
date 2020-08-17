@@ -4,53 +4,37 @@
   "children" : [ {
     "name" : "WIN-OQ20V7UABJF",
     "children" : [ {
-      "name" : "7484-MainThread",
+      "name" : "14028-MainThread",
       "children" : [ {
-        "name" : "test_get_common_ner",
-        "uid" : "6736b9ce6b4a11ee",
-        "parentUid" : "fb2fcebbbe353f95fb9d2890e90c14a4",
-        "status" : "broken",
+        "name" : "test_get_qa_similarity",
+        "uid" : "91081133f9fe761c",
+        "parentUid" : "023f3cbbcabb3398480cd4f3b7690476",
+        "status" : "passed",
         "time" : {
-          "start" : 1595561070357,
-          "stop" : 1595561440843,
-          "duration" : 370486
+          "start" : 1597308891491,
+          "stop" : 1597314817054,
+          "duration" : 5925563
+        },
+        "flaky" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "023f3cbbcabb3398480cd4f3b7690476"
+    }, {
+      "name" : "23540-MainThread",
+      "children" : [ {
+        "name" : "test_get_pro_intent",
+        "uid" : "b73cb0793f61ff36",
+        "parentUid" : "a9c7b3afc27e6a83362d51b37f45f208",
+        "status" : "passed",
+        "time" : {
+          "start" : 1597304502314,
+          "stop" : 1597304521353,
+          "duration" : 19039
         },
         "flaky" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "fb2fcebbbe353f95fb9d2890e90c14a4"
-    }, {
-      "name" : "12844-MainThread",
-      "children" : [ {
-        "name" : "test_get_qa_similarity",
-        "uid" : "768d85ab2173512",
-        "parentUid" : "b253b7e2ec64f33fe48cd286a9d2e8c1",
-        "status" : "passed",
-        "time" : {
-          "start" : 1593332851397,
-          "stop" : 1593332912303,
-          "duration" : 60906
-        },
-        "flaky" : true,
-        "parameters" : [ ]
-      } ],
-      "uid" : "b253b7e2ec64f33fe48cd286a9d2e8c1"
-    }, {
-      "name" : "3876-MainThread",
-      "children" : [ {
-        "name" : "test_get_pro_intent",
-        "uid" : "7e7f9deb4d88bd0",
-        "parentUid" : "ec39a83312277a407da885d2bec56507",
-        "status" : "passed",
-        "time" : {
-          "start" : 1596179266210,
-          "stop" : 1596179495707,
-          "duration" : 229497
-        },
-        "flaky" : true,
-        "parameters" : [ ]
-      } ],
-      "uid" : "ec39a83312277a407da885d2bec56507"
+      "uid" : "a9c7b3afc27e6a83362d51b37f45f208"
     } ],
     "uid" : "c1d739ea2cde58890d0f87d35a80f37b"
   } ]

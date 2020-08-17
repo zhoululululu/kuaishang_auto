@@ -24,12 +24,25 @@ rootPath = os.path.split(curPath)[0]
 
 class GetIntent:
 
-    def get_intent_result(self, target_file, bz_intent_list, re_intent_list, test_result_file):
+    def get_intent_result(self, target_file,bz_intent_list, re_intent_list,test_result_file):
         """
         通过获取target列表，以及人工及接口返回的意图值，来计算每个target及平均的准确率，召回率，F1
         :param target_file: 储存target的文件
         :param data_file: 储存接口结果数据的文件
         """
+        # test_data1 = ChangeDataType.file_to_dict(
+        #     rootPath + "\\testresults\\resultfile\\20_08_17-11_36_41infertility_intention_test_result_1_1.xls",
+        #     sheet_name="Sheet1")
+        # test_data2 = ChangeDataType.file_to_dict(
+        #     rootPath + "\\testresults\\resultfile\\20_08_17-11_42_05infertility_intention_test_result_1_2.xls",
+        #     sheet_name="Sheet1")
+        # bz_intent_list1 = test_data1.label.tolist()
+        # bz_intent_list2 = test_data2.label.tolist()
+        # bz_intent_list = bz_intent_list1 + bz_intent_list2
+        # re_intent_list1 = test_data1.response.tolist()
+        # re_intent_list2 = test_data2.response.tolist()
+        # re_intent_list = re_intent_list1 + re_intent_list2
+        # print(re_intent_list)
         # 获取target列表
         target_list = CommonFunction.get_target(self, target_file)
         # 返回每个target的准确率，召回率，F1
@@ -320,12 +333,28 @@ class GetIntent:
 
 
 if __name__ == '__main__':
+    # GetRequests().get_request("http://192.168.26.105:30106/intention/v2/infertility", "GET", "pro_intent",
+    #                           "intent\\infertility\\test_target.txt",
+    #                           "intent\\infertility\\infertility_to_test6000_third.csv",
+    #                           ["sentence", "false", "anorectal"],
+    #                           "label",
+    #                           "infertility_intention_test_result_1_1.xls",
+    #                           "infertility_intention_target_test_result_1_1.xls")
+    # GetRequests().get_request("http://192.168.26.105:30106/intention/v2/infertility", "GET", "pro_intent",
+    #                           "intent\\infertility\\test_target.txt",
+    #                           "intent\\infertility\\intention_to_test_6000_1.csv",
+    #                           ["sentence", "false", "anorectal"],
+    #                           "label",
+    #                           "infertility_intention_test_result_1_2.xls",
+    #                           "infertility_intention_target_test_result_1_2.xls")
+    GetIntent().get_intent_result("intent\\infertility\\test_target.txt",
+                                  "infertility_intention_target_test_result_mix.xls")
     # GetIntent().get_final_excel("intent\\infertility\\test_target.txt", "result1.xls", "result2.xls")
-    GetIntent().get_andrology_intent("http://192.168.26.105:30098/andrology_intent/v2?sentence={}",
-                                     "intent\\andrology\\target.txt",
-                                     "intent\\andrology\\andrology_intent.csv",
-                                     "andrology_intention_test.xls",
-                                     "andrology_intention_target_test.xls")
+    # GetIntent().get_andrology_intent("http://192.168.26.105:30098/andrology_intent/v2?sentence={}",
+    #                                  "intent\\andrology\\target.txt",
+    #                                  "intent\\andrology\\andrology_intent.csv",
+    #                                  "andrology_intention_test.xls",
+    #                                  "andrology_intention_target_test.xls")
 # GetRequests().get_request("http://10.13.8.230:8062/intention/v1", "GET", "pro_intent",
 #                               "intent\\gynaecology\\线上target.txt",
 #                               "intent\\gynaecology\\妇科-总测试数据-线上线下.csv",

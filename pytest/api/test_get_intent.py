@@ -27,13 +27,13 @@ class TestIntent(object):
         #                           "label",
         #                           "infertility_intention_test_result.xls",
         #                           "infertility_intention_target_test_result.xls")
-        # GetRequests().get_request("http://10.13.8.230:8204//intention/v2/anorectal", "GET", "a_intent",
+        # GetRequests().get_request("http://10.13.8.230:8204/intention/v2/anorectal", "GET", "a_intent",
         #                           "intent\\anorectal\\target.txt",
         #                           "intent\\anorectal\\anorectal_intention_to_test_4930.csv", ["sentence"],
         #                           "label",
         #                           "anorectal_intention_test_result.xls",
         #                           "anorectal_intention_target_test_result.xls")
-        GetRequests().get_request("http://192.168.26.105:30098/andrology_intent/v2", "GET", "a_intent",
+        GetRequests().get_request("http://10.13.8.230:8098/andrology_intent/v2", "GET", "test_intent",
                                   "intent\\andrology\\target.txt",
                                   "intent\\andrology\\andrology_intent.csv", ["sentence"],
                                   "label",

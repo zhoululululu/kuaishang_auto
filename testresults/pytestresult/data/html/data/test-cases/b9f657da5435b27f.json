@@ -1,0 +1,61 @@
+{
+  "uid" : "b9f657da5435b27f",
+  "name" : "test_get_qa_similarity",
+  "fullName" : "pytest.api.test_get_qa_similarity.TestQASimilarity#test_get_qa_similarity",
+  "historyId" : "a8a223cf4cc8bf93341a15ddd2b4185d",
+  "time" : {
+    "start" : 1597308826432,
+    "stop" : 1597308826499,
+    "duration" : 67
+  },
+  "status" : "broken",
+  "statusMessage" : "IndexError: list index out of range",
+  "statusTrace" : "self = <test_get_qa_similarity.TestQASimilarity object at 0x000002A2DE55E710>\n\n    @pytest.mark.qa_similary_apitest\n    @allure.feature(\"线上全科室\")\n    def test_get_qa_similarity(self):\n        GetRequests().get_request(\"http://192.168.1.79:32088/without_bert_similarity/v2/sim\", \"GET\", \"qa_similary\", \"None\",\n                                  \"similary\\\\all\\\\first_test_23202.csv\", [\"sentence1\", \"sentence2\"],\n                                  \"label\",\n>                                 \"全科室（23202）测试结果.xls\", \"None\")\n\napi\\test_get_qa_similarity.py:22: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n..\\api\\get_requests.py:180: in get_request\n    params = GetRequests.get_params(api_category, mul_params)  # 调用函数拼接参数对\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\napi_name = 'qa_similary', data = ['不到一分钟的', '不到一分钟？']\n\n    @staticmethod\n    def get_params(api_name, data):\n        \"\"\"\n        获取接口的请求参数\n        :param api_name: 请求接口属于哪个类型\n        :param data: 读取的testdata值，拼接params值\n        \"\"\"\n        # 线上意图\n        if api_name == \"pro_intent\":\n            params = {\n                \"utterance\": data[0],\n                \"multi_intent_mode\": data[1],\n                \"enterprise\": data[2]\n            }\n        # 测试环境意图\n        if api_name == \"test_intent\":\n            params = {\n                \"sentence\": data\n            }\n    \n        # 皮肤科意图\n        if api_name == \"a_intent\":\n            params = {\n                \"utterance\": data\n            }\n        # 项目\n        elif api_name == \"item\":\n            params = {\n                \"sentence\": data\n            }\n        # 实体\n        elif api_name == \"ner\":\n            params = {\n                \"utterance\": data[0],\n                \"model_name\": data[1]\n            }\n        # 句子相似度\n        elif api_name == \"qa_similary\":\n            params = {\n                \"str1\": data[0],\n                \"str2\": data[1],\n>               \"model\": data[2]\nE               IndexError: list index out of range\n\n..\\api\\get_requests.py:66: IndexError",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "线上全科室"
+  }, {
+    "name" : "tag",
+    "value" : "qa_similary_apitest"
+  }, {
+    "name" : "parentSuite",
+    "value" : "pytest.api"
+  }, {
+    "name" : "suite",
+    "value" : "test_get_qa_similarity"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestQASimilarity"
+  }, {
+    "name" : "host",
+    "value" : "WIN-OQ20V7UABJF"
+  }, {
+    "name" : "thread",
+    "value" : "3052-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "pytest.api.test_get_qa_similarity"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ "qa_similary_apitest" ]
+  },
+  "source" : "b9f657da5435b27f.json",
+  "parameterValues" : [ ]
+}

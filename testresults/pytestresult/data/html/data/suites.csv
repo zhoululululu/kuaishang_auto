@@ -1,4 +1,3 @@
 "Status","Name","Duration in ms","Description"
-"broken","pytest.api.test_get_ner.TestNer#test_get_common_ner","370486",""
-"passed","pytest.api.test_get_qa_similarity.TestQASimilarity#test_get_qa_similarity","60906",""
-"passed","pytest.api.test_get_intent.TestIntent#test_get_pro_intent","229497",""
+"passed","pytest.api.test_get_qa_similarity.TestQASimilarity#test_get_qa_similarity","5925563",""
+"passed","pytest.api.test_get_intent.TestIntent#test_get_pro_intent","19039",""

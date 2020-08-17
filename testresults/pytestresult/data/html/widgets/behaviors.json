@@ -1,19 +1,8 @@
 {
-  "total" : 3,
+  "total" : 2,
   "items" : [ {
-    "uid" : "ff03dcdeb0e9528d5bdca058c38677c4",
-    "name" : "Ner实体识别",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 1,
-      "skipped" : 0,
-      "passed" : 0,
-      "unknown" : 0,
-      "total" : 1
-    }
-  }, {
-    "uid" : "1734e92aeac9e0794e5020c2e1daf021",
-    "name" : "线上全科室",
+    "uid" : "c8e7f5ba17e5e618af1393c204f90170",
+    "name" : "测试环境通用意图识别",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -23,8 +12,8 @@
       "total" : 1
     }
   }, {
-    "uid" : "c8e7f5ba17e5e618af1393c204f90170",
-    "name" : "测试环境通用意图识别",
+    "uid" : "1734e92aeac9e0794e5020c2e1daf021",
+    "name" : "线上全科室",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,

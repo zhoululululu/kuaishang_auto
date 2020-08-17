@@ -87,7 +87,7 @@ class GetSentenceSimilarity:
         tf_list = []
         re_score = ""
         tf = ""
-        lb_list, sen1, sen2 = [], [], []
+        lb_list, sen1, sen2, sc1, sc2 = [], [], [], [], []
         for idx, temp in tqdm(test_data.iterrows()):
             label = int(temp["label"])
             str1 = temp["sentence1"]
@@ -98,14 +98,18 @@ class GetSentenceSimilarity:
             try:
                 r = requests.get(url, timeout=50)
                 result = r.json()
-                score1 = result["data"]["score"]
-                score2 = result["data"]["scorer"]
-                score = min(score1, score2)
-                re_score = CommonFunction.get_re_score(score, 0.916)
+                score = result["data"]["score"]
+                # score2 = result["data"]["scorer"]
+                # score = min(score1, score2)
+                re_score = CommonFunction.get_re_score(score, 0.757)
                 tf = CommonFunction.get_tf(re_score, label)
             except Exception as e:
                 score = "bad request"
                 print(score)
+                re_score = 2
+                tf = CommonFunction.get_tf(re_score, label)
+            sc1.append(score)
+            # sc2.append(score2)
             score_list.append(score)
             re_score_list.append(re_score)
             tf_list.append(tf)
@@ -118,6 +122,8 @@ class GetSentenceSimilarity:
         sheet1.write(0, 0, "sentence1")
         sheet1.write(0, 1, "sentence2")
         sheet1.write(0, 2, "score")
+        # sheet1.write(0, 3, "score")
+        # sheet1.write(0, 4, "score")
         sheet1.write(0, 3, "re_score")
         sheet1.write(0, 4, "label")
         sheet1.write(0, 5, "tf")
@@ -125,6 +131,7 @@ class GetSentenceSimilarity:
             sheet1.write(i + 1, 0, sen1[i])
             sheet1.write(i + 1, 1, sen2[i])
             sheet1.write(i + 1, 2, score_list[i])
+            # sheet1.write(i + 1, 3, sc1[i])
             sheet1.write(i + 1, 3, re_score_list[i])
             sheet1.write(i + 1, 4, lb_list[i])
             sheet1.write(i + 1, 5, tf_list[i])
@@ -235,21 +242,32 @@ class GetSentenceSimilarity:
 
         workbook.save(rootPath + '\\testresults\\resultfile\\' + now + result_file)
 
-    def get_collect(self, file, test_result_file):
-        re_score_list, p_list, r_list, f1_list, i_list = [], [], [], [], []
-        test_data = ChangeDataType.excel_to_dict(rootPath + "\\testresults\\resultfile\\" + file,
-                                                 sheet_name="统计结果")
-        score_list = test_data.score.tolist()
-        label_list = test_data.label.tolist()
+    def get_collect(self, file1, file2, file3, test_result_file):
+        re_score_list, p_list, r_list, f1_list, i_list, all_sc, all_resc = [], [], [], [], [], [], []
+        test_data1 = ChangeDataType.excel_to_dict(rootPath + "\\testresults\\resultfile\\" + file1,
+                                                  sheet_name="Sheet1")
+        test_data2 = ChangeDataType.excel_to_dict(rootPath + "\\testresults\\resultfile\\" + file2,
+                                                  sheet_name="Sheet1")
+        test_data3 = ChangeDataType.excel_to_dict(rootPath + "\\testresults\\resultfile\\" + file3,
+                                                  sheet_name="Sheet1")
+
+        score_list1 = test_data1.response.tolist()
+        label_list1 = test_data1.label.tolist()
+        score_list2 = test_data2.response.tolist()
+        label_list2 = test_data2.label.tolist()
+        score_list3 = test_data3.response.tolist()
+        label_list3 = test_data3.label.tolist()
+        all_sc = label_list1 + label_list2 + label_list3
+        all_resc = score_list1 + score_list2 + score_list3
         i = 0
-        n = 0
-        while (i < 0.99):
-            n += 1
-            i += 0.01
-            for j in range(0, len(score_list)):
-                re_score = CommonFunction.get_re_score(score_list[j], i)
+        # n = 0
+        while (i < 0.999):
+            # n += 1
+            i += 0.001
+            for j in range(0, len(all_resc)):
+                re_score = CommonFunction.get_re_score(all_resc[j], i)
                 re_score_list.append(re_score)
-            p, r, f1, pn, rn, tn = MultiClassByWord.class_target(self, label_list, re_score_list, 1)
+            p, r, f1, pn, rn, tn = MultiClassByWord.class_target(self, all_sc, re_score_list, 1)
             p_list.append(p)
             r_list.append(r)
             f1_list.append(f1)
@@ -276,11 +294,17 @@ if __name__ == '__main__':
     test = GetSentenceSimilarity()
     # test.get_prf("20_017_08-20_50_52新全科室统计结果.xls", 0.916)
     # test.get_prf("20_017_14-14_26_26测试环境_医美统计结果.xls", 0.916)
-    test.get_collect("120_07_15-17_38_04测试环境_全科室统计结果.xls", "新全科超参数结果.xls")
-    # test.get_collect("1120_07_15-14_49_01测试环境_医美统计结果.xls", "新医美超参数结果.xls")
+    # test.get_collect("120_07_15-17_38_04测试环境_全科室统计结果.xls", "新全科超参数结果.xls")
+    # test.get_collect("20_08_13-17_19_10全科室（23202）测试结果.xls", "20_08_13-18_02_44全科室（30000）测试结果.xls",
+    #                  "20_08_13-18_33_33全科室（21753）测试结果.xls",
+    #                  "全科室7w + 超参数结果(JH).xls")
     #
-    # test.get_sentence_similarity_twomodel("http://192.168.1.79:8235/bert_similarity/v2?str1={}&str2={}&model=siamese",
-    #                                       "similary\\all\\全科室新测试数据.csv", "测试环境_全科1室统计结果.xls")
+    test.get_sentence_similarity("http://10.0.220.240:32088//without_bert_similarity/v2/sim?str1={}&str2={}",
+                                 "similary\\all\\first_test_23202.csv", "全科室（23202）测试结果-测试环境.xls")
+    test.get_sentence_similarity("http://10.0.220.240:32088//without_bert_similarity/v2/sim?str1={}&str2={}",
+                                 "similary\\all\\second_test_30000.csv", "全科室（30000）测试结果-测试环境.xls")
+    test.get_sentence_similarity("http://10.0.220.240:32088//without_bert_similarity/v2/sim?str1={}&str2={}",
+                                 "similary\\all\\origin_test_21753.csv", "全科室（21753）测试结果-测试环境.xls")
 
     # test.get_sentence_similarity_pro("http://192.168.1.79:8234/bert_similarity/v2?str1={}&str2={}&model=rwms",
     # "similary\\beauty\\beauty_to_test.csv", "医美全科室统计结果.xls")

@@ -65,6 +65,11 @@ class GetRequests:
                 "str2": data[1],
                 "model": data[2]
             }
+        elif api_name == "jh_similary":
+            params = {
+                "str1": data[0],
+                "str2": data[1]
+            }
         # 症状相似度
         elif api_name == "symptom_similary":
             params = {
@@ -105,7 +110,7 @@ class GetRequests:
         elif api_name == "ner":
             result = result["data"]["bio"]
         # 句子相似度
-        elif api_name == "qa_similary":
+        elif api_name == "qa_similary" or api_name == "jh_similary":
             result = result["data"]["score"]
             # result = result["sim_score"]
         # 症状相似度
@@ -198,8 +203,8 @@ class GetRequests:
                         re_list.append(response)  # 拼接已排序后的结果意图返回值
                     else:
                         # 针对相似度进行一个相似匹配，0.5为匹配阈值，可根据需要修改
-                        if "qa_similary" in api_category:
-                            response = CommonFunction.get_re_score(response, 0.9)
+                        if "similary" in api_category:
+                            response = CommonFunction.get_re_score(response, 0.757)
                         if "symptom_similary" in api_category:
                             response = CommonFunction.get_sys_similary_tf(response, temp["标准症状"])
                         tf = CommonFunction.get_tf(temp[assert_param], response)  # 判断是否一致，为后面输出做准备

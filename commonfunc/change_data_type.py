@@ -131,4 +131,4 @@ if __name__ == '__main__':
     print(ChangeDataType().file_to_dict(rootPath + "\\testdata\\apidata\\" + "similary\\all\\全科室相似标注-v1.xlsx",
                                         sheet_name="Sheet1"))
     print(ChangeDataType().file_to_dict(
-        rootPath + "\\testresults\\resultfile\\" + "20_07_28-14_05_30gynaecology_intention_target_test_result.xls"))
+        rootPath + "\\testresults\\resultfile\\" + "1120_07_28-14_05_30gynaecology_intention_target_test_result.xls"))

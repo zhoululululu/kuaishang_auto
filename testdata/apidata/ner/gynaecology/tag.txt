@@ -12,7 +12,6 @@ price
 doctor
 tool
 medicine
-othertreatment
 address
 secretion
 age

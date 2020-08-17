@@ -2,52 +2,36 @@
   "uid" : "b1a8273437954620fa374b796ffaacdd",
   "name" : "behaviors",
   "children" : [ {
+    "name" : "测试环境通用意图识别",
+    "children" : [ {
+      "name" : "test_get_pro_intent",
+      "uid" : "b73cb0793f61ff36",
+      "parentUid" : "c8e7f5ba17e5e618af1393c204f90170",
+      "status" : "passed",
+      "time" : {
+        "start" : 1597304502314,
+        "stop" : 1597304521353,
+        "duration" : 19039
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "c8e7f5ba17e5e618af1393c204f90170"
+  }, {
     "name" : "线上全科室",
     "children" : [ {
       "name" : "test_get_qa_similarity",
-      "uid" : "768d85ab2173512",
+      "uid" : "91081133f9fe761c",
       "parentUid" : "1734e92aeac9e0794e5020c2e1daf021",
       "status" : "passed",
       "time" : {
-        "start" : 1593332851397,
-        "stop" : 1593332912303,
-        "duration" : 60906
+        "start" : 1597308891491,
+        "stop" : 1597314817054,
+        "duration" : 5925563
       },
       "flaky" : true,
       "parameters" : [ ]
     } ],
     "uid" : "1734e92aeac9e0794e5020c2e1daf021"
-  }, {
-    "name" : "Ner实体识别",
-    "children" : [ {
-      "name" : "test_get_common_ner",
-      "uid" : "6736b9ce6b4a11ee",
-      "parentUid" : "ff03dcdeb0e9528d5bdca058c38677c4",
-      "status" : "broken",
-      "time" : {
-        "start" : 1595561070357,
-        "stop" : 1595561440843,
-        "duration" : 370486
-      },
-      "flaky" : false,
-      "parameters" : [ ]
-    } ],
-    "uid" : "ff03dcdeb0e9528d5bdca058c38677c4"
-  }, {
-    "name" : "测试环境通用意图识别",
-    "children" : [ {
-      "name" : "test_get_pro_intent",
-      "uid" : "7e7f9deb4d88bd0",
-      "parentUid" : "c8e7f5ba17e5e618af1393c204f90170",
-      "status" : "passed",
-      "time" : {
-        "start" : 1596179266210,
-        "stop" : 1596179495707,
-        "duration" : 229497
-      },
-      "flaky" : true,
-      "parameters" : [ ]
-    } ],
-    "uid" : "c8e7f5ba17e5e618af1393c204f90170"
   } ]
 }

@@ -1,30 +1,20 @@
 [ {
-  "uid" : "6736b9ce6b4a11ee",
-  "name" : "test_get_common_ner",
+  "uid" : "91081133f9fe761c",
+  "name" : "test_get_qa_similarity",
   "time" : {
-    "start" : 1595561070357,
-    "stop" : 1595561440843,
-    "duration" : 370486
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "7e7f9deb4d88bd0",
-  "name" : "test_get_pro_intent",
-  "time" : {
-    "start" : 1596179266210,
-    "stop" : 1596179495707,
-    "duration" : 229497
+    "start" : 1597308891491,
+    "stop" : 1597314817054,
+    "duration" : 5925563
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "768d85ab2173512",
-  "name" : "test_get_qa_similarity",
+  "uid" : "b73cb0793f61ff36",
+  "name" : "test_get_pro_intent",
   "time" : {
-    "start" : 1593332851397,
-    "stop" : 1593332912303,
-    "duration" : 60906
+    "start" : 1597304502314,
+    "stop" : 1597304521353,
+    "duration" : 19039
   },
   "status" : "passed",
   "severity" : "normal"

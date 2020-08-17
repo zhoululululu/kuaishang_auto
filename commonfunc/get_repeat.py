@@ -27,10 +27,13 @@ class GetRepeat:
         sentence_list = test_data1.sentence.tolist()
         label_list = test_data1.label.tolist()
         hj_list = test_data2.text.tolist()
-        for i in range(0, len(sentence_list)):
-            if sentence_list[i] not in hj_list:
-                res_sentence.append(sentence_list[i])
-                res_label.append(label_list[i])
+        result = set(sentence_list) & set(hj_list)
+        print(result)
+        print(len(result))
+        # for i in range(0, len(sentence_list)):
+        #     if sentence_list[i] not in hj_list:
+        #         res_sentence.append(sentence_list[i])
+        #         res_label.append(label_list[i])
         result_data = pd.DataFrame({"sentence": res_sentence, "label": res_label})
         now = time.strftime('%y_%m_%d-%H_%M_%S')
         result_data.to_excel(rootPath + '\\testresults\\resultfile\\' + now + "new_test_case.xls")
@@ -86,7 +89,7 @@ class GetRepeat:
 
 
 if __name__ == '__main__':
-    # GetRepeat().get_repeat("intent\\gynaecology\\妇科-总测试数据-线上线下.csv", "intent\\gynaecology\\clear_data_v3_2.xlsx")
+    GetRepeat().get_intention_repeat("intent\\gynaecology\\妇科-总测试数据-线上线下.csv", "intent\\gynaecology\\new_test_data.xlsx")
     # GetRepeat().quchong(rootPath + "\\testdata\\apidata\\" + "intent\\gynaecology\\妇科-总测试数据-线上线下.csv")
-    GetRepeat().get_ner_repeat("ner\\gynaecology\\" + "bio_char_for_test.txt",
-                               "ner\\gynaecology\\" + "train_data.txt")
+    # GetRepeat().get_ner_repeat("ner\\andrology\\" + "bio_char.txt",
+    #                            "ner\\andrology\\" + "train_plus.txt")
