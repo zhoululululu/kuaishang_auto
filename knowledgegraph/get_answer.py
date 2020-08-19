@@ -19,14 +19,6 @@ rootPath = os.path.split(curPath)[0]
 
 
 class GetAnswer:
-
-    @staticmethod
-    def get_cause_and_item():
-        test_data = ChangeDataType.json_to_dict(rootPath + "\\testdata\\knowledgegraph\\" + "test.json")
-        item = list(test_data.keys())
-        cause = list(test_data.values())
-        return item, cause
-
     @staticmethod
     def get_check_and_item():
         test_data = ChangeDataType.csv_to_dict(rootPath + "\\testdata\\knowledgegraph\\" + "check_simple.csv")
@@ -63,20 +55,6 @@ class GetAnswer:
         cause_list = list(test_data.values())
         print()
         return to_cause_list, cause_list
-
-    @staticmethod
-    def get_cause2item_mapping():
-        test_data = ChangeDataType.json_to_dict(rootPath + "\\testdata\\knowledgegraph\\" + "cause.json")
-        cause_list = list(test_data.keys())
-        item_list = list(test_data.values())
-        return cause_list, item_list
-
-    @staticmethod
-    def get_cause2item_mapping2():
-        test_data = ChangeDataType.json_to_dict(rootPath + "\\testdata\\knowledgegraph\\" + "test.json")
-        item_list = list(test_data.keys())
-        cause_list = list(test_data.values())
-        return item_list, cause_list
 
     @staticmethod
     def get_all_item():

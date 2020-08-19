@@ -19,8 +19,6 @@ rootPath = os.path.split(curPath)[0]
 
 
 class GetNer:
-    #     def get_stander_testfile(self, test_data_file):
-    #         test_file = open(rootPath + "\\testdata\\apidata\\" + test_data_file, "w", encoding="utf-8")
 
     def get_ner_test(self, url, model_name, test_data_file, test_result_file):
         # GetNer.get_stander_testfile(self, test_data_file)
@@ -85,10 +83,15 @@ if __name__ == '__main__':
     #                     "ner\\gynaecology\\tag.txt",
     #                     "ner_gynaecology_testresult.csv",
     #                     "ner_gynaecology_target_testresult.xls")
+    #妇科ner预生产：10.14.250.220:8060
+    # GetNer().get_target("http://10.14.250.220:8060/ner/v1", "gynaecology", "ner\\gynaecology\\new_bio_char.txt",
+    #                     "ner\\gynaecology\\tag.txt",
+    #                     "ner_gynaecology_testresult.csv",
+    #                     "ner_gynaecology_target_testresult.xls")
     # 妇科 url:http://192.168.26.105:32060/ner/v1
     # GetNer().get_target("ner\\common\\common_mix.txt", "ner\\common\\mix_target.txt", "ne_testresult.csv",
     #                     "nerr_target_testresult.xls")
     # 男科 url:http://192.168.26.105:32060/ner/v1
-    GetNer().get_target("http://192.168.1.74:8062/ner/v1", "nanke_youhua", "ner\\andrology\\new_testdata_andrology.txt",
+    GetNer().get_target("http://192.168.1.74:8062/ner/v1", "nanke_youhua", "ner\\andrology\\first_andrology_testcase.txt",
                         "ner\\andrology\\andrology_target_test.txt", "ner_andrology_testresult.csv",
                         "ner_andrology_target_testresult.xls")

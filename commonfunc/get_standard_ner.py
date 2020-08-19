@@ -6,7 +6,6 @@ Created on 2020/8/13 10:13
 @Desc  :
 '''
 import os
-from commonfunc.change_data_type import ChangeDataType
 import codecs
 
 curPath = os.path.abspath(os.path.dirname(__file__))

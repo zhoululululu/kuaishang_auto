@@ -48,10 +48,13 @@
     <file url="file://$PROJECT_DIR$/testdata/apidata/similary/vitiligo/vitiligo_to_test.csv" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/testdata/apidata/similary/全科室.csv" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/testdata/knowledgegraph/all_item_knowledge.json" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/testdata/knowledgegraph/cause.json" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/testdata/knowledgegraph/check_simple.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testdata/knowledgegraph/other/cause.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testdata/knowledgegraph/other/cause.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testdata/knowledgegraph/other/check_simple.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testdata/knowledgegraph/other/check_simple.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testdata/knowledgegraph/other/test.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testdata/knowledgegraph/other/test.json" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/testdata/knowledgegraph/test.csv" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/testdata/knowledgegraph/test.json" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/testdata/similary/qa_similar/vitiligo_to_test.csv" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/testdata/similary/qa_similar/全科室.csv" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/testresults/resultfile/20_07_24-15_20_37gynaenology_ner_test_result.csv" charset="UTF-8" />

@@ -31,10 +31,10 @@ class GetIntent:
         :param data_file: 储存接口结果数据的文件
         """
         # test_data1 = ChangeDataType.file_to_dict(
-        #     rootPath + "\\testresults\\resultfile\\20_08_17-11_36_41infertility_intention_test_result_1_1.xls",
+        #     rootPath + "\\testresults\\resultfile\\20_08_17-11_36_41infertility_intention_test_result_1.xls",
         #     sheet_name="Sheet1")
         # test_data2 = ChangeDataType.file_to_dict(
-        #     rootPath + "\\testresults\\resultfile\\20_08_17-11_42_05infertility_intention_test_result_1_2.xls",
+        #     rootPath + "\\testresults\\resultfile\\20_08_17-11_42_05infertility_intention_test_result_1.xls",
         #     sheet_name="Sheet1")
         # bz_intent_list1 = test_data1.label.tolist()
         # bz_intent_list2 = test_data2.label.tolist()

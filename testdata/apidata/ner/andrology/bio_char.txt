@@ -47949,7 +47949,7 @@ m		I_normsymptom
 期		I_datetime
 天		I_datetime
 放		O
-假		O
+，		O
 
 闻		O
 到		O
@@ -47965,8 +47965,8 @@ m		I_normsymptom
 
 好		O
 像		O
-是		O
-没		B_cause
+		O
+B_cause
 洗		I_cause
 手		I_cause
 碰		I_cause
