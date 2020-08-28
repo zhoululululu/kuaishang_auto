@@ -1,81 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a68f835-effe-4429-a687-34ebae545105" name="Default Changelist" comment="&quot;first pycharm update&quot;">
-      <change afterPath="$PROJECT_DIR$/knowledgegraph/get_graph_answer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledgegraph/get_test_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testdata/apidata/ner/andrology/second_andrology_testcase.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testdata/knowledgegraph/check_item_mapping.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testdata/knowledgegraph/normal_intention.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testdata/knowledgegraph/other/sym2sym.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="2a68f835-effe-4429-a687-34ebae545105" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/get_intent.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/get_intent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/Qamatcher_Qastudio_comp.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/Qamatcher_Qastudio_comp.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/get_ner_v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/get_ner_v2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commonfunc/get_standard_ner.py" beforeDir="false" afterPath="$PROJECT_DIR$/commonfunc/get_standard_ner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commonfunc/nertest.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledgegraph/get_answer.py" beforeDir="false" afterPath="$PROJECT_DIR$/knowledgegraph/get_answer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testdata/apidata/ner/andrology/bio_char.txt" beforeDir="false" afterPath="$PROJECT_DIR$/testdata/apidata/ner/andrology/bio_char.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testdata/apidata/ner/andrology/new_testdata_andrology.txt" beforeDir="false" afterPath="$PROJECT_DIR$/testdata/apidata/ner/andrology/first_andrology_testcase.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testdata/apidata/ner/andrology/test_andrology_bio.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testdata/knowledgegraph/cause.json" beforeDir="false" afterPath="$PROJECT_DIR$/testdata/knowledgegraph/other/cause.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testdata/knowledgegraph/cause_simple.csv" beforeDir="false" afterPath="$PROJECT_DIR$/testdata/knowledgegraph/cause_item_mapping.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testdata/knowledgegraph/check_simple.csv" beforeDir="false" afterPath="$PROJECT_DIR$/testdata/knowledgegraph/other/check_simple.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testdata/knowledgegraph/knowledge.csv" beforeDir="false" afterPath="$PROJECT_DIR$/testdata/knowledgegraph/other/knowledge.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testdata/knowledgegraph/othertreatment_simple.csv" beforeDir="false" afterPath="$PROJECT_DIR$/testdata/knowledgegraph/other/othertreatment_simple.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testdata/knowledgegraph/test.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_07-11_14_24ner_gynaecology_target_testresult.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_07-11_14_24ner_gynaecology_testresult.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_10-09_07_05ner_gynaecology_testresult.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_10-09_07_06ner_gynaecology_target_testresult.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_10-10_31_57ner_gynaecology_testresult.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_10-10_31_58ner_gynaecology_target_testresult.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_11-12_21_45ner_gynaecology_testresult.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_11-12_21_46ner_gynaecology_target_testresult.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_11-16_53_13ner_target_testresult.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_11-16_53_13ner_testresult.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_11-17_03_04ner_target_testresult.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_11-17_03_04ner_testresult.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_11-17_13_37ner_testresult.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_11-17_13_38ner_target_testresult.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_11-17_20_51ner_target_testresult.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_11-17_20_51ner_testresult.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_11-17_37_45ner_testresult.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_11-17_37_46ner_target_testresult.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_12-11_25_11ner_gynaecology_testresult.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_12-11_25_12ner_gynaecology_target_testresult.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_12-11_55_28ner_testresult.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_12-11_55_29ner_target_testresult.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_12-11_58_48ner_target_testresult.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_12-11_58_48ner_testresult.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_12-13_47_10ner_gynaecology_target_testresult.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_12-13_47_10ner_gynaecology_testresult.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_12-18_08_06new_test_case.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_12-18_09_13new_test_case.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_13-09_49_33ner_gynaecology_testresult.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_13-09_49_34ner_gynaecology_target_testresult.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_13-09_52_57ner_andrology_target_testresult.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_13-09_52_57ner_andrology_testresult.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_13-09_56_54ner_andrology_testresult.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_13-09_56_55ner_andrology_target_testresult.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_13-11_42_21ner_andrology_testresult.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_13-11_42_22ner_andrology_target_testresult.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_13-13_50_48ner_gynaecology_testresult.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_13-13_50_49ner_gynaecology_target_testresult.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_13-15_10_45andrology_intention_target_test_result.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_13-15_10_45andrology_intention_test_result.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_13-15_42_01andrology_intention_target_test_result.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_13-15_42_01andrology_intention_test_result.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_13-18_10_29andrology_intention_target_test_result.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_13-18_10_29andrology_intention_test_result.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_17-11_30_22infertility_intention_test_result.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_17-11_36_41infertility_intention_test_result_1_1.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_17-11_36_42infertility_intention_target_test_result_1_1.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_17-11_42_05infertility_intention_test_result_1_2.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_17-11_42_06infertility_intention_target_test_result_1_2.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_17-11_59_52infertility_intention_target_test_result_mix.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_17-13_48_25ner_andrology_testresult.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_17-13_48_26ner_andrology_target_testresult.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledgegraph/get_graph_answer.py" beforeDir="false" afterPath="$PROJECT_DIR$/knowledgegraph/get_graph_answer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledgegraph/get_test_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/knowledgegraph/get_test_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testdata/knowledgegraph/all_item_knowledge.json" beforeDir="false" afterPath="$PROJECT_DIR$/testdata/knowledgegraph/all_item_knowledge.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_07_08-20_19_14新全科室统计结果.xls" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/resultfile/similar/20_07_08-20_19_14新全科室统计结果.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_12-14_16_22全科室（23202）测试结果.xls" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/resultfile/similar/20_08_12-14_16_22全科室（23202）测试结果.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_12-14_31_30全科室（30000）测试结果.xls" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/resultfile/similar/20_08_12-14_31_30全科室（30000）测试结果.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_12-14_42_38全科室（21753）测试结果.xls" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/resultfile/similar/20_08_12-14_42_38全科室（21753）测试结果.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_12-16_00_17全科室（23202）测试结果-测试环境.xls" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/resultfile/similar/20_08_12-16_00_17全科室（23202）测试结果-测试环境.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_12-16_07_58全科室（30000）测试结果-测试环境.xls" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/resultfile/similar/20_08_12-16_07_58全科室（30000）测试结果-测试环境.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_12-16_13_33全科室（21753）测试结果-测试环境.xls" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/resultfile/similar/20_08_12-16_13_33全科室（21753）测试结果-测试环境.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_12-17_17_48全科室7w + 超参数结果.xls" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/resultfile/similar/20_08_12-17_17_48全科室7w + 超参数结果.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_12-17_24_50全科室7w + 超参数结果.xls" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/resultfile/similar/20_08_12-17_24_50全科室7w + 超参数结果.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_12-17_27_18全科室7w + 超参数结果.xls" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/resultfile/similar/20_08_12-17_27_18全科室7w + 超参数结果.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_13-16_33_08全科室（23202）测试结果.xls" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/resultfile/similar/20_08_13-16_33_08全科室（23202）测试结果.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_13-17_19_10全科室（23202）测试结果.xls" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/resultfile/similar/20_08_13-17_19_10全科室（23202）测试结果.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_13-18_02_44全科室（30000）测试结果.xls" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/resultfile/similar/20_08_13-18_02_44全科室（30000）测试结果.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_13-18_33_33全科室（21753）测试结果.xls" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/resultfile/similar/20_08_13-18_33_33全科室（21753）测试结果.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_14-20_39_23全科室（23202）测试结果-测试环境.xls" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/resultfile/similar/20_08_14-20_39_23全科室（23202）测试结果-测试环境.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_14-21_32_27全科室（30000）测试结果-测试环境.xls" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/resultfile/similar/20_08_14-21_32_27全科室（30000）测试结果-测试环境.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_16-19_10_34全科室（21753）测试结果-测试环境.xls" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/resultfile/similar/20_08_16-19_10_34全科室（21753）测试结果-测试环境.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_18-14_54_16ner_gynaecology_target_testresult.xls" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/resultfile/ner/20_08_18-14_54_16ner_gynaecology_target_testresult.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_18-14_54_16ner_gynaecology_testresult.csv" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/resultfile/ner/20_08_18-14_54_16ner_gynaecology_testresult.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_18-15_45_40ner_andrology_target_testresult.xls" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/resultfile/ner/20_08_18-15_45_40ner_andrology_target_testresult.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/resultfile/20_08_18-15_45_40ner_andrology_testresult.csv" beforeDir="false" afterPath="$PROJECT_DIR$/testresults/resultfile/ner/20_08_18-15_45_40ner_andrology_testresult.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/resultfile/knowledgegraph/20_08_18-17_11_41cause_answer_mapping_result.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/resultfile/knowledgegraph/20_08_18-17_48_34cause_answer_mapping_result.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testresults/resultfile/knowledgegraph/20_08_18-17_49_16cause_answer_mapping_result.xls" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +159,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/testdata/knowledgegraph" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/testdata/knowledgegraph/standard" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -211,21 +167,43 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\workspace\kuaishang_auto\testresults\resultfile\ner" />
+      <recent name="D:\workspace\kuaishang_auto\testresults\resultfile\similar" />
       <recent name="D:\workspace\kuaishang_auto\testdata\knowledgegraph" />
       <recent name="D:\workspace\kuaishang_auto\testdata\knowledgegraph\other" />
       <recent name="D:\workspace\kuaishang_auto\testdata\apidata\similary\all" />
-      <recent name="D:\workspace\kuaishang_auto\testdata\apidata\ner\gynaecology" />
-      <recent name="D:\workspace\kuaishang_auto\testdata\apidata\symptom" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\kuaishang_auto\testdata\knowledgegraph\standard" />
       <recent name="D:\workspace\kuaishang_auto\testdata\knowledgegraph" />
       <recent name="D:\workspace\kuaishang_auto\testdata\apidata\ner\andrology" />
       <recent name="D:\workspace\kuaishang_auto\testdata\apidata\intent\infertility" />
       <recent name="D:\workspace\kuaishang_auto\testdata\apidata\intent\gynaecology" />
-      <recent name="D:\workspace\kuaishang_auto\testdata\apidata\similary\all" />
     </key>
   </component>
   <component name="RunManager" selected="Python.get_graph_answer">
+    <configuration name="get_diff_qastudio_qamatcher" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ZL_AUTO_TEST" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api/get_diff_qastudio_qamatcher.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="get_graph_answer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ZL_AUTO_TEST" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -240,28 +218,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/knowledgegraph/get_graph_answer.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="get_intent" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="ZL_AUTO_TEST" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api/get_intent.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -292,7 +248,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="get_test_data (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="get_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ZL_AUTO_TEST" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -300,12 +256,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/knowledgegraph" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/commonfunc" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/knowledgegraph/get_test_data.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/commonfunc/get_test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -314,7 +270,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="get_test_data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="neo4j_connect (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ZL_AUTO_TEST" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -327,7 +283,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:\workspace\kuaishang_auto\knowledgegraph\get_test_data.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/knowledgegraph/neo4j_connect.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -339,10 +295,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.get_graph_answer" />
-        <item itemvalue="Python.get_test_data (1)" />
+        <item itemvalue="Python.get_diff_qastudio_qamatcher" />
+        <item itemvalue="Python.neo4j_connect (1)" />
         <item itemvalue="Python.get_ner_v2" />
-        <item itemvalue="Python.get_test_data" />
-        <item itemvalue="Python.get_intent" />
+        <item itemvalue="Python.get_test" />
       </list>
     </recent_temporary>
   </component>
@@ -433,7 +389,7 @@
       <workItem from="1596179172033" duration="135573000" />
       <workItem from="1597202436977" duration="29484000" />
       <workItem from="1597305783223" duration="14392000" />
-      <workItem from="1597391970760" duration="41888000" />
+      <workItem from="1597391970760" duration="119485000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;first pycharm update&quot;">
       <created>1597047540353</created>
@@ -442,7 +398,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597047540353</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="&quot;second pycharm update&quot;">
+      <created>1597828339480</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1597828339480</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -450,7 +413,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;first pycharm update&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;first pycharm update&quot;" />
+    <MESSAGE value="&quot;second pycharm update&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;second pycharm update&quot;" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Notifications" timestamp="1591597999408">
@@ -465,58 +429,58 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595568397830" />
-    <state x="560" y="110" key="CommitChangelistDialog2" timestamp="1597047647453">
+    <state x="560" y="110" key="CommitChangelistDialog2" timestamp="1597828328518">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="560" y="110" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1597047647453" />
+    <state x="560" y="110" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1597828328518" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1597655238627">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1597655238627" />
-    <state width="1877" height="197" key="GridCell.Tab.0.bottom" timestamp="1597828217512">
+    <state width="1877" height="324" key="GridCell.Tab.0.bottom" timestamp="1598593428789">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="197" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597828217512" />
-    <state width="1877" height="197" key="GridCell.Tab.0.center" timestamp="1597828217512">
+    <state width="1877" height="324" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598593428789" />
+    <state width="1877" height="324" key="GridCell.Tab.0.center" timestamp="1598593428789">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="197" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597828217512" />
-    <state width="1877" height="197" key="GridCell.Tab.0.left" timestamp="1597828217512">
+    <state width="1877" height="324" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598593428789" />
+    <state width="1877" height="324" key="GridCell.Tab.0.left" timestamp="1598593428789">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="197" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597828217512" />
-    <state width="1877" height="197" key="GridCell.Tab.0.right" timestamp="1597828217512">
+    <state width="1877" height="324" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598593428789" />
+    <state width="1877" height="324" key="GridCell.Tab.0.right" timestamp="1598593428789">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="197" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597828217512" />
-    <state width="1877" height="416" key="GridCell.Tab.1.bottom" timestamp="1597823955130">
+    <state width="1877" height="324" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598593428789" />
+    <state width="1877" height="431" key="GridCell.Tab.1.bottom" timestamp="1598585320377">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="416" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597823955130" />
-    <state width="1877" height="416" key="GridCell.Tab.1.center" timestamp="1597823955130">
+    <state width="1877" height="431" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598585320377" />
+    <state width="1877" height="431" key="GridCell.Tab.1.center" timestamp="1598585320377">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="416" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597823955130" />
-    <state width="1877" height="416" key="GridCell.Tab.1.left" timestamp="1597823955130">
+    <state width="1877" height="431" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598585320377" />
+    <state width="1877" height="431" key="GridCell.Tab.1.left" timestamp="1598585320377">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="416" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597823955130" />
-    <state width="1877" height="416" key="GridCell.Tab.1.right" timestamp="1597823955130">
+    <state width="1877" height="431" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598585320377" />
+    <state width="1877" height="431" key="GridCell.Tab.1.right" timestamp="1598585320377">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="416" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597823955130" />
+    <state width="1877" height="431" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598585320377" />
     <state x="784" y="230" key="RollbackChangesDialog" timestamp="1596697306434">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="784" y="230" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596697306434" />
-    <state x="408" y="121" key="SettingsEditor" timestamp="1597218773363">
+    <state x="408" y="121" key="SettingsEditor" timestamp="1598579519994">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="408" y="121" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1597218773363" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1597048063997">
+    <state x="408" y="121" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1598579519994" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1597828367541">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597048063997" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597828367541" />
     <state x="645" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1591582355722">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -543,50 +507,54 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/kuaishang_auto$get_tt_test.coverage" NAME="get_tt_test Coverage Results" MODIFIED="1596532740568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$get_ner_v2.coverage" NAME="get_ner_v2 Coverage Results" MODIFIED="1598525555553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$get_null_answer.coverage" NAME="get_null_answer Coverage Results" MODIFIED="1594982598622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/knowledgegraph" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$api_test_for_youfu.coverage" NAME="api_test_for_youfu Coverage Results" MODIFIED="1596616649119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apitest" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$inuse_ner_test.coverage" NAME="inuse_ner_test Coverage Results" MODIFIED="1596634868211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commonfunc" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$get_test.coverage" NAME="get_test Coverage Results" MODIFIED="1598524574255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commonfunc" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$get_diff_qastudio_qamatcher.coverage" NAME="get_diff_qastudio_qamatcher Coverage Results" MODIFIED="1598586812404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$tmp2.coverage" NAME="tmp2 Coverage Results" MODIFIED="1592553637472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithm" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$get_graph_answer.coverage" NAME="get_graph_answer Coverage Results" MODIFIED="1598593428781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/knowledgegraph" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$handle_csv.coverage" NAME="handle_csv Coverage Results" MODIFIED="1596015294046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commonfunc" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$get_requests.coverage" NAME="get_requests Coverage Results" MODIFIED="1592900834729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$test_for_api.coverage" NAME="test_for_api Coverage Results" MODIFIED="1591929455171" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apitest" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$get_qastadio.coverage" NAME="get_qastadio Coverage Results" MODIFIED="1596796303017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$get_yf_intent_threshold.coverage" NAME="get_yf_intent_threshold Coverage Results" MODIFIED="1594362794877" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$get_repeat.coverage" NAME="get_repeat Coverage Results" MODIFIED="1597226951634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commonfunc" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$test_for_jieba.coverage" NAME="test_for_jieba Coverage Results" MODIFIED="1598335547594" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commonfunc" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$test_result_for_api.coverage" NAME="test_result_for_api Coverage Results" MODIFIED="1595993523321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apitest" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$get_answer_all.coverage" NAME="get_answer_all Coverage Results" MODIFIED="1597732354562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/knowledgegraph" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$test_get_intent_percent.coverage" NAME="test_get_intent_percent Coverage Results" MODIFIED="1591607274254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$Qamatcher_Qastudio_comp.coverage" NAME="Qamatcher_Qastudio_comp Coverage Results" MODIFIED="1597915965665" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$Test.coverage" NAME="Test Coverage Results" MODIFIED="1592386089751" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithm" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$test_for_applitools.coverage" NAME="test_for_applitools Coverage Results" MODIFIED="1592271751557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ui" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$item_process.coverage" NAME="item_process Coverage Results" MODIFIED="1592803472484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ui" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$get_test_data__1_.coverage" NAME="get_test_data (1) Coverage Results" MODIFIED="1597913546048" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/knowledgegraph" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$test_performs.coverage" NAME="test_performs Coverage Results" MODIFIED="1596703315415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/performs" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$test_get_intent.coverage" NAME="test_get_intent Coverage Results" MODIFIED="1595501579385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pytest/api" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$get_ner.coverage" NAME="get_ner Coverage Results" MODIFIED="1596505735894" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$get_standard_ner.coverage" NAME="get_standard_ner Coverage Results" MODIFIED="1597297676660" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commonfunc" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$test_item_process.coverage" NAME="test_item_process Coverage Results" MODIFIED="1594187215615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pytest/ui" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$test_get_ner.coverage" NAME="test_get_ner Coverage Results" MODIFIED="1595562139516" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pytest/api" />
-    <SUITE FILE_PATH="coverage/kuaishang_auto$get_ner_v2.coverage" NAME="get_ner_v2 Coverage Results" MODIFIED="1597736619982" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
-    <SUITE FILE_PATH="coverage/kuaishang_auto$get_null_answer.coverage" NAME="get_null_answer Coverage Results" MODIFIED="1594982598622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/knowledgegraph" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$algorithm_func.coverage" NAME="algorithm_func Coverage Results" MODIFIED="1593614895227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithm" />
-    <SUITE FILE_PATH="coverage/kuaishang_auto$api_test_for_youfu.coverage" NAME="api_test_for_youfu Coverage Results" MODIFIED="1596616649119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apitest" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1592386030781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithm" />
-    <SUITE FILE_PATH="coverage/kuaishang_auto$inuse_ner_test.coverage" NAME="inuse_ner_test Coverage Results" MODIFIED="1596634868211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commonfunc" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$testfortt.coverage" NAME="testfortt Coverage Results" MODIFIED="1591861538324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apitest" />
-    <SUITE FILE_PATH="coverage/kuaishang_auto$get_test.coverage" NAME="get_test Coverage Results" MODIFIED="1595921218453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commonfunc" />
-    <SUITE FILE_PATH="coverage/kuaishang_auto$tmp2.coverage" NAME="tmp2 Coverage Results" MODIFIED="1592553637472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithm" />
-    <SUITE FILE_PATH="coverage/kuaishang_auto$get_graph_answer.coverage" NAME="get_graph_answer Coverage Results" MODIFIED="1597826598562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/knowledgegraph" />
-    <SUITE FILE_PATH="coverage/kuaishang_auto$handle_csv.coverage" NAME="handle_csv Coverage Results" MODIFIED="1596015294046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commonfunc" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$neo4j_connect__1_.coverage" NAME="neo4j_connect (1) Coverage Results" MODIFIED="1598584210454" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/knowledgegraph" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$get_threshold_test.coverage" NAME="get_threshold_test Coverage Results" MODIFIED="1592823399051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$nertest.coverage" NAME="nertest Coverage Results" MODIFIED="1596764535626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commonfunc" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$get_andrology_symptem_test.coverage" NAME="get_andrology_symptem_test Coverage Results" MODIFIED="1594711220937" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commonfunc" />
-    <SUITE FILE_PATH="coverage/kuaishang_auto$get_requests.coverage" NAME="get_requests Coverage Results" MODIFIED="1592900834729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$common_function.coverage" NAME="common_function Coverage Results" MODIFIED="1596450203381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commonfunc" />
-    <SUITE FILE_PATH="coverage/kuaishang_auto$test_for_api.coverage" NAME="test_for_api Coverage Results" MODIFIED="1591929455171" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apitest" />
-    <SUITE FILE_PATH="coverage/kuaishang_auto$get_qastadio.coverage" NAME="get_qastadio Coverage Results" MODIFIED="1596796303017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$get_answer__1_.coverage" NAME="get_answer (1) Coverage Results" MODIFIED="1595323001801" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/knowledgegraph" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$get_different_pro_test.coverage" NAME="get_different_pro_test Coverage Results" MODIFIED="1597042199906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commonfunc" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$get_zp_test.coverage" NAME="get_zp_test Coverage Results" MODIFIED="1592542561725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$test_for_ultra.coverage" NAME="test_for_ultra Coverage Results" MODIFIED="1592207049655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ui" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$get_label_value.coverage" NAME="get_label_value Coverage Results" MODIFIED="1592463982668" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
-    <SUITE FILE_PATH="coverage/kuaishang_auto$get_yf_intent_threshold.coverage" NAME="get_yf_intent_threshold Coverage Results" MODIFIED="1594362794877" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$run_all.coverage" NAME="run_all Coverage Results" MODIFIED="1597308888215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pytest" />
-    <SUITE FILE_PATH="coverage/kuaishang_auto$get_repeat.coverage" NAME="get_repeat Coverage Results" MODIFIED="1597226951634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commonfunc" />
-    <SUITE FILE_PATH="coverage/kuaishang_auto$test_for_jieba.coverage" NAME="test_for_jieba Coverage Results" MODIFIED="1596441969651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commonfunc" />
+    <SUITE FILE_PATH="coverage/kuaishang_auto$get_neo4j_test.coverage" NAME="get_neo4j_test Coverage Results" MODIFIED="1598498949917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/knowledgegraph" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$api_test_2.coverage" NAME="api_test_2 Coverage Results" MODIFIED="1596158792882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apitest" />
-    <SUITE FILE_PATH="coverage/kuaishang_auto$test_result_for_api.coverage" NAME="test_result_for_api Coverage Results" MODIFIED="1595993523321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apitest" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$test_get_qa_similarity.coverage" NAME="test_get_qa_similarity Coverage Results" MODIFIED="1597304480280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pytest/api" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$get_sentence_similarity.coverage" NAME="get_sentence_similarity Coverage Results" MODIFIED="1597406291050" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
-    <SUITE FILE_PATH="coverage/kuaishang_auto$get_answer_all.coverage" NAME="get_answer_all Coverage Results" MODIFIED="1597732354562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/knowledgegraph" />
-    <SUITE FILE_PATH="coverage/kuaishang_auto$test_get_intent_percent.coverage" NAME="test_get_intent_percent Coverage Results" MODIFIED="1591607274254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$get_intent.coverage" NAME="get_intent Coverage Results" MODIFIED="1597636790117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
-    <SUITE FILE_PATH="coverage/kuaishang_auto$Test.coverage" NAME="Test Coverage Results" MODIFIED="1592386089751" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithm" />
-    <SUITE FILE_PATH="coverage/kuaishang_auto$test_for_applitools.coverage" NAME="test_for_applitools Coverage Results" MODIFIED="1592271751557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ui" />
-    <SUITE FILE_PATH="coverage/kuaishang_auto$item_process.coverage" NAME="item_process Coverage Results" MODIFIED="1592803472484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ui" />
-    <SUITE FILE_PATH="coverage/kuaishang_auto$get_test_data__1_.coverage" NAME="get_test_data (1) Coverage Results" MODIFIED="1597824111704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/knowledgegraph" />
-    <SUITE FILE_PATH="coverage/kuaishang_auto$test_performs.coverage" NAME="test_performs Coverage Results" MODIFIED="1596703315415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/performs" />
     <SUITE FILE_PATH="coverage/kuaishang_auto$change_data_type.coverage" NAME="change_data_type Coverage Results" MODIFIED="1596613621646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commonfunc" />
-    <SUITE FILE_PATH="coverage/kuaishang_auto$test_get_intent.coverage" NAME="test_get_intent Coverage Results" MODIFIED="1595501579385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pytest/api" />
   </component>
 </project>

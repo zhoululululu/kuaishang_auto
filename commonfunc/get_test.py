@@ -10,6 +10,7 @@ import os
 import requests
 from commonfunc.change_data_type import ChangeDataType
 from commonfunc.common_function import CommonFunction
+import codecs
 
 curPath = os.path.abspath(os.path.dirname(__file__))
 rootPath = os.path.split(curPath)[0]
@@ -52,7 +53,6 @@ class GetTest:
               "{:.2f}%".format(tf2_list.count("TRUE") / len(tf2_list) * 100), "，不一致率：",
               "{:.2f}%".format(tf2_list.count("FALSE") / len(tf2_list) * 100))
 
-
     def get_es(self):
         params = {
             "org": "kst",
@@ -63,7 +63,17 @@ class GetTest:
         }
         requests.post(url="http://192.168.1.79:8086/qastudio/v2/qamatch", params=params)
 
+    def get_resume_ner(self, file2):
+        test_data = ChangeDataType.file_to_dict(rootPath + "\\testdata\\apidata\\ner\\andrology\\0827test_nanke.csv")
+        result_data = codecs.open(rootPath + "\\testdata\\apidata\\ner\\andrology\\" + file2, 'w', encoding='utf-8')
+        sentence = test_data["句子"]
+        label = test_data["标签"]
+        for i in range(len(sentence)):
+            for j in range(len(sentence[i])):
+                result_data.write(sentence[i][j] + " " + label[i].split(" ")[j] + "\n")
+            result_data.write("\n")
+
 
 if __name__ == '__main__':
     # GetTest().get_accuracy("20_07_24-18_59_38infertility_intention_test1.xls")
-    GetTest().get_test()
+    GetTest().get_resume_ner("new_ner_bio.txt")

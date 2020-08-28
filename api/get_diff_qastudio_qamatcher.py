@@ -18,14 +18,14 @@ class GetDiff:
         data = {
             "org": "kst",
             "app": "marketing_robot",
-            "industry": "psoriasis",
-            "kb_names": "psoriasis",
+            "industry": "gynaecology",
+            "kb_names": ["gynaecology"],
             "question": sentence
         }
-        r = requests.post("http://192.168.1.18:32087/qastudio/v2/qamatch", data=data, headers=headers, timeout=50)
+        r = requests.post("http://192.168.26.105:30086/qastudio/v2/qamatch", data=data, headers=headers, timeout=50)
         result = r.json()
-        question_list = result["question_list"]  # 获取返回question_list
-        return question_list
+        print(result)
+        return result
 
     def get_qastudio_result(self, sentence):
         r = requests.get("http://192.168.1.18:30010/faqdiy/v1/sim_questions", timeout=50)
@@ -41,4 +41,4 @@ class GetDiff:
 
 if __name__ == '__main__':
     test = GetDiff()
-    test.get_qamatcher_result("掌趾脓疱病好治吗")
+    test.get_qamatcher_result("熬夜会导致月经推迟")

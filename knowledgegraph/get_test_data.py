@@ -77,4 +77,4 @@ class GetTestData:
 
 
 if __name__ == '__main__':
-    GetTestData().get_cause_and_item()
+    print(GetTestData().get_cause_and_item())
