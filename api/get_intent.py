@@ -56,32 +56,6 @@ class GetIntent:
         # final_data.append({"用例数：" + str(total_num), "accuracy：" + str(accuracy)})
         now = time.strftime('%y_%m_%d-%H_%M_%S')
         final_data.to_excel(rootPath + '\\testresults\\resultfile\\' + now + test_result_file)
-        # target_list.append("汇总")
-        # precision_list.append("用例数：" + str(total_num))
-        # recall_list.append("accuracy：" + str(accuracy))
-        # f1_list.append("")
-        # pn_list.append("")
-        # rn_list.append("")
-        # tn_list.append("")
-        # now = time.strftime('%y_%m_%d-%H_%M_%S')
-        # workbook = xlwt.Workbook()
-        # sheet1 = workbook.add_sheet('意图统计结果', cell_overwrite_ok=True)
-        # sheet1.write(0, 0, "意图列表")
-        # sheet1.write(0, 1, "人工标注数量")
-        # sheet1.write(0, 2, "接口结果数量")
-        # sheet1.write(0, 3, "一致数量")
-        # sheet1.write(0, 4, "准确率")
-        # sheet1.write(0, 5, "召回率")
-        # sheet1.write(0, 6, "F1值")
-        # for i in range(0, len(target_list)):
-        #     sheet1.write(i + 1, 0, target_list[i])
-        #     sheet1.write(i + 1, 1, pn_list[i])
-        #     sheet1.write(i + 1, 2, rn_list[i])
-        #     sheet1.write(i + 1, 3, tn_list[i])
-        #     sheet1.write(i + 1, 4, precision_list[i])
-        #     sheet1.write(i + 1, 5, recall_list[i])
-        #     sheet1.write(i + 1, 6, f1_list[i])
-        # workbook.save(rootPath + '\\testresults\\resultfile\\' + now + test_result_file)
         return rootPath + '\\testresults\\resultfile\\' + now + test_result_file
 
     def get_intent(self, api_url, target_file, test_data_file, result_file, test_result_file):
@@ -295,7 +269,7 @@ class GetIntent:
         # GetMultCount.get_half_threshold(self, exp_list, re_list, target_file)
         GetMultCount.get_half_threshold(self, target_file)
 
-    def get_andrology_intent(self, api_url, target_file, test_data_file, result_file, test_result_file):
+    def get_normal_intent(self, api_url, target_file, test_data_file, result_file, test_result_file):
         """
         通过抽取测试集的数据，调用意图接口，得出的测试结果，在调用函数获取每个target的准确率，召回率，F1
         :param target_file: 储存target的文件
@@ -340,15 +314,15 @@ if __name__ == '__main__':
     #                           "label",
     #                           "infertility_intention_test_result_1_1.xls",
     #                           "infertility_intention_target_test_result_1_1.xls")
-    # GetRequests().get_request("http://192.168.26.105:30106/intention/v2/infertility", "GET", "pro_intent",
-    #                           "intent\\infertility\\test_target.txt",
-    #                           "intent\\infertility\\intention_to_test_6000_1.csv",
-    #                           ["sentence", "false", "anorectal"],
-    #                           "label",
-    #                           "infertility_intention_test_result_1_2.xls",
-    #                           "infertility_intention_target_test_result_1_2.xls")
-    GetIntent().get_intent_result("intent\\infertility\\test_target.txt",
-                                  "infertility_intention_target_test_result_mix.xls")
+    GetRequests().get_request("http://192.168.26.105:30106/intention/v2/infertility", "GET", "pro_intent",
+                              "intent\\infertility\\test_target.txt",
+                              "intent\\infertility\\intention_to_test_6000_1.csv",
+                              ["sentence", "false", "anorectal"],
+                              "label",
+                              "infertility_intention_test_result_1_2.xls",
+                              "infertility_intention_target_test_result_1_2.xls")
+    # GetIntent().get_intent_result("intent\\infertility\\test_target.txt",
+    #                               "infertility_intention_target_test_result_mix.xls")
     # GetIntent().get_final_excel("intent\\infertility\\test_target.txt", "result1.xls", "result2.xls")
     # GetIntent().get_andrology_intent("http://192.168.26.105:30098/andrology_intent/v2?sentence={}",
     #                                  "intent\\andrology\\target.txt",

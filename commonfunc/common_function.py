@@ -319,7 +319,7 @@ class CommonFunction:
         """
         target_list = []
         # 打开target文件
-        file = open(rootPath + "\\testdata\\apidata\\" + file, encoding="UTF-8")
+        file = open(rootPath + "\\testdata\\" + file, encoding="UTF-8")
         # 循环读每行，取值，拼接
         for line in file.readlines():
             target_list.append(line.strip())

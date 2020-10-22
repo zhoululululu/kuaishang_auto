@@ -1,0 +1,9 @@
+,dialog_id,entity_value_relationship,file
+0,401,cause@频繁的手淫#同义的实体#cause@长期的手淫,男科_潘淑贞_0.graph
+1,401,symptom@龟头神经特别敏感#同义的实体#symptom@龟头神经敏感,男科_潘淑贞_0.graph
+2,401,item@阳痿#可能病因#cause@频繁的手淫,男科_潘淑贞_0.graph
+3,401,item@早泄#可能病因#cause@频繁的手淫,男科_潘淑贞_0.graph
+4,401,item@早泄#关联的症状#symptom@龟头神经特别敏感,男科_潘淑贞_0.graph
+5,401,item@阳痿#可能病因#cause@长期的手淫,男科_潘淑贞_0.graph
+6,401,item@早泄#可能病因#cause@长期的手淫,男科_潘淑贞_0.graph
+7,401,item@早泄#关联的症状#symptom@龟头神经敏感,男科_潘淑贞_0.graph

@@ -1,0 +1,61 @@
+{
+  "uid" : "191c47bd7ebcc5ba",
+  "name" : "test_get_qa_similarity",
+  "fullName" : "pytest.api.test_get_qa_similarity.TestQASimilarity#test_get_qa_similarity",
+  "historyId" : "a8a223cf4cc8bf93341a15ddd2b4185d",
+  "time" : {
+    "start" : 1598865562702,
+    "stop" : 1598865562719,
+    "duration" : 17
+  },
+  "status" : "broken",
+  "statusMessage" : "AttributeError: 'list' object has no attribute 'iterrows'",
+  "statusTrace" : "self = <test_get_qa_similarity.TestQASimilarity object at 0x00000288FE2609E8>\n\n    @pytest.mark.qa_similary_apitest\n    @allure.feature(\"线上全科室\")\n    def test_get_qa_similarity(self):\n        GetRequests().get_request(\"http://192.168.1.79:32088/without_bert_similarity/v2/sim\", \"GET\", \"jh_similary\", \"None\",\n                                  \"similary\\\\all\\\\first_test_23202.csv\", [\"sentence1\", \"sentence2\"],\n                                  \"label\",\n>                                 \"全科室（23202）测试结果.xls\", \"None\")\n\napi\\test_get_qa_similarity.py:22: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <api.get_requests.GetRequests object at 0x00000288FE260B00>\napi_url = 'http://192.168.1.79:32088/without_bert_similarity/v2/sim'\nmethod = 'GET', api_category = 'jh_similary', target_file = 'None'\ntest_data_file = 'similary\\\\all\\\\first_test_23202.csv'\ntestdata_param = ['sentence1', 'sentence2'], assert_param = 'label'\nresult_file = '全科室（23202）测试结果.xls', target_result_file = 'None'\n\n    def get_request(self, api_url, method, api_category, target_file, test_data_file, testdata_param, assert_param,\n                    result_file, target_result_file):\n        \"\"\"\n        通过抽取测试集的数据，调用请求api接口，得出的测试结果，在调用函数获取二分类或，每个target的准确率，召回率，F1\n        :param target_file: 储存target的文件\n        :param data_file: 储存接口结果数据的文件\n        \"\"\"\n        # 获取测试集的data\n        # case1: 如果是ner的话特殊处理，需要提取字集，句子集，以及bio集\n        # case2：其他的接口正常读取testdata的所有值后续处理\n        # 定义人工标注，接口返回，是否一致列表\n        re_list, exp_list, tf_list, mul_params, word_list = [], [], [], [], []\n        if api_category == \"ner\":\n            word_list, words_list, exp_list = CommonFunction.get_ner_to_words(test_data_file)\n            f = open(rootPath + \"\\\\testresults\\\\resultfile\\\\\" + result_file, 'w+', encoding='utf-8',\n                     newline=\"\")\n            csv_writer = csv.writer(f)\n            # 输入csv文件四个列的title\n            csv_writer.writerow([\"word\", \"exp_bio\", \"re_bio\", \"tf\"])\n            n = -1  # 计数n，用于遍历word_list及bios_list对应的值\n            circle_data = words_list\n            for temp in tqdm(circle_data):  # 循环读取参数，并传入参数值\n                # 获取params参数\n                mul_params.append(temp)\n                mul_params.append(testdata_param[1])  # 不存在data中的话，直接赋值参数值\n                params = GetRequests.get_params(api_category, mul_params)  # 调用函数拼接参数对\n                mul_params.clear()  # 清空params\n                try:\n                    # 发送请求\n                    r = requests.request(method=method, url=api_url,\n                                         params=params,\n                                         timeout=500)\n                    result = r.json()\n                    response = GetRequests.get_response(api_category, result)  # 获取返回结果中所需要的对比值\n                    for i in range(0, len(response)):\n                        n = n + 1\n                        # 调用函数，查看人工bio与接口返回bio是否一致\n                        tf = CommonFunction.get_tf(exp_list[n], response[i])\n                        # csv循环填入字，人工bio值，接口返回bio值，以及tf值\n                        csv_writer.writerow([word_list[n], exp_list[n], response[i], tf])\n                        re_list.append(response[i])\n                        tf_list.append(tf)\n                except Exception as e:\n                    print(\"bad request\")\n        else:\n            test_data = ChangeDataType.file_to_dict(rootPath + \"\\\\testdata\\\\apidata\\\\\" + test_data_file)\n>           circle_data = test_data.iterrows()\nE           AttributeError: 'list' object has no attribute 'iterrows'\n\n..\\api\\get_requests.py:169: AttributeError",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "线上全科室"
+  }, {
+    "name" : "tag",
+    "value" : "qa_similary_apitest"
+  }, {
+    "name" : "parentSuite",
+    "value" : "pytest.api"
+  }, {
+    "name" : "suite",
+    "value" : "test_get_qa_similarity"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestQASimilarity"
+  }, {
+    "name" : "host",
+    "value" : "WIN-OQ20V7UABJF"
+  }, {
+    "name" : "thread",
+    "value" : "5768-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "pytest.api.test_get_qa_similarity"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ "qa_similary_apitest" ]
+  },
+  "source" : "191c47bd7ebcc5ba.json",
+  "parameterValues" : [ ]
+}

@@ -22,7 +22,7 @@ class GetDiff:
             "kb_names": ["gynaecology"],
             "question": sentence
         }
-        r = requests.post("http://192.168.26.105:30086/qastudio/v2/qamatch", data=data, headers=headers, timeout=50)
+        r = requests.post("http://192.168.26.105:30086/qastudio/v2/qamatch", data=data, timeout=50)
         result = r.json()
         print(result)
         return result

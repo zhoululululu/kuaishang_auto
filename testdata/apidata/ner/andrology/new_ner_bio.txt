@@ -5585,10 +5585,10 @@ o O
 
 请 O
 问 O
-生 B_medicine
-物 I_medicine
-补 I_medicine
-片 I_medicine
+生 B_tool
+物 I_tool
+补 I_tool
+片 I_tool
 有 O
 哪 O
 些 O
@@ -9867,9 +9867,9 @@ n O
 男 O
 生 O
 不 O
-割 O
-包 B_part
-皮 I_part
+割 B_surgery
+包 I_surgery
+皮 I_surgery
 有 O
 什 O
 么 O
@@ -13935,14 +13935,14 @@ Q O
 吗 O
 ？ O
 我 O
-尿 B_part
-道 I_part
-口 I_part
-有 O
-点 O
-不 O
-舒 O
-服 O
+尿 B_symptom
+道 I_symptom
+口 I_symptom
+有 I_symptom
+点 I_symptom
+不 I_symptom
+舒 I_symptom
+服 I_symptom
 是 O
 怎 O
 么 O
@@ -24572,9 +24572,9 @@ Q O
 排 O
 除 O
 是 O
-前 B_part
-列 I_part
-腺 I_part
+前 B_symptom
+列 I_symptom
+腺 I_symptom
 ， O
 肾 B_symptom
 虚 I_symptom
@@ -25962,9 +25962,9 @@ Q O
 时 O
 间 O
 
-前 B_part
-列 I_part
-腺 I_part
+前 B_symptom
+列 I_symptom
+腺 I_symptom
 能 O
 看 O
 好 O
@@ -28873,9 +28873,9 @@ Q O
 是 O
 就 O
 是 O
-前 B_symptom
-列 I_symptom
-腺 I_symptom
+前 B_part
+列 I_part
+腺 I_part
 的 O
 事 O
 啊 O
@@ -41312,8 +41312,8 @@ Q O
 钟 I_datetime
 啊 O
 😄 O
-不 O
-射 B_physiology
+不 B_symptom
+射 I_symptom
 
 是 O
 的 O
@@ -64070,11 +64070,11 @@ j O
 问 O
 一 O
 下 O
-前 B_part
-列 I_part
-腺 I_part
-介 O
-入 O
+前 B_surgery
+列 I_surgery
+腺 I_surgery
+介 I_surgery
+入 I_surgery
 多 O
 少 O
 钱 O
@@ -67960,9 +67960,9 @@ j O
 但 O
 是 O
 我 O
-不 B_symptom
-舒 I_symptom
-服 I_symptom
+不 B_emotion
+舒 I_emotion
+服 I_emotion
 
 我 O
 的 O
@@ -68146,7 +68146,7 @@ j O
 裸 O
 睡 O
 有 O
-尿 B_fluid
+尿 B_physiology
 了 O
 ， O
 我 O
@@ -71240,9 +71240,9 @@ Q O
 
 治 O
 疗 O
-前 B_part
-列 I_part
-腺 I_part
+前 B_symptom
+列 I_symptom
+腺 I_symptom
 ， O
 费 O
 用 O
@@ -71734,8 +71734,8 @@ Q O
 起 I_physiology
 ， O
 是 O
-尿 B_physiology
-憋 O
+尿 B_cause
+憋 I_cause
 的 O
 吗 O
 
@@ -75072,9 +75072,9 @@ Q O
 注 O
 意 O
 
-前 B_part
-列 I_part
-腺 I_part
+前 B_symptom
+列 I_symptom
+腺 I_symptom
 都 O
 有 O
 什 O
@@ -75528,13 +75528,13 @@ N O
 间 O
 了 O
 
-前 B_part
-列 I_part
-腺 I_part
-上 O
-行 O
-感 O
-染 O
+前 B_symptom
+列 I_symptom
+腺 I_symptom
+上 I_symptom
+行 I_symptom
+感 I_symptom
+染 I_symptom
 是 O
 什 O
 么 O
@@ -77088,7 +77088,7 @@ f I_symptom
 不 O
 用 O
 憋 O
-尿 B_fluid
+尿 O
 ， O
 可 O
 以 O
@@ -82228,11 +82228,11 @@ Q O
 咱 O
 们 O
 做 O
-阴 B_symptom
-道 I_symptom
-镜 I_symptom
-检 I_symptom
-查 I_symptom
+阴 B_check
+道 I_check
+镜 I_check
+检 I_check
+查 I_check
 对 O
 于 O
 怀 B_physiology
@@ -83357,7 +83357,7 @@ L O
 院 O
 的 O
 泌 O
-尿 B_fluid
+尿 O
 外 O
 科 O
 具 O
@@ -88660,9 +88660,9 @@ Q O
 用 O
 割 O
 
-前 B_part
-列 I_part
-腺 I_part
+前 B_symptom
+列 I_symptom
+腺 I_symptom
 是 O
 一 O
 个 O
@@ -102133,10 +102133,10 @@ B B_check
 几 O
 天 O
 都 O
-射 B_physiology
-就 O
-会 O
-疼 B_symptom
+射 B_symptom
+就 I_symptom
+会 I_symptom
+疼 I_symptom
 
 症 O
 状 O
@@ -114027,3 +114027,4 @@ q O
 查 O
 到 O
 呢 O
+

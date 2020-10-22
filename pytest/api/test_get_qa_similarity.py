@@ -16,15 +16,15 @@ class TestQASimilarity(object):
     @pytest.mark.qa_similary_apitest
     @allure.feature("线上全科室")
     def test_get_qa_similarity(self):
-        GetRequests().get_request("http://192.168.1.79:32088/without_bert_similarity/v2/sim", "GET", "jh_similary", "None",
+        GetRequests().get_request("http://10.0.210.249:32088/without_bert_similarity/v2/sim", "GET", "jh_similary", "None",
                                   "similary\\all\\first_test_23202.csv", ["sentence1", "sentence2"],
                                   "label",
                                   "全科室（23202）测试结果.xls", "None")
-        GetRequests().get_request("http://192.168.1.79:32088/without_bert_similarity/v2/sim", "GET", "jh_similary", "None",
+        GetRequests().get_request("http://10.0.210.249:32088/without_bert_similarity/v2/sim", "GET", "jh_similary", "None",
                                   "similary\\all\\second_test_30000.csv", ["sentence1", "sentence2"],
                                   "label",
                                   "全科室（30000）测试结果.xls", "None")
-        GetRequests().get_request("http://192.168.1.79:32088/without_bert_similarity/v2/sim", "GET", "jh_similary", "None",
+        GetRequests().get_request("http://10.0.210.249:32088/without_bert_similarity/v2/sim", "GET", "jh_similary", "None",
                                   "similary\\all\\origin_test_21753.csv", ["sentence1", "sentence2"],
                                   "label",
                                   "全科室（21753）测试结果.xls", "None")

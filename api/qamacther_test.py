@@ -20,48 +20,79 @@ rootPath = os.path.split(curPath)[0]
 class Test:
 
     def __init__(self):
-        self.faq_list, self.similar_list, self.test_data, self.score_list, self.params = [], [], [], [], []
+        self.faq_list, self.similar_list, self.test_data, self.score_list, self.params, self.question_list, self.max_score_list = [], [], [], [], [], [], []
 
     def get_params(self, question):
         self.params = {
             "org": "kst",
             "app": "marketing_robot",
-            "industry": "infertility",
-            "kb_names": ["infertility"],
-            "question": question,
-            "final": 10,
-            "threshold": 0.6
+            "industry": "andrology",
+            "kb_names": ["林瑞卿机器人总公司_andrology_399"],
+            "question": question
         }
         return self.params
 
-    def get_qamatcher_result(self, api_url, file):
+    def get_old_qamatcher_result(self, api_url, file, result_file):
         self.test_data = ChangeDataType.csv_to_dict(rootPath + "\\testdata\\apidata\\" + file)
         for idx, temp in tqdm(self.test_data.iterrows()):
-            Test.get_params(self, temp["sentence"])
+            Test.get_params(self, temp["sentence1"])
+            r = requests.post(api_url, data=self.params, timeout=50)
+            result = r.json()
+            # print(result)
+            similar_faq = result["hit_question"]
+            max_score = result["max_score"]
+            question_list = result["question_list"]
+            if similar_faq != "":
+                self.faq_list.append(temp["sentence1"])
+                self.question_list.append(similar_faq)
+                self.similar_list.append(question_list)
+                self.max_score_list.append(max_score)
+        result_data = pd.DataFrame(
+            {"faq_list": self.faq_list, "hit_question": self.question_list, "similar_list": self.similar_list,
+             "score_list": self.max_score_list})
+        now = time.strftime('%y_%m_%d-%H_%M_%S')
+        result_data.to_excel(rootPath + '\\testresults\\resultfile\\' + now + result_file)
+
+    def get_new_qamatcher_result(self, api_url, file, result_file):
+        self.test_data = ChangeDataType.csv_to_dict(rootPath + "\\testdata\\apidata\\" + file)
+        for idx, temp in tqdm(self.test_data.iterrows()):
+            Test.get_params(self, temp["sentence1"])
             r = requests.post(api_url, data=self.params, timeout=50)
             result = r.json()
             similar_faq = result["hit_question"]
+            max_score = result["max_score"]
+            question_list = result["question_list"]
             if similar_faq != "":
-                self.faq_list.append(temp["sentence"])
-                self.similar_list.append(similar_faq)
-        Test.get_similar(self)
-
-    def get_similar(self):
-        for i in range(0, len(self.faq_list)):
-            str1 = self.faq_list[i]
-            str2 = self.similar_list[i]
-            url = "http://192.168.1.79:8234/bert_similarity/v2?str1={}&str2={}".format(str1, str2)
-            r = requests.get(url=url, timeout=100)
-            result = r.json()
-            score = result["sim_score"]
-            self.score_list.append(score)
+                self.faq_list.append(temp["sentence1"])
+                self.question_list.append(similar_faq)
+                self.similar_list.append(question_list)
+                self.max_score_list.append(max_score)
 
         result_data = pd.DataFrame(
-            {"faq_list": self.faq_list, "similar_faq_list": self.similar_list, "score": self.score_list})
+            {"faq_list": self.faq_list, "hit_question": self.question_list, "similar_list": self.similar_list,
+             "score_list": self.max_score_list})
         now = time.strftime('%y_%m_%d-%H_%M_%S')
-        result_data.to_excel(rootPath + '\\testresults\\resultfile\\' + now + "1qamatcher_similar_test_result.xls")
+        result_data.to_excel(rootPath + '\\testresults\\resultfile\\' + now + result_file)
+
+
+        # def get_similar(self, result_file):
+        #     for i in range(0, len(self.faq_list)):
+        #         str1 = self.faq_list[i]
+        #         str2 = self.similar_list[i]
+        #         url = "http://192.168.1.79:8234/bert_similarity/v2?str1={}&str2={}".format(str1, str2)
+        #         r = requests.get(url=url, timeout=100)
+        #         result = r.json()
+        #         score = result["sim_score"]
+        #         self.score_list.append(score)
+        #
+        #     result_data = pd.DataFrame(
+        #         {"faq_list": self.faq_list, "similar_faq_list": self.similar_list, "score": self.score_list})
+        #     now = time.strftime('%y_%m_%d-%H_%M_%S')
+        #     result_data.to_excel(rootPath + '\\testresults\\resultfile\\' + now + result_file)
 
 
 if __name__ == '__main__':
-    Test().get_qamatcher_result("http://192.168.26.105:30086/qastudio/v2/qamatch",
-                                "qamatcher\\不孕不育qa_matcher.csv")
+    Test().get_old_qamatcher_result("http://192.168.1.79:8087/qastudio/v2/qamatch",
+                                    "qamatcher\\andrology_qamatcher.csv", "old_qamatcher_similar_test_result.xls")
+    Test().get_new_qamatcher_result("http://192.168.1.79:8086/qastudio/v2/qamatch",
+                                    "qamatcher\\andrology_qamatcher.csv", "new_qamatcher_similar_test_result.xls")

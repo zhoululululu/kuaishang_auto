@@ -93,7 +93,7 @@ class GetNer:
         n = -1
         for temp in tqdm(words_list):
             params = {
-                'model_name': 'andrology',
+                'model_name': 'common',
                 'utterance': temp
             }
             # 请求接口，循环words_list中的每句话
@@ -102,6 +102,7 @@ class GetNer:
             try:
                 r = requests.get(api_url, params=params, timeout=50)
                 result = r.json()
+                print(result)
                 # 获取接口返回的data中的bio值
                 re_bio = result["data"]["bio"]
                 # 循环取接口返回的bio值
@@ -130,7 +131,7 @@ class GetNer:
 
 
 if __name__ == '__main__':
-    GetNer().get_ner("http://192.168.1.74:8062/ner/v1",
+    GetNer().get_ner("http://192.168.26.105:30214/ner/v1",
                      "ner\\common\\common_mix.csv",
                      "common_ner_test_result.csv", "ner\\common\\mix_target.txt",
                      "common_ner_target_test_result.xls")

@@ -2,36 +2,36 @@
   "uid" : "b1a8273437954620fa374b796ffaacdd",
   "name" : "behaviors",
   "children" : [ {
-    "name" : "测试环境通用意图识别",
-    "children" : [ {
-      "name" : "test_get_pro_intent",
-      "uid" : "b73cb0793f61ff36",
-      "parentUid" : "c8e7f5ba17e5e618af1393c204f90170",
-      "status" : "passed",
-      "time" : {
-        "start" : 1597304502314,
-        "stop" : 1597304521353,
-        "duration" : 19039
-      },
-      "flaky" : false,
-      "parameters" : [ ]
-    } ],
-    "uid" : "c8e7f5ba17e5e618af1393c204f90170"
-  }, {
     "name" : "线上全科室",
     "children" : [ {
       "name" : "test_get_qa_similarity",
-      "uid" : "91081133f9fe761c",
+      "uid" : "2d5f6f30e4c0f389",
       "parentUid" : "1734e92aeac9e0794e5020c2e1daf021",
       "status" : "passed",
       "time" : {
-        "start" : 1597308891491,
-        "stop" : 1597314817054,
-        "duration" : 5925563
+        "start" : 1598871487472,
+        "stop" : 1598876807832,
+        "duration" : 5320360
       },
       "flaky" : true,
       "parameters" : [ ]
     } ],
     "uid" : "1734e92aeac9e0794e5020c2e1daf021"
+  }, {
+    "name" : "测试环境通用意图识别",
+    "children" : [ {
+      "name" : "test_get_pro_intent",
+      "uid" : "a4097617d944f8f7",
+      "parentUid" : "c8e7f5ba17e5e618af1393c204f90170",
+      "status" : "passed",
+      "time" : {
+        "start" : 1600412482218,
+        "stop" : 1600412612307,
+        "duration" : 130089
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "c8e7f5ba17e5e618af1393c204f90170"
   } ]
 }

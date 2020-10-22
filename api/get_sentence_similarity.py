@@ -14,8 +14,8 @@ from algorithm.algorithm_func import Binary
 from algorithm.algorithm_func import MultiClassByWord
 import xlwt
 import time
-import pandas as pd
 from tqdm import tqdm
+import pandas as pd
 
 curPath = os.path.abspath(os.path.dirname(__file__))
 rootPath = os.path.split(curPath)[0]
@@ -301,10 +301,10 @@ if __name__ == '__main__':
     #
     test.get_sentence_similarity("http://10.0.220.240:32088//without_bert_similarity/v2/sim?str1={}&str2={}",
                                  "similary\\all\\first_test_23202.csv", "全科室（23202）测试结果-测试环境.xls")
-    test.get_sentence_similarity("http://10.0.220.240:32088//without_bert_similarity/v2/sim?str1={}&str2={}",
-                                 "similary\\all\\second_test_30000.csv", "全科室（30000）测试结果-测试环境.xls")
-    test.get_sentence_similarity("http://10.0.220.240:32088//without_bert_similarity/v2/sim?str1={}&str2={}",
-                                 "similary\\all\\origin_test_21753.csv", "全科室（21753）测试结果-测试环境.xls")
+    # test.get_sentence_similarity("http://10.0.220.240:32088//without_bert_similarity/v2/sim?str1={}&str2={}",
+    #                              "similary\\all\\second_test_30000.csv", "全科室（30000）测试结果-测试环境.xls")
+    # test.get_sentence_similarity("http://10.0.220.240:32088//without_bert_similarity/v2/sim?str1={}&str2={}",
+    #                              "similary\\all\\origin_test_21753.csv", "全科室（21753）测试结果-测试环境.xls")
 
     # test.get_sentence_similarity_pro("http://192.168.1.79:8234/bert_similarity/v2?str1={}&str2={}&model=rwms",
     # "similary\\beauty\\beauty_to_test.csv", "医美全科室统计结果.xls")

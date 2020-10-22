@@ -42,6 +42,13 @@ def download():
     data = {}
     url = request.form.get("url")  # 获取接口请求中form-data的url参数传入的值
     industry = request.form.get("industry")  # 获取接口请求中form-data的url参数传入的值
+    if industry == "植发科":
+        file_name = GetRequests().get_request(url, "GET", "a_intent",
+                                              "intent\\hairtransplant\\target.txt",
+                                              "intent\\hairtransplant\\hairtransplant_to_test_first_9998.csv", ["sentence"],
+                                              "label",
+                                              "hairtransplant_intention_test_result.xls",
+                                              "hairtransplant_intention_target_test_result.xls")
     if industry == "妇产科":
         file_name = GetRequests().get_request(url, "GET", "a_intent",
                                               "intent\\obstetrics\\obstetrics_target.txt",
@@ -101,4 +108,4 @@ def download():
     )
 
 
-app.run(host='0.0.0.0', port=8999, debug=True)
+app.run(host='0.0.0.0', port=8987, debug=True)

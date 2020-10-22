@@ -9,6 +9,7 @@ from commonfunc.change_data_type import ChangeDataType
 import os
 import requests
 import pandas
+import codecs
 
 curPath = os.path.abspath(os.path.dirname(__file__))
 rootPath = os.path.split(curPath)[0]
@@ -17,9 +18,12 @@ rootPath = os.path.split(curPath)[0]
 class GetQaStudio:
     def get_qa_studio_test_data(self, file):
         test_data = ChangeDataType.file_to_dict(rootPath + "\\testdata\\apidata\\similary\\psoriasis\\" + file)
+        file = codecs.open(rootPath + "\\testdata\\apidata\\similary\\psoriasis\\" + "testdata.txt",'w', encoding='utf-8')
         sentence_list = test_data.sentence.tolist()
-        return sentence_list
-        # print(sentence_list)
+        n = 0
+        for i in sentence_list:
+            n += 1
+            file.write('{"faqId":"' + str(n) + '","question":"' + i + '"},')
 
     def get_qastudio_result(self, file):
         test_data = GetQaStudio.get_qa_studio_test_data(self, file)
@@ -55,9 +59,10 @@ class GetQaStudio:
                 score_list.append(score)
                 sentence, question, answer, score = [], [], [], []
 
-        result_data = pandas.DataFrame({"sentence": sentence_list, "question": question_list, "answer": answer_list, "score": score_list})
+        result_data = pandas.DataFrame(
+            {"sentence": sentence_list, "question": question_list, "answer": answer_list, "score": score_list})
         result_data.to_excel(rootPath + "\\testresults\\resultfile" + "qastadio测试结果.xls")
 
 
 if __name__ == '__main__':
-    GetQaStudio().get_qastudio_result("psoriasis_to_test.csv")
+    GetQaStudio().get_qa_studio_test_data("psoriasis_to_test.csv")

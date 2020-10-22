@@ -287,7 +287,7 @@ B超检查的只是子宫以及附件的情况的，咱们现在有出血需要�
 那是怎么会是,O O O O O O
 就流了一次,O B_symptom I_symptom I_symptom I_symptom
 你现在就9厘米是短小。阴茎短小女性是不容易有性高潮的,O O O O B_symptom I_symptom I_symptom O B_symptom I_symptom O B_symptom I_symptom I_symptom I_symptom O O O O O O O O O O O
-请问生物补片有哪些,O O B_medicine I_medicine I_medicine I_medicine O O O
+请问生物补片有哪些,O O B_tool I_tool I_tool I_tool O O O
 前列腺炎和阴囊潮湿是有直接关系的。前列腺炎的患者就容易出现阴囊潮湿的症状。,B_symptom I_symptom I_symptom I_symptom O B_symptom I_symptom I_symptom I_symptom O O O O O O O O B_symptom I_symptom I_symptom I_symptom O O O O O O O O B_symptom I_symptom I_symptom I_symptom O O O O
 见个伟大的医师吗？连夜赶场救济是医师的美德，看来你还要多练习这是全天24小时接诊的综合医院的医生，我们这边现在已经不接诊了，您来了医院我自己一个人也没法给您做手术，您明白么？,O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O
 不在勃起的时候多长啊,O O B_physiology I_physiology O O O O O O
@@ -507,7 +507,7 @@ yinjiaxuan1128好的,O O O O O O O O O O O O O O O O
 性生活还是有一点影响的包皮系带断裂了！后来恢复了！是打字不方便吗？,O O O O O O O O O O O B_symptom I_symptom I_symptom I_symptom I_symptom I_symptom O O O O O O O O O O O O O O O O
 可以，从出现到现在有检查和治疗过吗？,O O O O O O O O O O O O O O O O O O
 不同的病因治疗的方式也不同的,O O O O O O O O O O O O O O
-男生不割包皮有什么影响没,O O O O B_part I_part O O O O O O
+男生不割包皮有什么影响没,O O O B_surgery I_surgery I_surgery O O O O O O
 嗯是检查确诊了吗，是什么一个分部情况呢,O O O O O O O O O O O O O O O O O O O
 肾气虚是不会直接引起早泄阳痿的。,B_symptom I_symptom I_symptom O O O O O O O B_symptom I_symptom B_symptom I_symptom O O
 请问怎么申请那可以给你申请一个的，咱们申请后就可以享受到免挂号费，主任面诊费，还有治疗费用最高50%的减免的,O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O
@@ -714,7 +714,7 @@ aa这边,B_address I_address O O
 那微信吧可以你微信多少我加上你,O O O O O O O O O O O O O O O
 中年男子尿液粘脚是糖尿病吗,O O O O B_symptom I_symptom I_symptom I_symptom O B_symptom I_symptom I_symptom O
 从我做完到康复大概要多少钱,O O O O O O O O O O O O O
-还在吗？我尿道口有点不舒服是怎么回事,O O O O O B_part I_part I_part O O O O O O O O O O
+还在吗？我尿道口有点不舒服是怎么回事,O O O O O B_symptom I_symptom I_symptom I_symptom I_symptom I_symptom I_symptom I_symptom O O O O O
 我了解一下您的情况，给您分析看下，多大年龄了呢？目前单次性生活可以维持在几分钟那你们那如何确定是哪种原因呢？我现在27，一般可能2分钟内哦,O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O B_datetime I_datetime I_datetime O O
 和包皮有关系么,O B_part I_part O O O O
 你有申请过咱们的援助61元检查吗？算了,O O O O O O O O O O B_price I_price I_price O O O O O O
@@ -1258,7 +1258,7 @@ i尿急z滴白沒有分叉等待有,O B_symptom I_symptom O B_symptom I_symptom 
 没什么问题，就是害怕影响生孩子,O O O O O O O O B_emotion I_emotion O O O O O
 我查着网上的看是说月经推迟一个星期有很大可能性是怀孕了是真的吗,O O O O O O O O O B_symptom I_symptom I_symptom I_symptom I_symptom I_symptom I_symptom I_symptom O O O O O O O B_physiology I_physiology O O O O O
 爱打不打一会跟警察叔叔玩吧,O O O O O O O O O O O O O
-不排除是前列腺，肾虚导致的脑髓空引起的头晕,O O O O B_part I_part I_part O B_symptom I_symptom O O O B_symptom I_symptom I_symptom O O O B_symptom I_symptom
+不排除是前列腺，肾虚导致的脑髓空引起的头晕,O O O O B_symptom I_symptom I_symptom O B_symptom I_symptom O O O B_symptom I_symptom I_symptom O O O B_symptom I_symptom
 做了包皮八天有点水肿吃点什么药,B_surgery I_surgery I_surgery I_surgery B_datetime I_datetime B_symptom I_symptom I_symptom I_symptom O O O O O
 以吃两次了,O O B_frequency I_frequency O
 不带套有哪些避免怀孕上环可以,O O O O O O O O B_physiology I_physiology B_surgery I_surgery O O
@@ -1328,7 +1328,7 @@ QQ：3079797055。给你详细分析一下。嗯,O O O O O O O O O O O O O O O O
 我要不要先吃点六位地黄丸试试,O O O O O O O B_medicine I_medicine I_medicine I_medicine I_medicine O O
 明天周末正好是有这方面的专家主任坐诊的，咱们可以申请个免费的专家诊号，过来详细了解看下的，咱们明天方便过来吗明天没时间,O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O B_datetime I_datetime O O O
 你多大了，现在性生活能维持多长时间,O O O O O O O B_physiology I_physiology I_physiology O O O O O O O
-前列腺能看好吗,B_part I_part I_part O O O O
+前列腺能看好吗,B_symptom I_symptom I_symptom O O O O
 没有是否有包皮过长呢？,O O O O O B_symptom I_symptom I_symptom I_symptom O O
 没有恩，这种情况还是需要重视起来，考虑是泌尿系统感染或者结石导致目前有大量出血,O O O O O O O O O O O O O O O O O O O O B_symptom I_symptom I_symptom I_symptom I_symptom I_symptom O O O O O O O O O B_symptom I_symptom I_symptom I_symptom
 逆行射精的话检查清楚找准病因后针对治疗就可以了多大年龄了呢？是检查确诊逆行射精了吗,B_symptom I_symptom I_symptom I_symptom O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O B_symptom I_symptom I_symptom I_symptom O O
@@ -1472,7 +1472,7 @@ QQ：3079797055。给你详细分析一下。嗯,O O O O O O O O O O O O O O O O
 现在是勃起不坚，还是完全不能勃起呢？,O O O B_symptom I_symptom I_symptom I_symptom O O O B_symptom I_symptom I_symptom I_symptom I_symptom I_symptom O O
 ？取环粘连，2度宫颈糜烂，清宫清宫预约后费用是240,O B_surgery I_surgery I_surgery I_surgery O B_symptom I_symptom I_symptom I_symptom I_symptom I_symptom O B_surgery I_surgery B_surgery I_surgery O O O O O O B_price I_price I_price
 那目前性生活能维持几分钟呢？,O O O B_physiology I_physiology I_physiology O O O O O O O O
-是不是就是前列腺的事啊,O O O O O B_symptom I_symptom I_symptom O O O
+是不是就是前列腺的事啊,O O O O O B_part I_part I_part O O O
 硬起来就10来公分，正常吗,B_physiology I_physiology I_physiology O B_symptom I_symptom I_symptom I_symptom I_symptom O O O O
 给你一个微信？,O O O O O O O
 那目前房事时间能维持在几分钟？勃起功能方面正常吗？很久没做了,O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O
@@ -2123,7 +2123,7 @@ QQ3524751669.,O O O O O O O O O O O O O
 你是北京什么医院,O O O O O O O O
 先生，你打字不方便吗，要是不方便的话，我电话给您沟通，，方便吗,O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O
 恩，全名是什么等下我过来找你，可以吗,O O O O O O O O O O O O O O O O O O
-找伴侣测过二十分钟啊😄不射,O O O O O B_datetime I_datetime I_datetime I_datetime O O O B_physiology
+找伴侣测过二十分钟啊😄不射,O O O O O B_datetime I_datetime I_datetime I_datetime O O B_symptom I_symptom
 是的治疗的话我院主要是中药为主或中西结合疗法,O O O O O O O O O O O O O O O O O O O O O O
 那有什么好药好办法呢,O O O O O O O O O O
 那睾丸是硬的，还是软的呢？,O B_part I_part O O O O O O O O O O
@@ -3333,7 +3333,7 @@ b超能查出前列腺吗,B_check I_check O O O B_symptom I_symptom I_symptom O
 您好，有什么可以帮你呢？（当前网络不稳定，你微信是多少，我加上你一对一帮你解答！）这个腰不舒服，没力,O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O B_symptom I_symptom I_symptom I_symptom O B_symptom I_symptom
 那就是用药治疗呗,O O O O O O O O
 我姓李怎么称呼呢？我泸州的,O O B_name O O O O O O O B_address I_address O
-我就是问一下前列腺介入多少钱,O O O O O O B_part I_part I_part O O O O O
+我就是问一下前列腺介入多少钱,O O O O O O B_surgery I_surgery I_surgery I_surgery I_surgery O O O
 您还有什么想问的吗？看什么科呢,O O O O O O O O O O O O O O O
 别人说没有不用治疗,O O O O O O O O O
 有时间性,O O O O
@@ -3535,7 +3535,7 @@ b超能查出前列腺吗,B_check I_check O O O B_symptom I_symptom I_symptom O
 晚上遗精正常吗？,B_datetime I_datetime B_physiology I_physiology O O O O
 好我微信15277380357这里是桂林男健预约挂号咨询平台，您什么男科问题请讲!!!!对话已加密，请放心咨询：微信<nj5551111>,O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O
 第一次时间短，78分钟,B_symptom I_symptom I_symptom I_symptom I_symptom I_symptom O B_datetime I_datetime I_datetime I_datetime
-要是撇着推，时间还算可以但是我不舒服,O O O O O O O O O O O O O O O B_symptom I_symptom I_symptom
+要是撇着推，时间还算可以但是我不舒服,O O O O O O O O O O O O O O O B_emotion I_emotion I_emotion
 我的微信13548421694,O O O O O O O O O O O O O O O
 剩下的就是他软软的应付我，导致我心情差，易怒,O O O O O O B_symptom I_symptom I_symptom O O O O O O O B_emotion I_emotion I_emotion O B_emotion I_emotion
 他是难受啊，,O O B_emotion I_emotion O O
@@ -3546,7 +3546,7 @@ b超能查出前列腺吗,B_check I_check O O O B_symptom I_symptom I_symptom O
 怎么弄呢！,O O O O O
 这几月有小疙瘩,B_datetime I_datetime I_datetime B_symptom I_symptom I_symptom I_symptom
 因为家庭穷就没治,O O O O O O O O
-我裸睡有尿了，我有裸着出去尿尿这不就收到风寒了吗？前列腺不就加重了吗？,O O O O B_fluid O O O O O O O O B_physiology I_physiology O O O B_cause I_cause I_cause I_cause O O O B_part I_part I_part O O O O O O O
+我裸睡有尿了，我有裸着出去尿尿这不就收到风寒了吗？前列腺不就加重了吗？,O O O O B_physiology O O O O O O O O B_physiology I_physiology O O O B_cause I_cause I_cause I_cause O O O B_part I_part I_part O O O O O O O
 避免引起上行感染影响到前列腺这方面。,O O O O O O O O O O O B_part I_part I_part O O O O
 性功能也不持久，感觉手淫时间缩短,B_symptom I_symptom I_symptom I_symptom I_symptom I_symptom I_symptom O O O B_cause I_cause O O O O
 尿液的检查,B_check I_check I_check I_check I_check
@@ -3726,7 +3726,7 @@ QQ3079797011，平时有疑问可以随时联系我！你好我问一下梅毒�
 精液在避孕套中成水状，是什么情况,B_fluid I_fluid O B_tool I_tool I_tool O B_symptom I_symptom I_symptom O O O O O O
 对淡红色不排除是血尿的表现,O B_symptom I_symptom I_symptom O O O O B_symptom I_symptom O O O
 是的有时还会有皮,O O O O O O B_symptom I_symptom
-治疗前列腺，费用？,O O B_part I_part I_part O O O O
+治疗前列腺，费用？,O O B_symptom I_symptom I_symptom O O O O
 你说的六百元，全包括冯？,O O O B_price I_price I_price O O O O O O
 请问尿液有泡沫，腰这两天还酸是怎么回事啊,O O B_symptom I_symptom I_symptom I_symptom I_symptom O B_part B_datetime I_datetime I_datetime O B_symptom O O O O O O
 不客气，这个检查也花费不了多少明确清楚这边也能给你针对性开药,O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O
@@ -3754,7 +3754,7 @@ QQ3079797011，平时有疑问可以随时联系我！你好我问一下梅毒�
 你方便接听电话吗给你去个电话沟通吧,O O O O O O O O O O O O O O O O O
 哪站下车，哪个口出来,O O O O O O O O O O
 那你这年龄来说这情况属于一个中度早泄的情况了,O O O O O O O O O O O O O O B_symptom I_symptom I_symptom I_symptom O O O O
-每天有勃起，是尿憋的吗,B_datetime I_datetime O B_physiology I_physiology O O B_physiology O O O
+每天有勃起，是尿憋的吗,B_datetime I_datetime O B_physiology I_physiology O O B_cause I_cause O O
 哦，大概费用多少？,O O O O O O O O O
 滑精是什么,B_physiology I_physiology O O O
 还需要进行生殖器检查，和细菌检测仪器进行检测，,O O O O O B_check I_check I_check I_check I_check O O O O O O O O O O O O O
@@ -3925,7 +3925,7 @@ QQ：3079797055。给你详细分析一下。我毛根有阴虱，请问这么�
 昨天在西単曙光、,B_datetime I_datetime O B_address I_address O O O
 你就追么和我说一下我的改种情况的费用大概和治疗方法吧,O O O O O O O O O O O O O O O O O O O O O O O O O O
 有没有异味没太注意,O O O B_symptom I_symptom O O O O
-前列腺都有什么症状，什么引起的,B_part I_part I_part O O O O O O O O O O O O
+前列腺都有什么症状，什么引起的,B_symptom I_symptom I_symptom O O O O O O O O O O O O
 之前看着就是不一样,O O O O O O O O O
 看到了嗯，您跟我说一下以N开头的预约号，我帮您激活,O O O O O O O O O O O O O O O O O O O O O O O O O
 我今年24'这种情况3天了恩，三天时间不算短了，像您这个情况咱们医院是可以治疗的，出现这个情况有到正规医院检查过吗？,O O O B_age I_age O O O O O B_datetime I_datetime O O O B_datetime I_datetime O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O
@@ -3946,7 +3946,7 @@ QQ：3079797055。给你详细分析一下。我毛根有阴虱，请问这么�
 嗯，15983697906是我的微信，你的微信是多少呢，我添加你17709004753,O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O
 我13岁平均一星期手淫一次.,O B_age I_age I_age O O B_frequency I_frequency I_frequency I_frequency I_frequency I_frequency I_frequency O
 出现多久了有一段时间了,O O O O O O O O O O O
-前列腺上行感染是什么,B_part I_part I_part O O O O O O O
+前列腺上行感染是什么,B_symptom I_symptom I_symptom I_symptom I_symptom I_symptom I_symptom O O O
 嗯像你这个情况是需要选择专业正规的医院检查一下确诊清楚具体导致的原因后针对性的去治疗的。现在主要就是硬度不行,O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O B_symptom I_symptom I_symptom I_symptom
 后期有什么问题可以上面在及时的跟联系即可的,O O O O O O O O O O O O O O O O O O O O O
 没有这样吧，你平时使用QQ还是微信呢，我添加你，详细的给你说下这方面的情况以及注意事项，对你一定有帮助的,O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O
@@ -4026,7 +4026,7 @@ QQ：3079797055。给你详细分析一下。我毛根有阴虱，请问这么�
 坐多少路公交车到医院,O O O O O O O O O O
 2880970072，我微信,O O O O O O O O O O O O O O
 请问精子跟水一样是怎么回事,O O B_symptom I_symptom I_symptom I_symptom I_symptom I_symptom O O O O O
-过来不用憋尿，可以直接检查的,O O O O O B_fluid O O O O O O O O
+过来不用憋尿，可以直接检查的,O O O O O O O O O O O O O O
 单纯割包皮要多少钱呢,O O B_surgery I_surgery I_surgery O O O O O
 就是我把尿拉到矿泉水瓶子里过一会下面很多白色的东西,O O O O B_fluid O O O O O O O O O O O O O O O B_symptom I_symptom I_symptom I_symptom I_symptom
 没有功能了，就可以切除呀,O O O O O O O O O O O O
@@ -4303,7 +4303,7 @@ QQ3524751669,O O O O O O O O O O O O
 如果是阳痿也得去医院检查么？,O O O O O O O O O O O O O O
 是患者,O O O
 现在没有看到你的报告，不能明确跟你说,O O O O O O O O O O O O O O O O O O
-同房两次了，内射，我怕怀孕了，万一做阴道检查会有影响吗咱们做阴道镜检查对于怀孕是没有任何影响的,O O O O O O O O O O O B_physiology I_physiology O O O O O B_check I_check I_check I_check O O O O O O O O B_symptom I_symptom I_symptom I_symptom I_symptom O O B_physiology I_physiology O O O O O O O O
+同房两次了，内射，我怕怀孕了，万一做阴道检查会有影响吗咱们做阴道镜检查对于怀孕是没有任何影响的,O O O O O O O O O O O B_physiology I_physiology O O O O O B_check I_check I_check I_check O O O O O O O O B_check I_check I_check I_check I_check O O B_physiology I_physiology O O O O O O O O
 2800多会不会太高了,B_price I_price I_price I_price O O O O O O O
 包皮有水泡,B_symptom I_symptom I_symptom I_symptom I_symptom
 你好，有什么问题，请讲我在房事后的小便有血和血块是哪里出吧问题了,O O O O O O O O O O O O O O O O O B_symptom I_symptom I_symptom I_symptom O B_symptom I_symptom O O O O O O O O
@@ -4362,7 +4362,7 @@ QQ3524751669,O O O O O O O O O O O O
 要是咱们性欲方面没有问题的话，一般是考虑咱们阴茎供血的情况不足导致的出现性生活中出现的不能勃起勃起的问题吧,O O O O O O O O O O O O O O O O O O O O O O B_part I_part O O O O O O O O O O O O O O O O O O O B_symptom I_symptom I_symptom I_symptom B_physiology I_physiology O O O O
 我是刚才咨询的那个就是在那早泄吃点啥药好,O O O O O O O O O O O O O B_symptom I_symptom O O O O O
 1200是包含所有费用吗？还有术前检查什么吗,B_price I_price I_price I_price O O O O O O O O O O O O O O O O O O
-嗯好的，去你当地医院的泌尿外科具体就诊吧,O O O O O O O O O O O O B_fluid O O O O O O O
+嗯好的，去你当地医院的泌尿外科具体就诊吧,O O O O O O O O O O O O O O O O O O O O
 32了，一般两三分钟吧,B_age I_age O O O O B_datetime I_datetime I_datetime I_datetime O
 我记得那边有一个什么男科医院嗯，目前有打算给您爱人改善这方面吗？,O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O
 恩，您之前是在哪个医院检查治疗的呢还在关注对话吗,O O O O O O O O O O O O O O O O O O O O O O O O
@@ -4647,7 +4647,7 @@ QQ：3079797055。给你详细分析一下。,O O O O O O O O O O O O O O O O O 
 是不是尿道炎呢？,O O O B_symptom I_symptom I_symptom O O
 大约费用是多少钱？,O O O O O O O O O
 包皮，什么样的不用割,B_part I_part O O O O O O O O
-前列腺是一个怎样的病,B_part I_part I_part O O O O O O O
+前列腺是一个怎样的病,B_symptom I_symptom I_symptom O O O O O O O
 我觉得我得病了，，早泄，开始没几分钟就射了,O O O O O O O O O B_symptom I_symptom O O O B_symptom I_symptom I_symptom I_symptom I_symptom I_symptom O
 快点就不行了,B_symptom I_symptom I_symptom I_symptom I_symptom I_symptom
 不敢让他们知道,B_emotion I_emotion O O O O O
@@ -5346,7 +5346,7 @@ QQ3524751669.,O O O O O O O O O O O O O
 我就是问下这个是怎么回事您目前单次性生活能维持多久呢？,O O O O O O O O O O O O O O O O O O O O O O O O O O O
 龟头疼，，不知道是包皮还是头,B_symptom I_symptom I_symptom O O O O O O B_part I_part O O B_part
 做这手术费用多少,O O O O O O O O
-连续几天都射就会疼,O O O O O B_physiology O O B_symptom
+连续几天都射就会疼,O O O O O B_symptom I_symptom I_symptom I_symptom
 症状出现前是否有去过洗浴场所桑拿住过宾馆或者有过不洁的性生活？也有,O O O O O O O O O O B_cause I_cause I_cause I_cause B_cause I_cause O O B_cause I_cause O O O O B_cause I_cause I_cause I_cause I_cause I_cause O O O
 一般是采用药物输液治疗，具体需要根据你的实际情况来定这样吧，你的QQ或者微信是多少，我添加你，平时有什么不明白的方便咨询了解，,O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O
 你好，阴茎延长手术多少钱？,O O O B_surgery I_surgery I_surgery I_surgery I_surgery I_surgery O O O O

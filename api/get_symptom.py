@@ -84,12 +84,9 @@ class GetSimilarySymptom:
                 tf = CommonFunction.get_tf(result_value, value[0])
             except Exception as e:
                 print(e)
-            # self.logging.info("口语症状：" + key + "---预期标准症状：" + value[0] + "---实际标准症状："
-            #                   + result_value + "---是否一致：" + tf)
             result_value_list.append(result_value)
             tf_list.append(tf)
 
-        # Binary.binary_plot_curve(value_list, result_value_list)
         now = time.strftime('%y_%m_%d-%H_%M_%S')
         workbook = xlwt.Workbook()
         sheet1 = workbook.add_sheet('sheet1', cell_overwrite_ok=True)
@@ -119,6 +116,11 @@ class GetSimilarySymptom:
 
 
 if __name__ == '__main__':
-    GetSimilarySymptom().get_symptom("http://192.168.1.74:8233/bert_similarity/v2?str1={}&str2={}&model=psoriasis1",
-                                     "similary\\st_for_request_symptom_similary.csv",
-                                     "ymptom_similary_test_result.xls")
+    # GetSimilarySymptom().get_symptom("http://192.168.1.74:8233/bert_similarity/v2?str1={}&str2={}&model=psoriasis1",
+    #                                  "similary\\st_for_request_symptom_similary.csv",
+    #                                  "ymptom_similary_test_result.xls")
+
+    test = GetSimilarySymptom()
+    test.get_pro_symptom("http://192.168.26.105:30094/symptom_norm/v1?symptoms={}",
+                         "symptom\\standard_symptom_rule.json",
+                         "andrology_symptom_similary_test_result.xls")

@@ -26,10 +26,9 @@ class GetQaMatcher:
         params = {
             "org": "kst",
             "app": "marketing_robot",
-            "industry": "vitiligo",
-            "kb_names": ["vitiligo"],
-            "question": question,
-            "final": 10
+            "industry": "dentistry",
+            "kb_names": ["口腔科测试模板1_dentistry_148"],
+            "question": question
         }
         return params
 
@@ -38,28 +37,45 @@ class GetQaMatcher:
         sheet1 = workbook.add_sheet('结果', cell_overwrite_ok=True)
         sheet1.write(0, 0, "question")
         sheet1.write(0, 1, "hit_question")
-        sheet1.write(0, 2, "answer")
+        sheet1.write(0, 2, "question_list")
+        sheet1.write(0, 3, "answer")
+        sheet1.write(0, 4, "max_score")
+        sheet1.write(0, 5, "hit_score")
         n = 0
         test_data = ChangeDataType.csv_to_dict(rootPath + "\\testdata\\apidata\\qamatcher\\" + test_data_file)
         for idx, question in tqdm(test_data.iterrows()):
-            params = GetQaMatcher.get_params(question[0])
             try:
-                r = requests.post(api_url, data=params, timeout=50)
+                r = requests.post(
+                    'http://192.168.26.105:30086/qastudio/v2/qamatch?org=kst&app=marketing_robot&industry=dentistry&kb_names=["口腔科测试模板1_dentistry_148"]&question={}'.format(
+                        question[0]))
                 result = r.json()
-                # print(result)
-                if "hit_question" in result:
-                    re_question = str(result["hit_question"])
-                    answer = str(result["faq_answer"])
-                    if re_question != "" or answer != "":
-                        n += 1
-                        print(question[0])
-                        sheet1.write(n, 0, question[0])
-                        sheet1.write(n, 1, re_question)
-                        sheet1.write(n, 2, answer)
+                re_question = result["hit_question"]
+                answer = str(result["faq_answer"])
+                question_list = result["question_list"]
+                max_score = result["max_score"]
+                print(question_list[len(question_list) - 1])
+                if len(question_list) != 0:
+                    result = requests.get(
+                        url="http://192.168.120.14:8234/bert_similarity/v2?str1={}&str2={}&model=Siamese".format(
+                            question[0], question_list[len(question_list) - 1])
+                    )
+                    sim_result = result.json()
+                    hit_score = sim_result["sim_score"]
+                else:
+                    hit_score = "null"
+                if re_question != "" or answer != "":
+                    n += 1
+                    print(question[0])
+                    sheet1.write(n, 0, question[0])
+                    sheet1.write(n, 1, re_question)
+                    sheet1.write(n, 2, question_list)
+                    sheet1.write(n, 3, answer)
+                    sheet1.write(n, 4, max_score)
+                    sheet1.write(n,5, hit_score)
                 else:
                     pass
             except Exception as e:
-                print("")
+                print(e)
 
         workbook.save(rootPath + '\\testresults\\resultfile\\' + result_file)
 
@@ -122,11 +138,11 @@ class GetQaMatcher:
 
 if __name__ == '__main__':
     test = GetQaMatcher()
-    test.get_qa_matcher_result("http://192.168.26.105:30086/qastudio/v2/qamatch", "白癜风抽样50W.csv",
-                               "1qamatcher_test_result.xls")
+    test.get_qa_matcher_result("http://192.168.26.105:30086/qastudio/v2/qamatch", "口腔科.csv",
+                               "11qamatcher_test_result.xls")
     # test.get_caq("D:\\workspace\\kuaishang_auto\\testdata\\apidata\\qamatcher\\vitiligo.txt",
     #              "cqa_collection.xls")
 # test.get_frequency("D:\\workspace\\kuaishang_auto\\testdata\\apidata\\qamatcher\\cqa_collection.xls",
-#                    "D:\\workspace\\kuaishang_auto\\testdata\\apidata\\qamatcher\\1qamatcher_test_result.xls",
+#                    "D:\\workspace\\kuaishang_auto\\testdata\\apidata\\qamatcher\\21qamatcher_test_result.xls",
 #                    "qa_final_frequency_test_result.xls"
 #                    )

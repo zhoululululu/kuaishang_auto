@@ -1,0 +1,113 @@
+{
+  "uid" : "2d5f6f30e4c0f389",
+  "name" : "test_get_qa_similarity",
+  "fullName" : "pytest.api.test_get_qa_similarity.TestQASimilarity#test_get_qa_similarity",
+  "historyId" : "a8a223cf4cc8bf93341a15ddd2b4185d",
+  "time" : {
+    "start" : 1598871487472,
+    "stop" : 1598876807832,
+    "duration" : 5320360
+  },
+  "status" : "passed",
+  "flaky" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "线上全科室"
+  }, {
+    "name" : "tag",
+    "value" : "qa_similary_apitest"
+  }, {
+    "name" : "parentSuite",
+    "value" : "pytest.api"
+  }, {
+    "name" : "suite",
+    "value" : "test_get_qa_similarity"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestQASimilarity"
+  }, {
+    "name" : "host",
+    "value" : "WIN-OQ20V7UABJF"
+  }, {
+    "name" : "thread",
+    "value" : "31136-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "pytest.api.test_get_qa_similarity"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "1f401a4ac715bdb4",
+      "status" : "broken",
+      "statusDetails" : "ValueError: Length of values does not match length of index",
+      "time" : {
+        "start" : 1598866407465,
+        "stop" : 1598868066820,
+        "duration" : 1659355
+      }
+    }, {
+      "uid" : "191c47bd7ebcc5ba",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'list' object has no attribute 'iterrows'",
+      "time" : {
+        "start" : 1598865562702,
+        "stop" : 1598865562719,
+        "duration" : 17
+      }
+    }, {
+      "uid" : "64f00d44f002b7c7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1597308891491,
+        "stop" : 1597314817054,
+        "duration" : 5925563
+      }
+    }, {
+      "uid" : "cb070b067fea7002",
+      "status" : "broken",
+      "statusDetails" : "IndexError: list index out of range",
+      "time" : {
+        "start" : 1597308826432,
+        "stop" : 1597308826499,
+        "duration" : 67
+      }
+    }, {
+      "uid" : "2b152b23c98afc5",
+      "status" : "broken",
+      "statusDetails" : "ZeroDivisionError: division by zero",
+      "time" : {
+        "start" : 1597306143708,
+        "stop" : 1597307592587,
+        "duration" : 1448879
+      }
+    }, {
+      "uid" : "6f6579a8745950f2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1597212334274,
+        "stop" : 1597214562259,
+        "duration" : 2227985
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ "qa_similary_apitest" ]
+  },
+  "source" : "2d5f6f30e4c0f389.json",
+  "parameterValues" : [ ]
+}

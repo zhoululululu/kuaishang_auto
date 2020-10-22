@@ -54,6 +54,8 @@ class GetNer:
                     re_bio_list.append(ner_bio[m])
             except Exception as e:
                 print(e)
+                print(sentence_list[j])
+                print(results)
         result_data = pd.DataFrame({"word": word_list, "bz_bio": bz_ner_list, "re_bio": re_bio_list})
         now = time.strftime('%y_%m_%d-%H_%M_%S')
         result_data.to_csv(rootPath + "\\testresults\\resultfile\\ner\\" + now + test_result_file)
@@ -77,14 +79,57 @@ class GetNer:
              "召回率": recall_list, "F1": f1_list})
         test_result.to_excel(rootPath + "\\testresults\\resultfile\\ner\\" + now + test_target_result_file)
 
+    def get_ner_compare(self, url1, url2, model_name, test_data_file):
+        tf_list = []
+        test_data = ChangeDataType.file_to_dict(rootPath + "\\testdata\\apidata\\" + test_data_file)
+        sentence_list, bio_list, sentence, re_bio_list, bio, bz_ner_list, word_list = [], [], [], [], [], [], []
+        for i in range(1, len(test_data)):
+            if len(test_data[i].strip()) != 0:
+                # print(test_data[i])
+                if test_data[i].strip().split(" ")[0] != '"':
+                    if test_data[i].strip().split(" ")[0] != '“':
+                        if test_data[i].strip().split(" ")[0] != '”':
+                            try:
+                                sentence.append(test_data[i].strip().split(" ")[0])
+                                bio.append(test_data[i].strip().split(" ")[1])
+                            except Exception as e:
+                                pass
+
+            else:
+                sentence_list.append("".join(sentence))
+                bio_list.append(bio)
+                sentence, bio = [], []
+        for j in tqdm(range(len(sentence_list))):
+            params = {
+                'utterance': sentence_list[j],
+                'model_name': model_name
+            }
+            try:
+                results1 = requests.get(url=url1, params=params)
+                ner_bio1 = results1.json()["data"]["bio"]
+                results2 = requests.get(url=url2, params=params)
+                ner_bio2 = results2.json()["data"]["bio"]
+                tf_list.append(ner_bio1 == ner_bio2)
+                if ner_bio1 != ner_bio2:
+                    print("")
+                    print(sentence_list[j])
+                    print(ner_bio1)
+                    print(ner_bio2)
+            except Exception as e:
+                print(e)
+                print(sentence_list[j])
+        print(set(tf_list))
+
 
 if __name__ == '__main__':
-    # 男妇科 url:http://192.168.1.74:8062/ner/v1，http://192.168.26.105:30060/ner/v1
-
-    GetNer().get_target("http://192.168.1.74:8062/ner/v1", "nanfuke_real", "ner\\gynaecology\\new_bio_char.txt",
-                        "ner\\gynaecology\\tag.txt",
-                        "ner_gynaecology_testresult.csv",
-                        "ner_gynaecology_target_testresult.xls")
+    # ner对比
+    GetNer().get_ner_compare("http://192.168.26.105:30229/ner/v1", "http://10.14.250.220:8229/ner/v1", "beauty",
+                             "ner\\common\\common_mix.txt")
+    #     # 男妇科 url:http://192.168.1.74:8062/ner/v1，http://192.168.26.105:30060/ner/v1
+    #     # GetNer().get_target("http://192.168.26.105:30214/ner/v1", "brain", "ner\\gynaecology\\new_bio_char.txt",
+    #     #                     "ner\\gynaecology\\tag.txt",
+    #     #                     "ner_gynaecology_testresult.csv",
+    #     #                     "ner_gynaecology_target_testresult.xls")
     # 妇科ner预生产：10.14.250.220:8060
     # GetNer().get_target("http://10.14.250.220:8060/ner/v1", "gynaecology", "ner\\gynaecology\\new_bio_char.txt",
     #                     "ner\\gynaecology\\tag.txt",

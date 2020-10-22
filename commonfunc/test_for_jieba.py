@@ -35,7 +35,7 @@ class JieBaTest:
                     else:
                         frequency_dict[lengh] = 1
             except Exception as e:
-                print(e, i)
+                print(e)
         print(frequency_dict)
         # print(frequency_dict.values())
         # print(frequency_dict.keys())
@@ -46,12 +46,14 @@ class JieBaTest:
 
 
 # if __name__ == '__main__':
-    #JieBaTest().get_frequency("男科随机10万句.csv")
+# JieBaTest().get_frequency("男科随机10万句.csv")
 
 str1 = "人家都说更本就不可能有阴茎变太的药物，和器材。老,师您是怎样看这问题的呢？？"
 words = set(list(jieba.cut(str1)))
 print(len(words))
-
+str1_1 = "人家都说更本就不可能有阴茎变太的药物，和器材。老,师您是怎样看这问题的呢？？人家都说更本就不可能有阴茎变太的药物，和器材。老,师您是怎样看这问题的呢？？人家都说更本就不可能有阴茎变太的药物，和器材。老,师您是怎样看这问题的呢？？人家都说更本就不可能有阴茎变太的药物，和器材。老,师您是怎样看这问题的呢？？人家都说更本就不可能有阴茎变太的药物，和器材。老,师您是怎样看这问题的呢？？人家都说更本就不可能有阴茎变太的药物，和器材。老,师您是怎样看这问题的呢？？"
+words_1 = set(list(jieba.cut(str1_1)))
+print(len(words_1))
 str2 = "照着敲了一下，报错了！加上-f 成功了，但却发现，没办法安装任何包了，总是报这样的错误信息,这我就很纳闷了，应该没敲错吧，上网找了一下资料，于是开始修正。不要忘记前面的点 打开，在- default 前面加上镜像地址,啊哈，大功告成，随便下一个包试试速度吧。飞咯"
 words1 = list(jieba.cut(str2))
 print(len(words1))
@@ -64,8 +66,7 @@ str3 = "照着敲了一下，报错了！加上-f 成功了，但却发现，没
 words3 = set(list(jieba.cut(str3)))
 print(len(words3))
 
-
-test1= "快乐、忧伤"
-test2= "快乐忧伤"
+test1 = "快乐、忧伤"
+test2 = "快乐忧伤"
 print(test1.split("、"))
 print(test2.split("、"))

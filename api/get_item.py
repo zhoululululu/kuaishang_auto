@@ -9,8 +9,8 @@ Created on 2020/5/12
 import os
 import requests
 import time
-from common.change_data_type import ChangeDataType
-from common.common_function import CommonFunction
+from commonfunc.change_data_type import ChangeDataType
+from commonfunc.common_function import CommonFunction
 from algorithm.algorithm_func import MultiClassByWord
 import xlwt
 
@@ -90,7 +90,7 @@ class GetItem:
             tf_list.append(tf)
 
         test_data["re_intent"] = re_item_list
-        test_data = CommonFunction.get_collections(test_data, tf_list)
+        test_data = CommonFunction.get_collection_1(test_data, tf_list)
         now = time.strftime('%y_%m_%d-%H_%M_%S')
         test_data.to_excel(rootPath + '\\testresults\\resultfile\\' + now + result_file, index=False,
                            encoding="utf-8")

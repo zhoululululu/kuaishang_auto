@@ -4,37 +4,37 @@
   "children" : [ {
     "name" : "pytest.api",
     "children" : [ {
-      "name" : "test_get_intent",
-      "children" : [ {
-        "name" : "test_get_pro_intent",
-        "uid" : "b73cb0793f61ff36",
-        "parentUid" : "6e996aa1bb2a364a84711696007b8cf8",
-        "status" : "passed",
-        "time" : {
-          "start" : 1597304502314,
-          "stop" : 1597304521353,
-          "duration" : 19039
-        },
-        "flaky" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "6e996aa1bb2a364a84711696007b8cf8"
-    }, {
       "name" : "test_get_qa_similarity",
       "children" : [ {
         "name" : "test_get_qa_similarity",
-        "uid" : "91081133f9fe761c",
+        "uid" : "2d5f6f30e4c0f389",
         "parentUid" : "abd937061ffb49e886a6b8a59fc0b65c",
         "status" : "passed",
         "time" : {
-          "start" : 1597308891491,
-          "stop" : 1597314817054,
-          "duration" : 5925563
+          "start" : 1598871487472,
+          "stop" : 1598876807832,
+          "duration" : 5320360
         },
         "flaky" : true,
         "parameters" : [ ]
       } ],
       "uid" : "abd937061ffb49e886a6b8a59fc0b65c"
+    }, {
+      "name" : "test_get_intent",
+      "children" : [ {
+        "name" : "test_get_pro_intent",
+        "uid" : "a4097617d944f8f7",
+        "parentUid" : "6e996aa1bb2a364a84711696007b8cf8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1600412482218,
+          "stop" : 1600412612307,
+          "duration" : 130089
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "6e996aa1bb2a364a84711696007b8cf8"
     } ],
     "uid" : "pytest.api"
   } ]

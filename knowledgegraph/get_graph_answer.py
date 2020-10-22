@@ -338,7 +338,7 @@ class GetGraphAnswer:
         result_data.to_excel(
             rootPath + '\\testresults\\resultfile\\knowledgegraph\\' + now + result_file)
 
-    def get_check_answer_match(self, api_url, result_file):
+    def get_check_answer_single_match(self, api_url, result_file):
         '''
         :param api_url: url
         :param result_file: 生成的文件
@@ -349,22 +349,145 @@ class GetGraphAnswer:
             'MATCH (i:Item{flag:"andrology_v1"})-[r:NEED_TO_CHECK]->(c:Check{flag:"andrology_v1"})'
             "RETURN i.name as item,c.name as check")
         item_check, item, check = {}, [], []
-        print(testdata)
+        sentence_list, re_item_list, answer_list, answer_type_list, check_tf_list = [], [], [], [], []
         for i in testdata:  # 第一层for循环，获取各个元素（即各个不同的字典）
-            print(i.items())
-            for key, value in i.items():  # 在第一层for循环得到的“字典”情况下，对各个“字典”进行第二层for循环，通过items获取到每个“字典“的key和value
-                print(key, value)
-                item_check[key] = value
-                item.append(key)
-                check.append(value)
+            if i["item"] in item_check.keys():
+                item_check[i["item"]].append(i["check"])
+            else:
+                item_check[i["item"]] = i["check"].split()
+        item = list(item_check.keys())
         print(item_check)
-        print(item)
-        print(check)
+        for i in range(len(item)):
+            time.sleep(5)
+            sentence = "{}需要检查什么吗".format(item[i])
+            params = {
+                "utterance": sentence,
+                "department": "andrology",
+                "use_attr": 1
+            }
+            check.append(item_check[item[i]])
+            try:
+                response = requests.get(url=api_url, params=params)
+                result = response.json()
+                answer = result["data"]["answer"]
+                answer_type = result["data"]["answer_type"]
+                print(answer)
+                if "可以" in str(answer):
+                    if len(result["data"]["answer"][0].split("可以")) > 1:
+                        result_check_list = result["data"]["answer"][0].split("可以")[0].split("、")
+                    else:
+                        result_check_list = result["data"]["answer"][0].split("可以")[0]
+                    re_item = result["data"]["answer"][0].split("查出")[1]
+                    if set(result_check_list) <= set(item_check[item[i]]):
+                        c_tf = "true"
+                    else:
+                        c_tf = "false"
+                else:
+                    result_check_list, re_item, c_tf = [], "", "false"
+
+            except Exception as e:
+                print(item)
+                item = "bad case"
+                answer = "bad case"
+                c_tf = "bad case"
+                answer_type = "bad case"
+            print(c_tf)
+            sentence_list.append(sentence)
+            re_item_list.append(re_item)
+            answer_list.append(answer)
+            answer_type_list.append(answer_type)
+            check_tf_list.append(c_tf)
+            # print(len(sentence_list), len(item), len(check), len(re_item_list), len(answer_list),
+            #       len(answer_type_list), len(check_tf_list))
+        result_data = pd.DataFrame(
+            {"项目": item, "项目定义检查": check, "句子参数": sentence_list, "接口返回项目": re_item_list,
+             "接口返回答案类型": answer_type_list,
+             "接口返回答案": answer_list,
+             "接口返回答案是否在项目定义病因中": check_tf_list})
+        now = time.strftime('%y_%m_%d-%H_%M_%S')
+        result_data.to_excel(
+            rootPath + '\\testresults\\resultfile\\knowledgegraph\\' + now + result_file)
+
+    def get_check_answer_double_match(self, api_url, result_file):
+        '''
+        :param api_url: url
+        :param result_file: 生成的文件
+        :return: None
+        主要是正向问题的回答：关系库+item属性,单纯的咨询病因，sentence中未提及病因,包含单+多个item的check
+        '''
+        testdata = Neo4jConnect().get_match(
+            'MATCH (i:Item{flag:"andrology_v1"})-[r:NEED_TO_CHECK]->(c:Check{flag:"andrology_v1"})'
+            "RETURN i.name as item,c.name as check")
+        item_check, item, check,check1, check2 = {}, [], [], [], []
+        sentence_list, re_item_list, answer_list, answer_type_list, check_tf_list = [], [], [], [], []
+        for i in testdata:  # 第一层for循环，获取各个元素（即各个不同的字典）
+            if i["item"] in item_check.keys():
+                item_check[i["item"]].append(i["check"])
+            else:
+                item_check[i["item"]] = i["check"].split()
+        item = list(item_check.keys())
+        for i in range(len(item)):
+            time.sleep(5)
+            item1, item2 = random.choice(item), random.choice(item)
+            print(item_check[item1], item_check[item2])
+            check.append(list(str(item_check[item1]) + "," + str(item_check[item2])))
+            sentence = "{},{}需要检查什么吗".format(item1, item2)
+            params = {
+                "utterance": sentence,
+                "department": "andrology",
+                "use_attr": 1
+            }
+            try:
+                response = requests.get(url=api_url, params=params)
+                result = response.json()
+                answer = result["data"]["answer"]
+                answer_type = result["data"]["answer_type"]
+                print(sentence, answer)
+                ctf, re_item = [], []
+                for i in answer:
+                    if "可以" in i:
+                        if len(i.split("可以")) > 1:
+                            result_check_list = i.split("可以")[0].split("、")
+                            print(result_check_list)
+                        re_item.append(i.split("检查出")[1])
+                        print(set(result_check_list), set(check))
+                        if set(result_check_list) <= set(check):
+                            ctf.append("true")
+                        else:
+                            ctf.append("false")
+                    else:
+                        result_check_list, re_item = [], ""
+                        ctf.append("false")
+                if len(set(ctf)) == 1:
+                    c_tf = "true"
+                else:
+                    c_tf = "false"
+            except Exception as e:
+                item = "bad case"
+                answer = "bad case"
+                c_tf = "bad case"
+                answer_type = "bad case"
+            print(c_tf)
+            sentence_list.append(sentence)
+            re_item_list.append(re_item)
+            answer_list.append(answer)
+            answer_type_list.append(answer_type)
+            check_tf_list.append(c_tf)
+            # print(len(sentence_list), len(item), len(check), len(re_item_list), len(answer_list),
+            #       len(answer_type_list), len(check_tf_list))
+        result_data = pd.DataFrame(
+            {"项目": item, "项目定义检查": check, "句子参数": sentence_list, "接口返回项目": re_item_list,
+             "接口返回答案类型": answer_type_list,
+             "接口返回答案": answer_list,
+             "接口返回答案是否在项目定义病因中": check_tf_list})
+        now = time.strftime('%y_%m_%d-%H_%M_%S')
+        result_data.to_excel(
+            rootPath + '\\testresults\\resultfile\\knowledgegraph\\' + now + result_file)
 
 
 if __name__ == '__main__':
-    GetGraphAnswer().get_check_answer_match("http://192.168.26.105:30201/knowledge_graph/v1/answer",
-                                            "cause_yes_or_no_result.xls")
+    GetGraphAnswer().get_check_answer_double_match("http://192.168.26.105:30201/knowledge_graph/v1/answer",
+                                                   "check_match_double_item.xls")
 # GetGraphAnswer().get_cause_answer_mapping("http://192.168.26.105:30201/knowledge_graph/v1/answer",
 #                                           "cause_answer_mapping_result.xls")
 # GetGraphAnswer().get_cause_mix("http://192.168.26.105:30201/knowledge_graph/v1/answer",

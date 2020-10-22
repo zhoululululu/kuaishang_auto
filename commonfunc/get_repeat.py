@@ -19,24 +19,27 @@ rootPath = os.path.split(curPath)[0]
 class GetRepeat:
 
     @staticmethod
-    def get_intention_repeat(file1, file2):
+    def get_intention_repeat(file1, file2, file3):
         res_sentence, res_label = [], []
-        test_data1 = ChangeDataType.csv_to_dict(rootPath + "\\testdata\\apidata\\" + file1)
-        test_data2 = ChangeDataType.excel_to_dict(rootPath + "\\testdata\\apidata\\" + file2, "Sheet1")
-
+        test_data1 = ChangeDataType.csv_to_dict(rootPath + "\\testdata\\" + file1)
+        # test_data1_1 = ChangeDataType.csv_to_dict(rootPath + "\\testdata\\apidata\\" + file1)
+        # test_data1_2 = ChangeDataType.csv_to_dict(rootPath + "\\testdata\\apidata\\" + file2)
+        test_data2 = ChangeDataType.csv_to_dict(rootPath + "\\testdata\\" + file2)
+        # test_data2 = ChangeDataType.excel_to_dict(rootPath + "\\testdata\\apidata\\" + file3,
+        #                                           "infertility_to_train_58159")
+        test_list, train_list = [], []
         sentence_list = test_data1.sentence.tolist()
-        label_list = test_data1.label.tolist()
-        hj_list = test_data2.text.tolist()
-        result = set(sentence_list) & set(hj_list)
-        print(result)
-        print(len(result))
+        entity1_list = test_data1.entity.tolist()
+        train_list = test_data2.sentence.tolist()
+        train_entity_list = test_data2.entity.tolist()
+
         # for i in range(0, len(sentence_list)):
         #     if sentence_list[i] not in hj_list:
         #         res_sentence.append(sentence_list[i])
         #         res_label.append(label_list[i])
-        result_data = pd.DataFrame({"sentence": res_sentence, "label": res_label})
-        now = time.strftime('%y_%m_%d-%H_%M_%S')
-        result_data.to_excel(rootPath + '\\testresults\\resultfile\\' + now + "new_test_case.xls")
+        # result_data = pd.DataFrame({"sentence": res_sentence, "label": res_label})
+        # now = time.strftime('%y_%m_%d-%H_%M_%S')
+        # result_data.to_excel(rootPath + '\\testresults\\resultfile\\' + now + "new_test_case.xls")
 
     def get_ner_repeat(self, file1, file2):
         test_data1 = ChangeDataType.file_to_dict(rootPath + "\\testdata\\apidata\\" + file1)
@@ -87,9 +90,36 @@ class GetRepeat:
         datalist = df.drop_duplicates()
         datalist.to_csv(file)
 
+    def get_new_testdata(self, file1, file2, file3, file4):
+        res_sentence, res_label = [], []
+        test_data1_1 = ChangeDataType.csv_to_dict(rootPath + "\\testdata\\apidata\\" + file1)
+        test_data1_2 = ChangeDataType.csv_to_dict(rootPath + "\\testdata\\apidata\\" + file2)
+        test_data2 = ChangeDataType.excel_to_dict(rootPath + "\\testdata\\apidata\\" + file3,
+                                                  "infertility_to_train_58159")
+        new_test_data = codecs.open(rootPath + "\\testdata\\apidata\\" + file4, "w", encoding="utf-8")
+        sentence_list = test_data1_1.sentence.tolist() + test_data1_2.sentence.tolist()
+        label_list = test_data1_1.label.tolist() + test_data1_2.label.tolist()
+        infer_list = test_data2.sentence.tolist()
+        print(len(sentence_list), len(set(sentence_list)))
+        result = set(sentence_list) & set(infer_list)
+        print(result, len(result))
+        for i in range(len(sentence_list)):
+            tf = []
+            for j in result:
+                if sentence_list[i] != j:
+                    tf.append("true")
+            if len(set(tf)) == 1:
+                new_test_data.write(sentence_list[i] + "," + label_list[i] + "\n")
+
 
 if __name__ == '__main__':
-    GetRepeat().get_intention_repeat("intent\\gynaecology\\妇科-总测试数据-线上线下.csv", "intent\\gynaecology\\new_test_data.xlsx")
+    # GetRepeat().get_new_testdata("intent\\infertility\\intention_to_test_6000_1.csv",
+    #                              "intent\\infertility\\infertility_to_test6000_third.csv",
+    #                              "intent\\infertility\\infertility_to_train_58159_add_generate_v6.xlsx",
+    #                              "intent\\infertility\\new_testdata.csv11")
     # GetRepeat().quchong(rootPath + "\\testdata\\apidata\\" + "intent\\gynaecology\\妇科-总测试数据-线上线下.csv")
     # GetRepeat().get_ner_repeat("ner\\andrology\\" + "bio_char.txt",
     #                            "ner\\andrology\\" + "train_plus.txt")
+    GetRepeat().get_intention_repeat("knowledgegraph\\itemalign\\othertreatment.csv",
+                                     "knowledgegraph\\itemalign\\train11.csv",
+                                     "intent\\infertility\\infertility_to_train_58159_add_generate_v6.xlsx")

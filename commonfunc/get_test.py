@@ -73,7 +73,22 @@ class GetTest:
                 result_data.write(sentence[i][j] + " " + label[i].split(" ")[j] + "\n")
             result_data.write("\n")
 
+    def get_ner_stander(self):
+        test_data = ChangeDataType.file_to_dict(rootPath + "\\testdata\\apidata\\ner\\andrology\\0827test_nanke.csv")
+        sentence = test_data["句子"]
+        label = test_data["标签"]
+        for i in range(len(sentence)):
+            if len(sentence[i]) != len(label[i].split(" ")):
+                print(sentence[i])
 
+    def get_round(self):
+        print(round(1.5))
+        print(round(2.5))
+        print(round(3.5))
+        print(round(4.5))
 if __name__ == '__main__':
     # GetTest().get_accuracy("20_07_24-18_59_38infertility_intention_test1.xls")
-    GetTest().get_resume_ner("new_ner_bio.txt")
+    # GetTest().get_resume_ner("new_ner_bio.txt")
+    # GetTest().get_ner_stander()
+
+    GetTest().get_round()

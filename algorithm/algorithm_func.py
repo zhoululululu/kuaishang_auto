@@ -62,6 +62,44 @@ class Binary:
         return P, R, F1, accuracy, mis_rate
 
     @staticmethod
+    def get_knowledgegraph_score(bz_list, re_list):
+        """
+        传入标注内容
+        :param bz_list: 人工标注数据
+        :param re_list：接口返回数据
+        :return P, R, F1, accuracy：对应的测试指标
+        """
+        count_all_p = 0
+        count_p = 0
+        count_all_r = 0
+        count_r = 0
+        acc_num = 0
+        mis_num, zero_num = 0, 0
+        for i in range(0, len(bz_list)):
+            if bz_list[i] == 1:
+                count_all_r += 1
+                if bz_list[i] == re_list[i]:
+                    count_r += 1
+            if re_list[i] == 1:
+                count_all_p += 1
+                if re_list[i] == bz_list[i]:
+                    count_p += 1
+            if bz_list[i] == re_list[i]:
+                acc_num += 1
+            if bz_list[i] == 0:
+                zero_num += 1
+                if re_list[i] == 1:
+                    mis_num += 1
+
+        P = count_p / count_all_p
+        R = count_r / count_all_r
+        F1 = 2 * P * R / (P + R)
+        mis_rate = mis_num / zero_num
+        accuracy = acc_num / len(bz_list)
+        print(P, R, F1, mis_num, zero_num)
+        return P, R, F1, accuracy, mis_rate
+
+    @staticmethod
     def binary_plot_curve(truth_value, prob_value):
         precision, recall, f1, accuracy, misrate = Binary.get_binary_score(truth_value, prob_value)
         print("召回率R为：", recall)
@@ -72,6 +110,18 @@ class Binary:
 
 
 class MultiClassByWord:
+    def get_map(self):
+        """
+        获取多分类
+        :return:
+        """
+
+    def get_ap(self):
+        """
+        获取多分类
+        :return:
+        """
+
     def class_target_for_ner(self, bz_intent_list, re_intent_list, point):
         """
         传入标注内容
@@ -192,6 +242,35 @@ class MultiClassByWord:
             f1 = 0
         return p, r, f1, count_all_r, count_all_p, count_r
 
+    def new_mult_class_target(self, bz_intent_list, re_intent_list, point):
+        result = list(zip(bz_intent_list, re_intent_list))
+        tp, fp, tn, fn, f1 = 0, 0, 0, 0, 0
+        for res in result:
+            bz_bio = res[0]  # 人工标注
+            re_bio = res[1]  # 接口返回
+            if point in bz_bio:
+                if point in re_bio:
+                    tp += 1
+                else:
+                    tp += 1
+            else:
+                if point in re_bio:
+                    fn += 1
+                else:
+                    tn += 1
+        accuracy = tp + tn / (fp + fn + tp + tn)  # 准确率
+        error = fp + fn / (fp + fn + tp + tn)  # 错误率
+        precision = tp / (tp + fp)  # 精确率
+        specificity = tn / (tn + fp)  # 特效度（specificity): 表示的是所有负例中被分对的比例，衡量了分类器对负例的识别能力
+        sensitive = tp / (tp + fn)  # 灵敏度（sensitive）=召回率: 表示的是所有正例中被分对的比例，衡量了分类器对正例的识别能力
+        recall = tp / (tp + fn)  # 召回率
+        if precision != 0 and recall != 0:
+            f1 = 2 * precision * recall / (precision + recall)  # F1值
+        return accuracy, precision, recall, f1, error
+
+
+
+
     def multi_each_target_ner(self, target_list, bz_intent_list, re_intent_list):
         recall_list, precision_list, f1_list, pn_list, rn_list, tn_list = [], [], [], [], [], []
         for i in range(0, len(target_list)):
@@ -212,11 +291,11 @@ class MultiClassByWord:
             tn_list.append(tn)
         return precision_list, recall_list, f1_list, pn_list, rn_list, tn_list
 
-    def multi_each_target(self, target_list, bz_intent_list, re_intent_list):
+    def multi_each_target(self, target_list, bz_list, re_list):
         recall_list, precision_list, f1_list, pn_list, rn_list, tn_list = [], [], [], [], [], []
         for i in range(0, len(target_list)):
             print("------", target_list[i], "------")
-            p, r, f1, pn, rn, tn = MultiClassByWord.class_target(self, bz_intent_list, re_intent_list, target_list[i])
+            p, r, f1, pn, rn, tn = MultiClassByWord.class_target(self, bz_list, re_list, target_list[i])
             print("人工标注数量为：", pn)
             print("接口预测数量为：", rn)
             print("结果一致数量为：", tn)
